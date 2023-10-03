@@ -8,7 +8,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public static float PHealth = 100;
     public float startMHealth;
-    public Image heathbar;
+    public Image healthbar;
 
 
 
@@ -21,7 +21,10 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        heathbar.fillAmount = PHealth / startMHealth;
+        healthbar.gameObject.transform.parent.transform.rotation = Quaternion.identity;
+        healthbar.gameObject.transform.parent.transform.position = transform.position - new Vector3(0, 1);
+
+        healthbar.fillAmount = PHealth / startMHealth;
 
         if (PHealth <= 0)
         {
