@@ -28,7 +28,8 @@ public class PlayerHealth : MonoBehaviour
             //SceneManager.LoadScene("DeadScene");
 
             //PHealth = 100;
-            Destroy(gameObject);
+            // Destroy(gameObject);
+            SceneManager.LoadScene(0);
         }
     }
 }

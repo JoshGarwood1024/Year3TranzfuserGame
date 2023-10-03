@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   speed: 0
-  Damage: 35
+  Damage: 25
 --- !u!58 &7612275132020188772
 CircleCollider2D:
   m_ObjectHideFlags: 0

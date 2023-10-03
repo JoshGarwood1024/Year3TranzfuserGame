@@ -31,10 +31,9 @@ public class EnemyChase : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-      
-
         if (collision.gameObject.tag == "Player")
         {
+            collision.gameObject.GetComponent<CameraShake>().shakeDuration = 0.3f;
             PlayerHealth.PHealth -= Damage;
         }
     }

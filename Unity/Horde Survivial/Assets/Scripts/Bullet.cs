@@ -5,16 +5,19 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
 
+    public GameObject scoreText;
+
     private float time = 0.0f;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
-
         if(collision.gameObject.tag == "Enemy")
         {
-            Destroy(collision.gameObject);
+            GameObject scoretxt = Instantiate(scoreText, Camera.main.WorldToScreenPoint(collision.transform.position), Quaternion.identity, GameObject.Find("Canvas").transform);
+            Destroy(collision.gameObject);   
         }
+
+        Destroy(gameObject);
     }
 
     private void Update()
