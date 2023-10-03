@@ -14,7 +14,7 @@ public class EnemyChase : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
-        speed = 3;
+        speed = 4;
     }
 
     // Update is called once per frame
