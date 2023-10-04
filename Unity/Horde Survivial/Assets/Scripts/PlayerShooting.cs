@@ -16,7 +16,8 @@ public class PlayerShooting : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 mousePos;
 
-
+    //TEMP
+    public bool shotgun = false;
 
     private void Start()
     {
@@ -36,7 +37,7 @@ public class PlayerShooting : MonoBehaviour
 
     public void Shotgun()
     {
-        if (shotgunSlider.value >= 0.95f)
+        if (shotgunSlider.value >= 0.95f && shotgun)
         {
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, transform.rotation);
             GameObject bullet2 = Instantiate(bulletPrefab, firePoint.position + (firePoint.right * 0.4f), transform.rotation * Quaternion.Euler(0, 0, 10));
