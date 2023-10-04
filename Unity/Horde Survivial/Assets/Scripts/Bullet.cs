@@ -15,6 +15,7 @@ public class Bullet : MonoBehaviour
         {
             GameObject scoretxt = Instantiate(scoreText, Camera.main.WorldToScreenPoint(collision.transform.position), Quaternion.identity, GameObject.Find("Canvas").transform);
             scoretxt.transform.SetSiblingIndex(0);
+            ScoreScript.scoreValue += 1;
             Destroy(collision.gameObject);
 
             Destroy(gameObject);
