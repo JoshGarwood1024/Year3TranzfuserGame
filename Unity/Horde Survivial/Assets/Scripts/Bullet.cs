@@ -14,11 +14,14 @@ public class Bullet : MonoBehaviour
         if(collision.gameObject.tag == "Enemy")
         {
             GameObject scoretxt = Instantiate(scoreText, Camera.main.WorldToScreenPoint(collision.transform.position), Quaternion.identity, GameObject.Find("Canvas").transform);
-            Destroy(collision.gameObject);   
-        }
+            scoretxt.transform.SetSiblingIndex(0);
+            Destroy(collision.gameObject);
 
-        Destroy(gameObject);
+            Destroy(gameObject);
+        }
+        
     }
+
 
     private void Update()
     {

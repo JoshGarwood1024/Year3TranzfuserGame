@@ -14,21 +14,25 @@ public class PlayerShooting : MonoBehaviour
     public Slider shotgunSlider;
 
     private Rigidbody2D rb;
+    private Rigidbody2D firepointrb;
     private Vector2 mousePos;
 
     //TEMP
+    private float aimAngle;
+
     public bool shotgun = false;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        firepointrb = firePoint.gameObject.GetComponent<Rigidbody2D>();
     }
     public void Fire()
     {
         if(pistolSlider.value >= 0.95f)
         {
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, transform.rotation);
-            bullet.GetComponent<Rigidbody2D>().AddForce(transform.up * fireForce, ForceMode2D.Impulse);
+            bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.transform.up * fireForce, ForceMode2D.Impulse);
 
             pistolSlider.value = 0;
         }
@@ -43,9 +47,9 @@ public class PlayerShooting : MonoBehaviour
             GameObject bullet2 = Instantiate(bulletPrefab, firePoint.position + (firePoint.right * 0.4f), transform.rotation * Quaternion.Euler(0, 0, 10));
             GameObject bullet3 = Instantiate(bulletPrefab, firePoint.position - (firePoint.right * 0.4f), transform.rotation * Quaternion.Euler(0, 0, -10));
 
-            bullet.GetComponent<Rigidbody2D>().AddForce(transform.up * fireForce, ForceMode2D.Impulse);
-            bullet2.GetComponent<Rigidbody2D>().AddForce(transform.up * fireForce, ForceMode2D.Impulse);
-            bullet3.GetComponent<Rigidbody2D>().AddForce(transform.up * fireForce, ForceMode2D.Impulse);
+            bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.transform.up * fireForce, ForceMode2D.Impulse);
+            bullet2.GetComponent<Rigidbody2D>().AddForce(firePoint.transform.up * fireForce, ForceMode2D.Impulse);
+            bullet3.GetComponent<Rigidbody2D>().AddForce(firePoint.transform.up * fireForce, ForceMode2D.Impulse);
 
             shotgunSlider.value = 0;
         }
@@ -78,8 +82,9 @@ public class PlayerShooting : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector2 aimDirection = mousePos - rb.position;
+        Vector2 aimDirection = mousePos - firepointrb.position;
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
-        rb.rotation = aimAngle;
+        firepointrb.rotation = aimAngle;
+        firepointrb.position = rb.position + new Vector2(0.8f, 0.25f);
     }
 }

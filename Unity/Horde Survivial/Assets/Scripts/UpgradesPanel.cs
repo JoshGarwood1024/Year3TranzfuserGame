@@ -11,7 +11,7 @@ public class Upgrades : MonoBehaviour
     public GameObject upgradePanel;
     public GameObject player;
 
-    private float timeToSpawn = 8.0f;
+    private float timeToSpawn = 20.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +26,7 @@ public class Upgrades : MonoBehaviour
         {
             Time.timeScale = 0.0f;
             upgradePanel.SetActive(true);
-            timeToSpawn = 8.0f;
+            timeToSpawn = 10.0f;
         }
         else
         {
