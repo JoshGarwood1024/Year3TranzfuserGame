@@ -17,6 +17,8 @@ public class PlayerShooting : MonoBehaviour
     private Rigidbody2D firepointrb;
     private Vector2 mousePos;
 
+    private bool right = true;
+
     //TEMP
     private float aimAngle;
 
@@ -85,6 +87,17 @@ public class PlayerShooting : MonoBehaviour
         Vector2 aimDirection = mousePos - firepointrb.position;
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
         firepointrb.rotation = aimAngle;
-        firepointrb.position = rb.position + new Vector2(0.8f, 0.25f);
+        firepointrb.position =  rb.position;
+        firepointrb.position += right ? new Vector2(0.8f, -0.25f) : -new Vector2(0.8f, 0.25f);
+
+        if (Input.GetAxisRaw("Horizontal") > 0)
+        {
+            right = true;
+        }
+        if (Input.GetAxisRaw("Horizontal") < 0)
+        {
+            right = false;
+        }
+        
     }
 }

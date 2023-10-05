@@ -18,7 +18,7 @@ public class ScoreScript : MonoBehaviour
     {
 
 
-        Score.text = "X " + scoreValue;
+        Score.text = scoreValue.ToString();
     }
 
     public void GoBack()

@@ -9,10 +9,11 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 forceToApply;
     public float forceDamping;
 
+    private float scaleX;
     // Start is called before the first frame update
     void Start()
     {
-        
+        scaleX = transform.localScale.x;
     }
 
     // Update is called once per frame
@@ -27,5 +28,16 @@ public class PlayerMovement : MonoBehaviour
             forceToApply = Vector2.zero;
         }
         rb.velocity = moveForce;
+
+        Vector3 characterScale = transform.localScale;
+        if(Input.GetAxisRaw("Horizontal") < 0)
+        {
+            characterScale.x = -scaleX;
+        }
+        if (Input.GetAxisRaw("Horizontal") > 0)
+        {
+            characterScale.x = scaleX;
+        }
+        transform.localScale = characterScale;
     }
 }
