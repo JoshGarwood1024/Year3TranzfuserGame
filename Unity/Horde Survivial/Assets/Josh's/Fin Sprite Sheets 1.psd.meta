@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e4c6e1d388f0ce6488cfd1f468df30a1
+guid: 45c87fdb3e9bbd641b610da15f578586
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fin Sprite Sheets_0
+      name: Fin Sprite Sheets 1_0
       rect:
         serializedVersion: 2
         x: 2
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 284375b1344787e4fb3314fe9ff0d41b
-      internalID: -306624501
+      spriteID: 297b65c237fa8684992ba9f323fbcf75
+      internalID: 603875230
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fin Sprite Sheets_1
+      name: Fin Sprite Sheets 1_1
       rect:
         serializedVersion: 2
         x: 34
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a3fa6ed54c6a7842a3c2ff95de959d0
-      internalID: 327605658
+      spriteID: 29ed3049e9c393549a2e35fce649ca75
+      internalID: -2021802617
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fin Sprite Sheets_2
+      name: Fin Sprite Sheets 1_2
       rect:
         serializedVersion: 2
         x: 66
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdb80be60286724479d1a83efd700c85
-      internalID: -515486069
+      spriteID: 7645fb94240b6e94c8b8a2ab2f0a022e
+      internalID: 866955495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fin Sprite Sheets_3
+      name: Fin Sprite Sheets 1_3
       rect:
         serializedVersion: 2
         x: 5
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0df05ad56a0eb1a4e980cfbe932ddb6b
-      internalID: -254464103
+      spriteID: 1788b816d1c52754a91c4559a884ebad
+      internalID: -1916735880
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fin Sprite Sheets_4
+      name: Fin Sprite Sheets 1_4
       rect:
         serializedVersion: 2
         x: 37
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee3f06e7256566e4ab7fb305df953544
-      internalID: 148909707
+      spriteID: 1ec6b612111fa24498fe8bf1da1f023d
+      internalID: 835993260
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fin Sprite Sheets_5
+      name: Fin Sprite Sheets 1_5
       rect:
         serializedVersion: 2
         x: 69
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65401970896b184458527512fea67460
-      internalID: -1949965216
+      spriteID: 2aeb98d9cd97afe498cfd7412ea5accd
+      internalID: 1213531801
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fin Sprite Sheets_6
+      name: Fin Sprite Sheets 1_6
       rect:
         serializedVersion: 2
         x: 2
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 508a0960c288a8d46aae6a8ea46cc53e
-      internalID: 620801705
+      spriteID: 8feb00fbb91561541bbcfad1a54383a0
+      internalID: 631153220
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fin Sprite Sheets_7
+      name: Fin Sprite Sheets 1_7
       rect:
         serializedVersion: 2
         x: 36
@@ -271,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b7642212386d984fa0e74da1f9d55c2
-      internalID: -1577388672
+      spriteID: ae8af5cc96521f74e9917bdca1533ed6
+      internalID: 833752135
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fin Sprite Sheets_8
+      name: Fin Sprite Sheets 1_8
       rect:
         serializedVersion: 2
         x: 67
@@ -292,14 +292,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a382407185a1e24b80a8df64d2463f6
-      internalID: -2004795873
+      spriteID: 3dd8420c37240e942938036014f364a3
+      internalID: -801723409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fin Sprite Sheets_9
+      name: Fin Sprite Sheets 1_9
       rect:
         serializedVersion: 2
         x: 2
@@ -313,14 +313,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc8e0dadb17d96b42a35022772628776
-      internalID: -1337466635
+      spriteID: 3abe099738475684da6c5238a4052adb
+      internalID: -1444375857
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fin Sprite Sheets_10
+      name: Fin Sprite Sheets 1_10
       rect:
         serializedVersion: 2
         x: 36
@@ -334,14 +334,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ec2c24fbb613b843a76974279959989
-      internalID: -608935525
+      spriteID: 597eca0a3bc92344daf5eb4984724095
+      internalID: 1064892259
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fin Sprite Sheets_11
+      name: Fin Sprite Sheets 1_11
       rect:
         serializedVersion: 2
         x: 67
@@ -355,8 +355,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3239c398d989c045aa0cca27c7e1648
-      internalID: -2100129279
+      spriteID: a3ecf7b1bdbc99b409c07b3a1a5a2801
+      internalID: 1188847456
       vertices: []
       indices: 
       edges: []
@@ -372,18 +372,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Fin Sprite Sheets_0: -306624501
-      Fin Sprite Sheets_1: 327605658
-      Fin Sprite Sheets_10: -608935525
-      Fin Sprite Sheets_11: -2100129279
-      Fin Sprite Sheets_2: -515486069
-      Fin Sprite Sheets_3: -254464103
-      Fin Sprite Sheets_4: 148909707
-      Fin Sprite Sheets_5: -1949965216
-      Fin Sprite Sheets_6: 620801705
-      Fin Sprite Sheets_7: -1577388672
-      Fin Sprite Sheets_8: -2004795873
-      Fin Sprite Sheets_9: -1337466635
+      Fin Sprite Sheets 1_0: 603875230
+      Fin Sprite Sheets 1_1: -2021802617
+      Fin Sprite Sheets 1_10: 1064892259
+      Fin Sprite Sheets 1_11: 1188847456
+      Fin Sprite Sheets 1_2: 866955495
+      Fin Sprite Sheets 1_3: -1916735880
+      Fin Sprite Sheets 1_4: 835993260
+      Fin Sprite Sheets 1_5: 1213531801
+      Fin Sprite Sheets 1_6: 631153220
+      Fin Sprite Sheets 1_7: 833752135
+      Fin Sprite Sheets 1_8: -801723409
+      Fin Sprite Sheets 1_9: -1444375857
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
