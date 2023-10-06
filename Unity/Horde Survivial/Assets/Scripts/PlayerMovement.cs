@@ -10,6 +10,9 @@ public class PlayerMovement : MonoBehaviour
     public float forceDamping;
 
     private float scaleX;
+
+    public Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,10 +22,14 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //anim.SetFloat("Speed", Mathf.Abs(forceToApply));
+
+
         Vector2 playerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         Vector2 moveForce = playerInput * moveSpeed;
         moveForce += forceToApply;
         forceToApply /= forceDamping;
+        
         if(Mathf.Abs(forceToApply.x) <= 0.01f && Mathf.Abs(forceToApply.y) <= 0.01f)
         {
             forceToApply = Vector2.zero;
