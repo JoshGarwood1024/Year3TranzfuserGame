@@ -1,18 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyChase : MonoBehaviour
 {
     public GameObject player;
     public float speed;
-
-    private float distance;
     public float Damage;
+    private float distance;
+
+    public float EnemyHealth;
+    public float startEnemyHealth;
+    public Image healthbar;
+
+    //public GameObject scoreText;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        EnemyHealth = startEnemyHealth;
         player = GameObject.Find("Player");
         speed = 4;
     }
@@ -20,6 +28,18 @@ public class EnemyChase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        healthbar.gameObject.transform.parent.transform.rotation = Quaternion.identity;
+        healthbar.gameObject.transform.parent.transform.position = transform.position - new Vector3(0, 1);
+
+        healthbar.fillAmount = EnemyHealth / startEnemyHealth;
+
+        if (EnemyHealth <= 0)
+        {
+            ScoreScript.scoreValue += 1;
+            Destroy(this.gameObject);
+        }
+
+
         distance = Vector2.Distance(transform.position, player.transform.position);
         Vector2 direction = player.transform.position - transform.position;
         direction.Normalize();
@@ -37,5 +57,6 @@ public class EnemyChase : MonoBehaviour
             PlayerHealth.PHealth -= Damage;
         }
     }
+
 
 }
