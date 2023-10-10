@@ -19,13 +19,16 @@ public class CollectableXP : MonoBehaviour
      
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
 
-            collision.gameObject.GetComponent<CameraShake>().shakeDuration = 0.3f;
-            XP.LVLXP += 1f;
+    void OnTriggerEnter2D(Collider2D hitinfo)
+    {
+        LevelSystem levelSystem = hitinfo.GetComponent<LevelSystem>();
+        if (levelSystem != null)
+        {
+            levelSystem.GainExperienceFlatRate(20);
+            Destroy(gameObject);
+
         }
+
     }
 }

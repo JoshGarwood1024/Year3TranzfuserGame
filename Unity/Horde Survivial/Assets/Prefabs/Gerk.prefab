@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1995007805393433433
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5772303492945255126}
+  m_Layer: 8
+  m_Name: XPSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5772303492945255126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995007805393433433}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 331616391094901470}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3857611166520399584
 GameObject:
   m_ObjectHideFlags: 0
@@ -36,7 +67,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1865.2288, y: -1395.5848}
+  m_AnchoredPosition: {x: -1865.2288, y: -1398.07}
   m_SizeDelta: {x: 1101, y: 519}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &8115320794672501217
@@ -118,7 +149,7 @@ GameObject:
   - component: {fileID: 9164740175109064140}
   - component: {fileID: 1390676226608260271}
   m_Layer: 8
-  m_Name: Enemy2
+  m_Name: Gerk
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,11 +164,12 @@ Transform:
   m_GameObject: {fileID: 3919421699315490193}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.118637, y: -0.42956853, z: 0}
+  m_LocalPosition: {x: -8.44332, y: -1.3722868, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8114055119034821186}
+  - {fileID: 5772303492945255126}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6536113095829514793
@@ -181,8 +213,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1385920992, guid: 9c8d1784605fcbd4c8db2dfdc6f83b58, type: 3}
-  m_Color: {r: 1, g: 0.2762809, b: 0.21226418, a: 1}
+  m_Sprite: {fileID: -214908445, guid: b88cdb8113d64e94aa7a014ed60a19da, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -208,9 +240,10 @@ MonoBehaviour:
   speed: 1.4
   Damage: 50
   EnemyHealth: 0
-  startEnemyHealth: 100
+  startEnemyHealth: 80
   healthbar: {fileID: 8048210198028756909}
-  scoreText: {fileID: 0}
+  XP: {fileID: 673465106986425479, guid: 542a4cfa68ff46e49ab4d1a0d28652d2, type: 3}
+  XpSpawnPoint: {fileID: 5772303492945255126}
 --- !u!50 &4367746978058439716
 Rigidbody2D:
   serializedVersion: 4
@@ -248,7 +281,7 @@ Animator:
   m_GameObject: {fileID: 3919421699315490193}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 508cebe3b1996a544a5c6fd558a3aa32, type: 2}
+  m_Controller: {fileID: 9100000, guid: de182654b49cf1c42bef8ec38eeedbea, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -295,7 +328,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.125, y: 2}
+    oldSize: {x: 1.75, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -340,7 +373,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.125, y: 2}
+    oldSize: {x: 1.75, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -459,7 +492,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -50, y: -341}
+  m_AnchoredPosition: {x: -50, y: 54}
   m_SizeDelta: {x: 0, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8670247564151083353

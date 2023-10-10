@@ -13,6 +13,8 @@ public class EnemyChase : MonoBehaviour
     public float EnemyHealth;
     public float startEnemyHealth;
     public Image healthbar;
+    public GameObject XP;
+    public Transform XpSpawnPoint;
 
     //public GameObject scoreText;
 
@@ -35,6 +37,7 @@ public class EnemyChase : MonoBehaviour
 
         if (EnemyHealth <= 0)
         {
+            Instantiate(XP, XpSpawnPoint.position, XpSpawnPoint.rotation);
             ScoreScript.scoreValue += 1;
             Destroy(this.gameObject);
         }
