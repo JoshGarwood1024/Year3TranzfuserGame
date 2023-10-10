@@ -49,7 +49,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8114055119034821186
 RectTransform:
   m_ObjectHideFlags: 0
@@ -238,10 +238,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   speed: 1.4
-  Damage: 50
+  Damage: 10
   EnemyHealth: 0
   startEnemyHealth: 80
-  healthbar: {fileID: 8048210198028756909}
   XP: {fileID: 673465106986425479, guid: 542a4cfa68ff46e49ab4d1a0d28652d2, type: 3}
   XpSpawnPoint: {fileID: 5772303492945255126}
 --- !u!50 &4367746978058439716

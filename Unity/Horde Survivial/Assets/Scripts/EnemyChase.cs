@@ -12,7 +12,7 @@ public class EnemyChase : MonoBehaviour
 
     public float EnemyHealth;
     public float startEnemyHealth;
-    public Image healthbar;
+    //public Image healthbar;
     public GameObject XP;
     public Transform XpSpawnPoint;
 
@@ -24,16 +24,16 @@ public class EnemyChase : MonoBehaviour
     {
         EnemyHealth = startEnemyHealth;
         player = GameObject.Find("Player");
-        speed = 4;
+        speed = 3;
     }
 
     // Update is called once per frame
     void Update()
     {
-        healthbar.gameObject.transform.parent.transform.rotation = Quaternion.identity;
-        healthbar.gameObject.transform.parent.transform.position = transform.position - new Vector3(0, 1);
+        //healthbar.gameObject.transform.parent.transform.rotation = Quaternion.identity;
+        //healthbar.gameObject.transform.parent.transform.position = transform.position - new Vector3(0, 1);
 
-        healthbar.fillAmount = EnemyHealth / startEnemyHealth;
+        //healthbar.fillAmount = EnemyHealth / startEnemyHealth;
 
         if (EnemyHealth <= 0)
         {
