@@ -22,7 +22,7 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         healthbar.gameObject.transform.parent.transform.rotation = Quaternion.identity;
-        healthbar.gameObject.transform.parent.transform.position = transform.position - new Vector3(0, 1);
+        healthbar.gameObject.transform.parent.transform.position = transform.position - new Vector3(0, 1.3f);
 
         healthbar.fillAmount = PHealth / startMHealth;
 

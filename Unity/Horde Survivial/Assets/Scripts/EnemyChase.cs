@@ -12,7 +12,7 @@ public class EnemyChase : MonoBehaviour
 
     public float EnemyHealth;
     public float startEnemyHealth;
-    //public Image healthbar;
+
     public GameObject XP;
     public Transform XpSpawnPoint;
 
@@ -30,14 +30,10 @@ public class EnemyChase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //healthbar.gameObject.transform.parent.transform.rotation = Quaternion.identity;
-        //healthbar.gameObject.transform.parent.transform.position = transform.position - new Vector3(0, 1);
-
-        //healthbar.fillAmount = EnemyHealth / startEnemyHealth;
-
         if (EnemyHealth <= 0)
         {
-            Instantiate(XP, XpSpawnPoint.position, XpSpawnPoint.rotation);
+            GameObject xpgo = Instantiate(XP, XpSpawnPoint.position, XpSpawnPoint.rotation);
+            xpgo.GetComponent<Rigidbody2D>().AddRelativeForce(Random.insideUnitCircle * 400);
             ScoreScript.scoreValue += 1;
             Destroy(this.gameObject);
         }
