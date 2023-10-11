@@ -75,7 +75,8 @@ public class LevelSystem : MonoBehaviour
         requierdXp = CalculateRequiredXP();
         levelText.text = "Level " + level;
 
-
+        gameObject.GetComponent<CameraShake>().shakeDuration = 0.0f;
+        GameObject.Find("GameManager").GetComponent<UpgradeSystem>().ShowPanel();
     }
     private int CalculateRequiredXP()
     {

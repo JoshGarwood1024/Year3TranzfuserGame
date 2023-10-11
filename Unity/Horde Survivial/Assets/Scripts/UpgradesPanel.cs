@@ -1,44 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-public class Upgrades : MonoBehaviour
+public class UpgradesPanel : MonoBehaviour
 {
 
-    //OBVIOUSLY A VERY TEMP HARD CODED SCRIPT JUST TO SHOW WHAT WILL BE ADDED TO THE FUTURE
+    public Upgrade shownUpgrade;
+    public TextMeshProUGUI title;
 
-    public GameObject shotgun;
-    public GameObject upgradePanel;
-    public GameObject player;
-
-    private float timeToSpawn = 20.0f;
-
+    GameObject GM;
     // Start is called before the first frame update
     void Start()
     {
-        
+        GM = GameObject.Find("GameManager");
     }
 
-    // Update is called once per frame
+    public void ShowUpgrade(Upgrade upgrade)
+    {
+        shownUpgrade = upgrade;
+        title.text = upgrade.upgradeName;
+    }
+
+    public void Pressed()
+    {
+        GM.GetComponent<UpgradeSystem>().ApplyUpgrade(shownUpgrade);
+        GM.GetComponent<UpgradeSystem>().ClosePanel();
+    }
+
+    //Update is called once per frame
     void Update()
     {
-        if(timeToSpawn <= 0.0f && !player.GetComponent<PlayerShooting>().shotgun)
-        {
-            Time.timeScale = 0.0f;
-            upgradePanel.SetActive(true);
-            timeToSpawn = 10.0f;
-        }
-        else
-        {
-             timeToSpawn -= Time.deltaTime;
-        }
-    }
 
-    public void BoughtShotgun()
-    {
-        shotgun.SetActive(true);
-        player.GetComponent<PlayerShooting>().shotgun = true;
-        ResetTimeScale();
     }
 
     public void ResetTimeScale()
