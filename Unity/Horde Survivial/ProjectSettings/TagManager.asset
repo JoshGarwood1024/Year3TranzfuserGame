@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Map
+  - Trigger
   layers:
   - Default
   - TransparentFX
