@@ -1,97 +1,131 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
-public class MapGeneration : MonoBehaviour
+public class CellularLevelGenerator : MonoBehaviour
 {
-    Dictionary<int, GameObject> tileset;
-    Dictionary<int, GameObject> tileGroups;
+    int[,] generatedMap;
 
-    public GameObject prefabGrass, prefabWalls, prefabTrees;
+    public int width;
+    public int height;
 
-    int mapWidth = 20;
-    int mapHeight = 20;
+    public RuleTile tile;
 
-    List<List<int>> noiseGrid = new List<List<int>>();
-    List<List<GameObject>> tileGrid = new List<List<GameObject>>();
+    public string seed;
+    private System.Random pseudoRandom;
 
-    float magnification = 14.0f;
-
-    int xOffset;
-    int yOffset;
+    [Range(0, 100)]
+    public int fillingPercentage;
 
     void Start()
     {
-        xOffset = Random.Range(-20, 20);
-        yOffset = Random.Range(-20, 20);
+        CellularAutomata();
+        DrawMap();
+    }
 
-        CreateTileset();
-        CreateTileGroups();
+    void CellularAutomata()
+    {
+        seed = (seed.Length <= 0) ? Time.time.ToString() : seed;
+        pseudoRandom = new System.Random(seed.GetHashCode());
+
         GenerateMap();
-    }
 
-    void CreateTileset()
-    {
-        tileset = new Dictionary<int, GameObject>();
-        tileset.Add(0, prefabGrass);
-        tileset.Add(1, prefabTrees);
-    }
+        for (int i = 0; i < 5; i++)
+            SmoothMap();
 
-    void CreateTileGroups()
-    {
-        tileGroups = new Dictionary<int, GameObject>();
-        foreach(KeyValuePair<int, GameObject> prefabPair in tileset)
-        {
-            GameObject tileGroup = new GameObject(prefabPair.Value.name);
-            tileGroup.transform.parent = gameObject.transform;
-            tileGroup.transform.localPosition = new Vector3(0, 0, 0);
-            tileGroups.Add(prefabPair.Key, tileGroup);
-        }
+        RemoveSecludedCells();
+        RecoverEdgeCells();
     }
 
     void GenerateMap()
     {
-        for(int x = 0; x < mapWidth; x++)
-        {
-            noiseGrid.Add(new List<int>());
-            tileGrid.Add(new List<GameObject>());
+        generatedMap = new int[width, height];
 
-            for(int y = 0; y < mapHeight; y++)
+        for (int x = 1; x < width - 1; x++)
+        {
+            for (int y = 1; y < height - 1; y++)
             {
-                int tileID = GetIdUsingPerlin(x, y);
-                noiseGrid[x].Add(tileID);
-                CreateTile(tileID, x, y);
+                generatedMap[x, y] = (pseudoRandom.Next(0, 100) < fillingPercentage) ? 1 : 0;
             }
         }
     }
 
-    int GetIdUsingPerlin(int x, int y)
+    int getNeighboursCellCount(int x, int y, int[,] map)
     {
-        float rawPerlin = Mathf.PerlinNoise(
-            (x - xOffset) / magnification,
-            (y - yOffset) / magnification);
+        int neighbors = 0;
+        for (int i = -1; i <= 1; i++)
+            for (int j = -1; j <= 1; j++)
+                neighbors += map[i + x, j + y];
 
-        float clampPerlin = Mathf.Clamp01(rawPerlin);
-        float scaledPerlin = clampPerlin * tileset.Count;
+        neighbors -= map[x, y];
 
-        if(scaledPerlin == tileset.Count)
+        return neighbors;
+    }
+
+    void SmoothMap()
+    {
+        for (int x = 1; x < width - 1; x++)
         {
-            scaledPerlin = (tileset.Count - 1);
+            for (int y = 1; y < height - 1; y++)
+            {
+                int neighbors = getNeighboursCellCount(x, y, generatedMap);
+
+                // enforcing rule for cave generation by Johnson et. al.
+                // source: https://www.researchgate.net/publication/228919622_Cellular_automata_for_real-time_generation_of
+                // T > 4 => C = true
+                // T = 4 => C = C
+                // T < 4 => C = false
+
+                if (neighbors > 4)
+                    generatedMap[x, y] = 1;
+                else if (neighbors < 4)
+                    generatedMap[x, y] = 0;
+            }
+        }
+    }
+
+    void RecoverEdgeCells()
+    {
+        for (int x = 0; x < width; x++)
+        {
+            for (int y = 0; y < height; y++)
+            {
+                if (x == 0 || x == width - 1 || y == 0 || y == height - 1)
+                    generatedMap[x, y] = 0;
+            }
+        }
+    }
+
+    void RemoveSecludedCells()
+    {
+        for (int x = 1; x < width - 1; x++)
+        {
+            for (int y = 1; y < height - 1; y++)
+            {
+                generatedMap[x, y] = (getNeighboursCellCount(x, y, generatedMap) <= 0) ? 0 : generatedMap[x, y];
+            }
         }
 
-        return Mathf.FloorToInt(scaledPerlin);
     }
 
-    void CreateTile(int tileID, int x, int y)
+    void DrawMap()
     {
-        GameObject tilePrefab = tileset[tileID];
-        GameObject tileGroup = tileGroups[tileID];
-        GameObject tile = Instantiate(tilePrefab, tileGroup.transform);
+        if (generatedMap != null)
+        {
+            for (int x = 0; x < width; x++)
+            {
+                for (int y = 0; y < height; y++)
+                {
+                    Vector3 pos = new Vector3(x + .5f, y + .5f, 0);
 
-        tile.name = string.Format("Tile_x{0}_y{1}", x, y);
-        tile.transform.localPosition = new Vector3(x - xOffset, y - yOffset, 0);
-
-        tileGrid[x].Add(tile);
+                    if (generatedMap[x, y] == 1)
+                    {
+                        Vector3Int gridPos = GetComponent<Tilemap>().WorldToCell(pos);
+                        GetComponent<Tilemap>().SetTile(gridPos, tile);
+                    }
+                }
+            }
+        }
     }
-
 }
