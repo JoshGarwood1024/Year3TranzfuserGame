@@ -10,7 +10,8 @@ public class CellularLevelGenerator : MonoBehaviour
     public int width;
     public int height;
 
-    public RuleTile tile;
+    public RuleTile tile, BGTile;
+    public Tilemap backgroundTileMap;
 
     public string seed;
     private System.Random pseudoRandom;
@@ -20,6 +21,8 @@ public class CellularLevelGenerator : MonoBehaviour
 
     void Start()
     {
+        seed = Random.Range(1, 9999999).ToString();
+
         CellularAutomata();
         DrawMap();
     }
@@ -71,12 +74,6 @@ public class CellularLevelGenerator : MonoBehaviour
             {
                 int neighbors = getNeighboursCellCount(x, y, generatedMap);
 
-                // enforcing rule for cave generation by Johnson et. al.
-                // source: https://www.researchgate.net/publication/228919622_Cellular_automata_for_real-time_generation_of
-                // T > 4 => C = true
-                // T = 4 => C = C
-                // T < 4 => C = false
-
                 if (neighbors > 4)
                     generatedMap[x, y] = 1;
                 else if (neighbors < 4)
@@ -118,11 +115,14 @@ public class CellularLevelGenerator : MonoBehaviour
                 for (int y = 0; y < height; y++)
                 {
                     Vector3 pos = new Vector3(x + .5f, y + .5f, 0);
+                    Vector3Int gridPos = GetComponent<Tilemap>().WorldToCell(pos);
 
                     if (generatedMap[x, y] == 1)
                     {
-                        Vector3Int gridPos = GetComponent<Tilemap>().WorldToCell(pos);
                         GetComponent<Tilemap>().SetTile(gridPos, tile);
+                    } else
+                    {                    
+                        backgroundTileMap.SetTile(gridPos, BGTile);
                     }
                 }
             }
