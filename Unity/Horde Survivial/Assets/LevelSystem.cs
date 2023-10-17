@@ -24,6 +24,8 @@ public class LevelSystem : MonoBehaviour
     public float PowerMuiltipler = 2;
     [Range(7f, 14f)]
     public float DivisionMuiltipler = 7;
+
+    public GameObject enemySpawner;
     // Start is called before the first frame update
     void Start()
     {
@@ -75,8 +77,12 @@ public class LevelSystem : MonoBehaviour
         requierdXp = CalculateRequiredXP();
         levelText.text = "Level " + level;
 
+        enemySpawner.GetComponent<EnemySpawner>().LeveledUp(level);
+
         gameObject.GetComponent<CameraShake>().shakeDuration = 0.0f;
         GameObject.Find("GameManager").GetComponent<UpgradeSystem>().ShowPanel();
+
+        
     }
     private int CalculateRequiredXP()
     {

@@ -12,6 +12,9 @@ public class CellularLevelGenerator : MonoBehaviour
 
     public RuleTile tile, BGTile;
     public Tilemap backgroundTileMap;
+    public List<Tile> trees;
+
+    public GameObject player;
 
     public string seed;
     private System.Random pseudoRandom;
@@ -25,6 +28,18 @@ public class CellularLevelGenerator : MonoBehaviour
 
         CellularAutomata();
         DrawMap();
+
+        for(int x = (width/2)-5; x < (width/2)+5; x++)
+        {
+            for (int y = (height / 2) - 5; y < (height / 2) + 5; y++)
+            {
+                if(generatedMap[x, y] == 1)
+                {
+                    player.transform.position = new Vector3(x, y);
+                    break; 
+                }
+            }
+        }
     }
 
     void CellularAutomata()
@@ -120,6 +135,14 @@ public class CellularLevelGenerator : MonoBehaviour
                     if (generatedMap[x, y] == 1)
                     {
                         GetComponent<Tilemap>().SetTile(gridPos, tile);
+
+                        if(Random.Range(0,100) < 40)
+                        {
+                            if(x < 5 || x > 55 || y < 5 || y > 35)
+                            {
+                                    backgroundTileMap.SetTile(gridPos, trees[Random.Range(0, trees.Count)]);
+                            }
+                        }
                     } else
                     {                    
                         backgroundTileMap.SetTile(gridPos, BGTile);
