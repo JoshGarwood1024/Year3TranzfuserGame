@@ -15,6 +15,7 @@ public class EnemyChase : MonoBehaviour
 
     public GameObject XP;
     public Transform XpSpawnPoint;
+    public GameObject Blood;
 
     //public GameObject scoreText;
 
@@ -34,6 +35,7 @@ public class EnemyChase : MonoBehaviour
         {
             GameObject xpgo = Instantiate(XP, XpSpawnPoint.position, XpSpawnPoint.rotation);
             xpgo.GetComponent<Rigidbody2D>().AddRelativeForce(Random.insideUnitCircle * 400);
+            GameObject blood = Instantiate(Blood, XpSpawnPoint.position, XpSpawnPoint.rotation);
             ScoreScript.scoreValue += 1;
             Destroy(this.gameObject);
         }

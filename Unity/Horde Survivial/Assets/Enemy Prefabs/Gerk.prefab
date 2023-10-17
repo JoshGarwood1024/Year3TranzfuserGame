@@ -245,6 +245,7 @@ MonoBehaviour:
   startEnemyHealth: 80
   XP: {fileID: 673465106986425479, guid: 542a4cfa68ff46e49ab4d1a0d28652d2, type: 3}
   XpSpawnPoint: {fileID: 5772303492945255126}
+  Blood: {fileID: 931355830842430980, guid: 79658ee1d807d854d89753e6ba66ecb9, type: 3}
 --- !u!50 &4367746978058439716
 Rigidbody2D:
   serializedVersion: 4
