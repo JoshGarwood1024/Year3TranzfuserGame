@@ -23,9 +23,10 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         //anim.SetFloat("Speed", Mathf.Abs(forceToApply));
+        float horz = Input.GetAxisRaw("Horizontal");
+        float vert = Input.GetAxisRaw("Vertical");
 
-
-        Vector2 playerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        Vector2 playerInput = new Vector2(horz, vert).normalized;
         Vector2 moveForce = playerInput * moveSpeed;
         moveForce += forceToApply;
         forceToApply /= forceDamping;
@@ -37,14 +38,21 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = moveForce;
 
         Vector3 characterScale = transform.localScale;
-        if(Input.GetAxisRaw("Horizontal") < 0)
+        if(horz < 0)
         {
             characterScale.x = -scaleX;
         }
-        if (Input.GetAxisRaw("Horizontal") > 0)
+        if (horz > 0)
         {
             characterScale.x = scaleX;
         }
         transform.localScale = characterScale;
+
+        GetComponent<Animator>().SetFloat("Speed", Mathf.Abs(horz) + Mathf.Abs(vert));
+
+        if(Mathf.Abs(horz) + Mathf.Abs(vert) > 0)
+        {
+            GetComponent<Animator>().SetTrigger("Squish");
+        }
     }
 }

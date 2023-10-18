@@ -18,6 +18,14 @@ public abstract class Enemy : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if(Health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
 
 public class Gerk : Enemy

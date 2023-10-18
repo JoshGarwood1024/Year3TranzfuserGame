@@ -76,6 +76,7 @@ public class LevelSystem : MonoBehaviour
         // Can upgrade stats like health here
         requierdXp = CalculateRequiredXP();
         levelText.text = "Level " + level;
+        PlayerHealth.PHealth = GetComponent<PlayerHealth>().startMHealth;
 
         enemySpawner.GetComponent<EnemySpawner>().LeveledUp(level);
 

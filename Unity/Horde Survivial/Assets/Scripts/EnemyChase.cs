@@ -44,10 +44,8 @@ public class EnemyChase : MonoBehaviour
         distance = Vector2.Distance(transform.position, player.transform.position);
         Vector2 direction = player.transform.position - transform.position;
         direction.Normalize();
-      //  float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
-       // transform.rotation = Quaternion.Euler(Vector3.forward * angle);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -59,5 +57,11 @@ public class EnemyChase : MonoBehaviour
         }
     }
 
+    public void Hurt(float dmg)
+    {
+        EnemyHealth -= dmg;
+        Vector3 dir = -(player.transform.position - transform.position);
+        GetComponent<Rigidbody2D>().AddForce(dir * 1000);
+    }
 
 }

@@ -8,7 +8,7 @@ public abstract class Upgrade : MonoBehaviour
     public string upgradeName { get; set; }
     public float rarity { get; set; }
     public string description { get; set; }
-
+    public int level { get; set; }
 
     public virtual void Equip() { }
     public virtual void Use() { }
@@ -28,72 +28,52 @@ public abstract class Upgrade : MonoBehaviour
     }
 }
 
-public class BreathOfTheWild : Upgrade
+public class HealthUpgrade : Upgrade
 {
     private void Start()
     {
-        rarity = 80;
-        upgradeName = "Breath of the Wild";
-    }
-
-    public override void Use()
-    {
-        Debug.Log("Breath of the wild");
-    }
-}
-
-public class MindsFocus : Upgrade
-{
-    private void Start()
-    {
-        rarity = 20;
-        upgradeName = "Minds Focus";
-
-    }
-    public override void Use()
-    {
-        Debug.Log("Minds Focus");
-    }
-}
-
-public class Test1 : Upgrade
-{
-    private void Start()
-    {
+        upgradeName = "Health Upgrade";
         rarity = 100;
-        upgradeName = "Test 1";
+        description = "Increase health by 10";
+        level = 1;
     }
 
-    public override void Use()
+    public override void Equip()
     {
-        Debug.Log("Test 1");
+        GameObject.Find("Player").GetComponent<PlayerHealth>().startMHealth += 10;
+        PlayerHealth.PHealth = GameObject.Find("Player").GetComponent<PlayerHealth>().startMHealth;
     }
-}
 
-public class Test2 : Upgrade
-{
-    private void Start()
+    public override void LevelUp()
     {
-        upgradeName = "Test 2";
-        rarity = 100;
-
-    }
-    public override void Use()
-    {
-        Debug.Log("Test 2");
+        GameObject.Find("Player").GetComponent<PlayerHealth>().startMHealth += 10;
+        level++;
     }
 }
 
-public class Test3 : Upgrade
+public class SlashAttack : Upgrade
 {
     private void Start()
     {
-        upgradeName = "Test 3";
+        upgradeName = "Slash Attack";
         rarity = 100;
-
+        description = "Send a 360 slash around the player hurting nearby enemies";
+        level = 1;
     }
-    public override void Use()
+
+    public override void LevelUp()
     {
-        Debug.Log("Test 3");
+        GetComponent<CircleCollider2D>().radius += 1;
+    }
+}
+
+public class Upgrade2 : Upgrade
+{
+    private void Start()
+    {
+        upgradeName = "test2";
+        rarity = 100;
+        description = "test2";
+        level = 1;
     }
 }

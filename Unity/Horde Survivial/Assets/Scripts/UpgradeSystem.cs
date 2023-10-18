@@ -16,11 +16,11 @@ public class UpgradeSystem : MonoBehaviour
     {
         player = GameObject.Find("Player");
 
-        upgrades.Add(player.AddComponent<BreathOfTheWild>());
-        upgrades.Add(player.AddComponent<MindsFocus>());
-        upgrades.Add(player.AddComponent<Test1>());
-        upgrades.Add(player.AddComponent<Test2>());
-        upgrades.Add(player.AddComponent<Test3>());
+        upgrades.Add(player.AddComponent<HealthUpgrade>());
+        upgrades.Add(player.AddComponent<Upgrade2>());
+
+        //already equipped on spawn
+        currentUpgrades.Add(player.AddComponent<SlashAttack>());
     }
 
     // Update is called once per frame
@@ -41,14 +41,22 @@ public class UpgradeSystem : MonoBehaviour
 
         //Make it so it doesnt choose the same 
         int rarity = Random.Range(0, 100);
-        upgradeSlots[0].GetComponent<UpgradesPanel>().ShowUpgrade(ChooseUpgrade(rarity));
+        List<Upgrade> slotUpgrades = ChooseUpgrade(rarity);
 
+        if(slotUpgrades[0])
+        {
+            upgradeSlots[0].GetComponent<UpgradesPanel>().ShowUpgrade(slotUpgrades[0]);
+        }
+        
+        if(slotUpgrades[1])
+        {
+            upgradeSlots[1].GetComponent<UpgradesPanel>().ShowUpgrade(slotUpgrades[1]);
+        }
 
-        upgradeSlots[1].GetComponent<UpgradesPanel>().ShowUpgrade(ChooseUpgrade(rarity));
-
-
-        upgradeSlots[2].GetComponent<UpgradesPanel>().ShowUpgrade(ChooseUpgrade(rarity));
-
+        if(slotUpgrades[2])
+        {
+            upgradeSlots[2].GetComponent<UpgradesPanel>().ShowUpgrade(slotUpgrades[2]);
+        }
     }
 
     public void ApplyUpgrade(Upgrade upgrade)
@@ -56,15 +64,17 @@ public class UpgradeSystem : MonoBehaviour
         if(!currentUpgrades.Contains(upgrade))
         {
             currentUpgrades.Add(upgrade);
+            upgrade.Equip();
         } else
         {
             currentUpgrades.Find(upgrade => upgrade).LevelUp();
         }
     }
 
-    Upgrade ChooseUpgrade(int rarity)
+    List<Upgrade> ChooseUpgrade(int rarity)
     {
         List<Upgrade> possibleUpgrades = new List<Upgrade>();
+        List<Upgrade> sentUpgrades = new List<Upgrade>();
 
         foreach (Upgrade u in upgrades)
         {
@@ -74,13 +84,25 @@ public class UpgradeSystem : MonoBehaviour
             }
         }
 
-        if(possibleUpgrades.Count > 0)
+        foreach (Upgrade u in currentUpgrades)
         {
-            Upgrade upg = possibleUpgrades[Random.Range(0, possibleUpgrades.Count)];
-            return upg;
+            if (rarity <= u.rarity)
+            {
+                possibleUpgrades.Add(u);
+            }
         }
 
-        return null;
+        if (possibleUpgrades.Count > 0)
+        {
+            for(int i = 0; i < 3; i++)
+            {
+                int random = Random.Range(0, possibleUpgrades.Count);
+                sentUpgrades.Add(possibleUpgrades[random]);
+                possibleUpgrades.Remove(possibleUpgrades[random]);
+            }
+        }
+
+        return sentUpgrades;
     }
 
     public void ClosePanel()
