@@ -17,6 +17,8 @@ public class EnemyChase : MonoBehaviour
     public Transform XpSpawnPoint;
     public GameObject Blood;
 
+    private Rigidbody2D rb;
+
     //public GameObject scoreText;
 
 
@@ -25,7 +27,9 @@ public class EnemyChase : MonoBehaviour
     {
         EnemyHealth = startEnemyHealth;
         player = GameObject.Find("Player");
-        speed = 3;
+        speed = 1.7f;
+
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -45,7 +49,8 @@ public class EnemyChase : MonoBehaviour
         Vector2 direction = player.transform.position - transform.position;
         direction.Normalize();
 
-        transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+        Vector2 moveTowardsPos = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+        rb.MovePosition(moveTowardsPos * speed);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -61,7 +66,7 @@ public class EnemyChase : MonoBehaviour
     {
         EnemyHealth -= dmg;
         Vector3 dir = -(player.transform.position - transform.position);
-        GetComponent<Rigidbody2D>().AddForce(dir * 1000);
+        GetComponent<Rigidbody2D>().AddForce(dir * 100, ForceMode2D.Impulse);
     }
 
 }

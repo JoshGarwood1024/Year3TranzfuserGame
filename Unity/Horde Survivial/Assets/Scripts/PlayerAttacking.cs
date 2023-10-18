@@ -42,7 +42,7 @@ public class PlayerAttacking : MonoBehaviour
         foreach (GameObject e in attackRadius)
         {
             //replace with (Weapon.damage)
-            e.GetComponent<EnemyChase>().Hurt(30);
+            e.GetComponent<EnemyChase>().Hurt(10);
             
         }
 
