@@ -20,14 +20,17 @@ public class CollectableXP : MonoBehaviour
     }
 
 
-    void OnTriggerEnter2D(Collider2D hitinfo)
-    {
-        LevelSystem levelSystem = hitinfo.GetComponent<LevelSystem>();
-        if (levelSystem != null)
-        {
-            levelSystem.GainExperienceFlatRate(20);
-            Destroy(gameObject);
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            LevelSystem levelSystem = collision.gameObject.GetComponent<LevelSystem>();
+            if (levelSystem != null)
+            {
+                levelSystem.GainExperienceFlatRate(20);
+                Destroy(gameObject);
+            }
         }
 
     }

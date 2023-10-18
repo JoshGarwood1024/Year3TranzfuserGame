@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    private float spawnTime = 1.5f;
+    public float spawnTime = 4f;
 
-    private float currentSpawnTime = 1.5f;
+    private float currentSpawnTime;
 
     public List<GameObject> easyEnemies, midEnemies, hardEnemies;
 
@@ -18,7 +18,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void Start()
     {
-        int enemyCount = easyEnemies.Count < 3 ? easyEnemies.Count : 3;
+        int enemyCount = easyEnemies.Count < 2 ? easyEnemies.Count : 2;
 
         for(int i = 0; i < enemyCount; i++)
         {
@@ -26,6 +26,8 @@ public class EnemySpawner : MonoBehaviour
         }
 
         player = GameObject.FindWithTag("Player");
+
+        currentSpawnTime = spawnTime;
     }
 
     // Update is called once per frame
@@ -49,7 +51,6 @@ public class EnemySpawner : MonoBehaviour
     {
         if (player.GetComponent<LevelSystem>().level % 2 == 0)
         {
-            Debug.Log("TESTITNGSNGS");
             if (currentSpawnTime > 0.7f)
             {
                 currentSpawnTime -= 0.1f;

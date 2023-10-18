@@ -9,33 +9,13 @@ public class Bullet : MonoBehaviour
 
     private float time = 0.0f;
 
-     void OnTriggerEnter2D(Collider2D hitinfo)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        EnemyChase enemyChase = hitinfo.GetComponent<EnemyChase>();
-        if (enemyChase != null)
+        if(collision.gameObject.tag == "Enemy")
         {
-            enemyChase.EnemyHealth -= Damage;
+            collision.gameObject.GetComponent<EnemyChase>().Hurt(Damage);
             Destroy(gameObject);
-
         }
-
-   // void OnCollisionEnter2D(Collision collision)
-       // {
-          //  if (collision.gameObject.tag == "Enemy")
-         //   {
-               // GameObject scoretxt = Instantiate(scoreText, Camera.main.WorldToScreenPoint(collision.transform.position), Quaternion.identity, GameObject.Find("Canvas").transform);
-               // scoretxt.transform.SetSiblingIndex(0);
-               // ScoreScript.scoreValue += 1;
-
-                //EnemyChase.EnemyHealth -= Damage;
-                //Destroy(collision.gameObject);
-
-                //Destroy(gameObject);
-           //}
-
-        //}
-       
-        
     }
 
 

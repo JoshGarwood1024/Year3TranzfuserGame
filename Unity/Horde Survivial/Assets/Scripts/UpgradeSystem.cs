@@ -17,10 +17,12 @@ public class UpgradeSystem : MonoBehaviour
         player = GameObject.Find("Player");
 
         upgrades.Add(player.AddComponent<HealthUpgrade>());
-        upgrades.Add(player.AddComponent<Upgrade2>());
+        upgrades.Add(player.AddComponent<DamageUpgrade>());
+        upgrades.Add(player.AddComponent<RangeAttack>());
+        upgrades.Add(player.AddComponent<SlashAttack>());
 
-        //already equipped on spawn
-        currentUpgrades.Add(player.AddComponent<SlashAttack>());
+        //starting item
+        ApplyUpgrade(player.GetComponent<SlashAttack>());
     }
 
     // Update is called once per frame
@@ -61,13 +63,21 @@ public class UpgradeSystem : MonoBehaviour
 
     public void ApplyUpgrade(Upgrade upgrade)
     {
-        if(!currentUpgrades.Contains(upgrade))
+        if (!currentUpgrades.Contains(upgrade))
         {
             currentUpgrades.Add(upgrade);
+            upgrades.Remove(upgrade);
             upgrade.Equip();
+            
         } else
         {
+            Debug.Log("TEST2" + upgrade.upgradeName);
             currentUpgrades.Find(upgrade => upgrade).LevelUp();
+            if (upgrade.level >= 5)
+            {
+                currentUpgrades.Remove(upgrade); //max level
+            }
+            
         }
     }
 

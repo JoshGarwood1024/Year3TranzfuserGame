@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAttacking : MonoBehaviour
 {
-    List<GameObject> attackRadius = new List<GameObject>();
+    public List<GameObject> attackRadius = new List<GameObject>();
     //List<Weapon> currentWeapons;
 
     public GameObject slashPrefab;
@@ -12,6 +12,10 @@ public class PlayerAttacking : MonoBehaviour
     //will be based on weapon reset time
     float attackTime = 1.5f;
     float timer;
+
+    public float damage = 25;
+
+    public bool active;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +26,7 @@ public class PlayerAttacking : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(timer <= 0)
+        if(timer <= 0 && active)
         {
             Attack();
             timer = attackTime;
@@ -32,17 +36,23 @@ public class PlayerAttacking : MonoBehaviour
         }
     }
 
+    public void EnemyDied(GameObject e)
+    {
+        if(attackRadius.Contains(e))
+        {
+            attackRadius.Remove(e);
+        }
+    }
+
     public void Attack()
     {
-        Debug.Log("Attack");
-
         GameObject slash = Instantiate(slashPrefab, transform.position, Quaternion.identity, transform);
         slash.transform.localScale = slash.transform.localScale * (2 * GetComponent<CircleCollider2D>().radius);
 
         foreach (GameObject e in attackRadius)
         {
             //replace with (Weapon.damage)
-            e.GetComponent<EnemyChase>().Hurt(10);
+            e.GetComponent<EnemyChase>().Hurt(damage);
             
         }
 
@@ -50,7 +60,7 @@ public class PlayerAttacking : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Enemy")
+        if(collision.gameObject.tag == "Enemy" && Mathf.Abs(Vector2.Distance(collision.gameObject.transform.position,transform.position)) < 2 * GetComponent<CircleCollider2D>().radius)
         {
             attackRadius.Add(collision.gameObject);
         }

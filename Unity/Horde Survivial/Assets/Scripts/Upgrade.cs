@@ -7,10 +7,13 @@ public abstract class Upgrade : MonoBehaviour
 
     public string upgradeName { get; set; }
     public float rarity { get; set; }
-    public string description { get; set; }
+    public string baseDescription { get; set; }
+    public string equippedDescription { get; set; }
     public int level { get; set; }
 
-    public virtual void Equip() { }
+    public virtual void Equip() {
+        level++;
+    }
     public virtual void Use() { }
 
     public virtual void GetLevelUpgrade() { }
@@ -18,13 +21,13 @@ public abstract class Upgrade : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(upgradeName + ": " + level);
     }
 }
 
@@ -34,19 +37,21 @@ public class HealthUpgrade : Upgrade
     {
         upgradeName = "Health Upgrade";
         rarity = 100;
-        description = "Increase health by 10";
-        level = 1;
+        baseDescription = "Increase health by 5";
+        equippedDescription = "Increase health by 5";
+        level = 0;
     }
 
     public override void Equip()
     {
+        base.Equip();
         GameObject.Find("Player").GetComponent<PlayerHealth>().startMHealth += 10;
         PlayerHealth.PHealth = GameObject.Find("Player").GetComponent<PlayerHealth>().startMHealth;
     }
 
     public override void LevelUp()
     {
-        GameObject.Find("Player").GetComponent<PlayerHealth>().startMHealth += 10;
+        GameObject.Find("Player").GetComponent<PlayerHealth>().startMHealth += 5;
         level++;
     }
 }
@@ -57,23 +62,67 @@ public class SlashAttack : Upgrade
     {
         upgradeName = "Slash Attack";
         rarity = 100;
-        description = "Send a 360 slash around the player hurting nearby enemies";
-        level = 1;
+        baseDescription = "Send a 360 slash around the player hurting nearby enemies";
+        equippedDescription = "Increase radius of slash";
+    }
+
+    public override void Equip()
+    {
+        base.Equip();
+        GameObject.Find("Player").GetComponent<PlayerAttacking>().active = true;
     }
 
     public override void LevelUp()
     {
-        GetComponent<CircleCollider2D>().radius += 1;
+        GetComponent<CircleCollider2D>().radius += 0.6f;
+        level++;
     }
 }
 
-public class Upgrade2 : Upgrade
+public class DamageUpgrade : Upgrade
 {
     private void Start()
     {
-        upgradeName = "test2";
+        upgradeName = "Damage Buff";
         rarity = 100;
-        description = "test2";
-        level = 1;
+        baseDescription = "Increase your damage by 2";
+        equippedDescription = "Increase your damage by 2";
+        level = 0;
+    }
+
+    public override void Equip()
+    {
+        base.Equip();
+        GameObject.Find("Player").GetComponent<PlayerAttacking>().damage += 2;
+    }
+
+    public override void LevelUp()
+    {
+        GameObject.Find("Player").GetComponent<PlayerAttacking>().damage += 2;
+        level++;
+    }
+}
+
+public class RangeAttack : Upgrade
+{
+    private void Start()
+    {
+        upgradeName = "Sword Projectile";
+        baseDescription = "Launches a sword at a nearby player";
+        equippedDescription = "Reduce cooldown";
+        rarity = 80;
+        level = 0;
+    }
+
+    public override void Equip()
+    {
+        base.Equip();
+        GameObject.Find("Player").GetComponent<Projectile>().active = true;
+    }
+
+    public override void LevelUp()
+    {
+        GameObject.Find("Player").GetComponent<Projectile>().cooldown -= 0.15f;
+        level++;
     }
 }

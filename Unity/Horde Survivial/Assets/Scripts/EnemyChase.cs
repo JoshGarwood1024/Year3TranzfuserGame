@@ -27,7 +27,7 @@ public class EnemyChase : MonoBehaviour
     {
         EnemyHealth = startEnemyHealth;
         player = GameObject.Find("Player");
-        speed = 1.7f;
+        speed = 8f;
 
         rb = GetComponent<Rigidbody2D>();
     }
@@ -41,6 +41,10 @@ public class EnemyChase : MonoBehaviour
             xpgo.GetComponent<Rigidbody2D>().AddRelativeForce(Random.insideUnitCircle * 400);
             GameObject blood = Instantiate(Blood, XpSpawnPoint.position, XpSpawnPoint.rotation);
             ScoreScript.scoreValue += 1;
+
+            player.GetComponent<PlayerAttacking>().EnemyDied(gameObject);
+            player.GetComponent<Projectile>().EnemyDied(gameObject);
+
             Destroy(this.gameObject);
         }
 
@@ -50,7 +54,7 @@ public class EnemyChase : MonoBehaviour
         direction.Normalize();
 
         Vector2 moveTowardsPos = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
-        rb.MovePosition(moveTowardsPos * speed);
+        rb.MovePosition(moveTowardsPos);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
