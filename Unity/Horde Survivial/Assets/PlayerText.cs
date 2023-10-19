@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerText : MonoBehaviour
 {
-
+    public GameObject bottomText;
+    public GameObject topText;
     GameObject player;
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,8 @@ public class PlayerText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = player.transform.position + new Vector3(0, 1);
+
+        topText.transform.position = player.transform.position + new Vector3(0, 1);
+        bottomText.transform.position = player.transform.position + new Vector3(0, -1);
     }
 }
