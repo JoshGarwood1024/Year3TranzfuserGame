@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class EnemyChase : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class EnemyChase : MonoBehaviour
     public GameObject XP;
     public Transform XpSpawnPoint;
     public GameObject Blood;
+
+    public GameObject damageTextPrefab;
 
     private Rigidbody2D rb;
 
@@ -68,9 +71,15 @@ public class EnemyChase : MonoBehaviour
 
     public void Hurt(float dmg)
     {
+/*        Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
+        GameObject dmgTxt = Instantiate(damageTextPrefab, pos, Quaternion.identity, GameObject.Find("Canvas").transform);
+        dmgTxt.GetComponent<TextMeshProUGUI>().text = dmg.ToString();*/
+
         EnemyHealth -= dmg;
         Vector3 dir = -(player.transform.position - transform.position);
         GetComponent<Rigidbody2D>().AddForce(dir * 100, ForceMode2D.Impulse);
+
+        
     }
 
 }

@@ -32,5 +32,10 @@ public class Weapon : MonoBehaviour
     {
         currentCooldown = cooldown;
     }
+
+    public virtual void Activate()
+    {
+
+    }
 }
 

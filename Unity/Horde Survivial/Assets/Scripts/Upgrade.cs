@@ -30,7 +30,7 @@ public abstract class Upgrade : MonoBehaviour
         Debug.Log(upgradeName + ": " + level);
     }
 }
-
+//-----------UPGRADES-------------
 public class HealthUpgrade : Upgrade
 {
     private void Start()
@@ -55,30 +55,6 @@ public class HealthUpgrade : Upgrade
         level++;
     }
 }
-
-public class SlashAttack : Upgrade
-{
-    private void Start()
-    {
-        upgradeName = "Slash Attack";
-        rarity = 100;
-        baseDescription = "Send a 360 slash around the player hurting nearby enemies";
-        equippedDescription = "Increase radius of slash";
-    }
-
-    public override void Equip()
-    {
-        base.Equip();
-        GameObject.Find("Player").GetComponent<PlayerAttacking>().active = true;
-    }
-
-    public override void LevelUp()
-    {
-        GetComponent<CircleCollider2D>().radius += 0.6f;
-        level++;
-    }
-}
-
 public class DamageUpgrade : Upgrade
 {
     private void Start()
@@ -102,6 +78,31 @@ public class DamageUpgrade : Upgrade
         level++;
     }
 }
+
+//----------------WEAPONS-------------------
+public class SlashAttack : Upgrade
+{
+    private void Start()
+    {
+        upgradeName = "Slash Attack";
+        rarity = 100;
+        baseDescription = "Send a 360 slash around the player hurting nearby enemies";
+        equippedDescription = "Increase radius of slash";
+    }
+
+    public override void Equip()
+    {
+        base.Equip();
+        GameObject.Find("Player").GetComponent<PlayerAttacking>().active = true;
+    }
+
+    public override void LevelUp()
+    {
+        GetComponent<CircleCollider2D>().radius += 0.6f;
+        level++;
+    }
+}
+
 
 public class RangeAttack : Upgrade
 {

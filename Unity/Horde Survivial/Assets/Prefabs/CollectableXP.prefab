@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8139496964053534401}
   - component: {fileID: 2861547336104278918}
   - component: {fileID: -2552585288174019093}
+  - component: {fileID: 4700315269945627239}
   m_Layer: 11
   m_Name: CollectableXP
   m_TagString: Untagged
@@ -73,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -59249501
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 274106dc5a8a2ad4aa16213d63812435, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -161,3 +162,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ca4ea868a85e934fa373042c9127aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4700315269945627239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673465106986425479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6cfd58b041efc3469b2f8f1377c97f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FadeOutTime: 8

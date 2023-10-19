@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class EnemySpawner : MonoBehaviour
 {
     public float spawnTime = 4f;
 
-    private float currentSpawnTime;
+    private float currentSpawnTime, time;
 
     public List<GameObject> easyEnemies, midEnemies, hardEnemies;
 
@@ -15,6 +16,8 @@ public class EnemySpawner : MonoBehaviour
     private GameObject player;
 
     public List<GameObject> spawners;
+
+    public AnimationCurve spawnCurve;
 
     private void Start()
     {
@@ -27,7 +30,7 @@ public class EnemySpawner : MonoBehaviour
 
         player = GameObject.FindWithTag("Player");
 
-        currentSpawnTime = spawnTime;
+        spawnTime = spawnCurve.Evaluate(Time.time);
     }
 
     // Update is called once per frame
@@ -41,7 +44,7 @@ public class EnemySpawner : MonoBehaviour
             {
                 Vector3 spawnPos = (new Vector3(Random.insideUnitCircle.x, Random.insideUnitCircle.y, 0) * 10) + spawners[i].transform.position;
                 GameObject enemyTemp = Instantiate(enemyPool[Random.Range(0, enemyPool.Count)], spawnPos, Quaternion.identity);
-                spawnTime = currentSpawnTime;
+                spawnTime = spawnCurve.Evaluate(Time.time);
             }
 
         }

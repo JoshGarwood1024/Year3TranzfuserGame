@@ -5,11 +5,30 @@ using TMPro;
 
 public class PointText : MonoBehaviour
 {
+    public float FadeOutTime;
+    private float timer;
+
+    private TextMeshProUGUI text;
+
+    private void Start()
+    {
+        timer = FadeOutTime;
+        text = GetComponent<TextMeshProUGUI>();
+    }
+
     private void Update()
     {
-        if(GetComponent<TextMeshProUGUI>().color.a == 0)
+        transform.position += new Vector3(0.1f, 0.2f, 0);
+
+        if (timer <= 0)
         {
-            Destroy(gameObject.transform.parent.gameObject);
+            Destroy(gameObject);
+        }
+        else
+        {
+            Color c = new Color(text.color.r, text.color.g, text.color.b, timer / FadeOutTime);
+            text.color = c;
+            timer -= Time.deltaTime;
         }
     }
 }
