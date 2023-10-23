@@ -22,7 +22,7 @@ public class EnemyChase : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    //public GameObject scoreText;
+    private bool moving;
 
 
     // Start is called before the first frame update
@@ -31,6 +31,7 @@ public class EnemyChase : MonoBehaviour
         EnemyHealth = startEnemyHealth;
         player = GameObject.Find("Player");
         speed = 8f;
+        moving = true;
 
         rb = GetComponent<Rigidbody2D>();
     }
@@ -52,12 +53,15 @@ public class EnemyChase : MonoBehaviour
         }
 
 
-        distance = Vector2.Distance(transform.position, player.transform.position);
-        Vector2 direction = player.transform.position - transform.position;
-        direction.Normalize();
+        if(moving)
+        {
+            distance = Vector2.Distance(transform.position, player.transform.position);
+            Vector2 direction = player.transform.position - transform.position;
+            direction.Normalize();
 
-        Vector2 moveTowardsPos = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
-        rb.MovePosition(moveTowardsPos);
+            Vector2 moveTowardsPos = Vector2.MoveTowards(this.transform.position, new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z), speed * Time.deltaTime);
+            rb.MovePosition(moveTowardsPos);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -69,17 +73,26 @@ public class EnemyChase : MonoBehaviour
         }
     }
 
+
+
     public void Hurt(float dmg)
     {
-/*        Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
-        GameObject dmgTxt = Instantiate(damageTextPrefab, pos, Quaternion.identity, GameObject.Find("Canvas").transform);
-        dmgTxt.GetComponent<TextMeshProUGUI>().text = dmg.ToString();*/
+        //Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
+        GameObject dmgTxt = Instantiate(damageTextPrefab, transform.position, Quaternion.identity, GameObject.Find("WorldSpaceCanvas").transform);
+        dmgTxt.GetComponent<TextMeshProUGUI>().text = dmg.ToString();
+
+        moving = false;
 
         EnemyHealth -= dmg;
         Vector3 dir = -(player.transform.position - transform.position);
-        GetComponent<Rigidbody2D>().AddForce(dir * 100, ForceMode2D.Impulse);
+        GetComponent<Rigidbody2D>().AddForce(dir * 1000, ForceMode2D.Impulse);
 
-        
+        StartCoroutine(Push());
     }
 
+    IEnumerator Push()
+    {
+        yield return new WaitForSeconds(0.5f);
+        moving = true;
+    }
 }

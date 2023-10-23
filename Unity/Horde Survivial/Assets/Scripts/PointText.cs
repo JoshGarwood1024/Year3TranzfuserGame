@@ -18,7 +18,7 @@ public class PointText : MonoBehaviour
 
     private void Update()
     {
-        transform.position += new Vector3(0.1f, 0.2f, 0);
+        transform.position += new Vector3(0.01f, 0.02f, 0);
 
         if (timer <= 0)
         {

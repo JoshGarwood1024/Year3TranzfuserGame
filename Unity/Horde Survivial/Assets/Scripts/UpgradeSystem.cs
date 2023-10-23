@@ -19,10 +19,12 @@ public class UpgradeSystem : MonoBehaviour
         upgrades.Add(player.AddComponent<HealthUpgrade>());
         upgrades.Add(player.AddComponent<DamageUpgrade>());
         upgrades.Add(player.AddComponent<RangeAttack>());
-        upgrades.Add(player.AddComponent<SlashAttack>());
+        upgrades.Add(player.AddComponent<BreathingUpgrade>());
+        upgrades.Add(player.AddComponent<MeditationUpgrade>());
 
         //starting item
-        ApplyUpgrade(player.GetComponent<SlashAttack>());
+       // ApplyUpgrade(player.GetComponent<MeditationUpgrade>());
+        ApplyUpgrade(player.GetComponent<BreathingUpgrade>());
     }
 
     // Update is called once per frame

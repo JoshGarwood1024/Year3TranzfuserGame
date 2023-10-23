@@ -80,14 +80,14 @@ public class DamageUpgrade : Upgrade
 }
 
 //----------------WEAPONS-------------------
-public class SlashAttack : Upgrade
+public class BreathingUpgrade : Upgrade
 {
     private void Start()
     {
-        upgradeName = "Slash Attack";
+        upgradeName = "Breathing";
         rarity = 100;
-        baseDescription = "Send a 360 slash around the player hurting nearby enemies";
-        equippedDescription = "Increase radius of slash";
+        baseDescription = "Send a 360 air wave around the player, hurting nearby enemies";
+        equippedDescription = "Increase radius";
     }
 
     public override void Equip()
@@ -124,6 +124,30 @@ public class RangeAttack : Upgrade
     public override void LevelUp()
     {
         GameObject.Find("Player").GetComponent<Projectile>().cooldown -= 0.15f;
+        level++;
+    }
+}
+
+public class MeditationUpgrade : Upgrade
+{
+    private void Start()
+    {
+        upgradeName = "Meditation";
+        baseDescription = "SpawnsTrees around the player damaging enemies";
+        equippedDescription = "damage buff";
+        rarity = 100;
+        level = 0;
+    }
+
+    public override void Equip()
+    {
+        base.Equip();
+        GameObject.Find("Player").GetComponent<Meditation>().active = true;
+    }
+
+    public override void LevelUp()
+    {
+        GameObject.Find("Player").GetComponent<Meditation>().cooldown -= 0.15f;
         level++;
     }
 }

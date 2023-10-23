@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class CellularLevelGenerator : MonoBehaviour
+public class MapGeneration : MonoBehaviour
 {
     int[,] generatedMap;
 
@@ -135,14 +135,6 @@ public class CellularLevelGenerator : MonoBehaviour
                     if (generatedMap[x, y] == 1)
                     {
                         GetComponent<Tilemap>().SetTile(gridPos, tile);
-
-                        if(Random.Range(0,100) < 40)
-                        {
-                            if(x < 5 || x > 55 || y < 5 || y > 35)
-                            {
-                                    backgroundTileMap.SetTile(gridPos, trees[Random.Range(0, trees.Count)]);
-                            }
-                        }
                     } else
                     {                    
                         backgroundTileMap.SetTile(gridPos, BGTile);
