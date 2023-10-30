@@ -6504,6 +6504,8 @@ GameObject:
   - component: {fileID: 1753964920}
   - component: {fileID: 1753964921}
   - component: {fileID: 1753964922}
+  - component: {fileID: 1753964923}
+  - component: {fileID: 1753964924}
   m_Layer: 0
   m_Name: WeaponManager
   m_TagString: Untagged
@@ -6571,8 +6573,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WeaponPrefab: {fileID: 6284243862660515516, guid: c07a7ff9db3e452409089a24d63ddf82, type: 3}
   WeaponData: {fileID: 11400000, guid: 4ce9b44f2e31e5049a8be43aeeb052b3, type: 2}
-  active: 1
+  active: 0
   Radius: 8
+--- !u!114 &1753964923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753964918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d4045a88551da44b652b05706eda8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeaponPrefab: {fileID: 2645621687276874412, guid: ae5bb0f925ae89449aba73b870483897, type: 3}
+  WeaponData: {fileID: 11400000, guid: e53ca8c6b0fafd345809c6d993368e2f, type: 2}
+  active: 0
+--- !u!114 &1753964924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753964918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 639e83831dcee1547b36c725005575a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeaponPrefab: {fileID: 5542947557415549423, guid: 960cc5f28e629cf4bad924792d81344e, type: 3}
+  WeaponData: {fileID: 11400000, guid: ef6803c752f3e6741b4e777b36d68c51, type: 2}
+  active: 1
 --- !u!1 &1800010470
 GameObject:
   m_ObjectHideFlags: 0

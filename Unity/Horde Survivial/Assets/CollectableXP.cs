@@ -5,21 +5,35 @@ using UnityEngine.UI;
 
 public class CollectableXP : MonoBehaviour
 {
+    Vector3 targetPos;
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-     
+        targetPos = transform.position;
+    }
+    private void Update()
+    {
+        if(transform.position != targetPos)
+        {
+            transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-     
+        if(collision.CompareTag("Player"))
+        {
+            targetPos = collision.transform.position;
+        }
     }
 
-
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            targetPos = transform.position;
+        }
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

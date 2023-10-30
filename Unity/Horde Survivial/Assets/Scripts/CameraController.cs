@@ -10,6 +10,12 @@ public class CameraController : MonoBehaviour
     public float damping;
 
     private Vector3 velocity = Vector3.zero;
+
+    private void Start()
+    {
+        transform.position = target.position + offset;
+    }
+
     private void FixedUpdate()
     {
         Vector3 movePosition = target.position + offset;
