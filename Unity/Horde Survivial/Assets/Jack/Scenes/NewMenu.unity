@@ -1764,7 +1764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5457adf6b58b5af4c84195b38da1e5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Daniels Scene
+  sceneToLoad: Character and pet Select
 --- !u!61 &480210820
 BoxCollider2D:
   m_ObjectHideFlags: 0
