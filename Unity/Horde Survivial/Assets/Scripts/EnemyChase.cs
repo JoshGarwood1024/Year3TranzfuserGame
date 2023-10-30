@@ -46,9 +46,6 @@ public class EnemyChase : MonoBehaviour
             GameObject blood = Instantiate(Blood, XpSpawnPoint.position, XpSpawnPoint.rotation);
             ScoreScript.scoreValue += 1;
 
-            player.GetComponent<PlayerAttacking>().EnemyDied(gameObject);
-            player.GetComponent<Projectile>().EnemyDied(gameObject);
-
             Destroy(this.gameObject);
         }
 

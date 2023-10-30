@@ -18,13 +18,7 @@ public class UpgradeSystem : MonoBehaviour
 
         upgrades.Add(player.AddComponent<HealthUpgrade>());
         upgrades.Add(player.AddComponent<DamageUpgrade>());
-        upgrades.Add(player.AddComponent<RangeAttack>());
-        upgrades.Add(player.AddComponent<BreathingUpgrade>());
-        upgrades.Add(player.AddComponent<MeditationUpgrade>());
-
-        //starting item
-       // ApplyUpgrade(player.GetComponent<MeditationUpgrade>());
-        ApplyUpgrade(player.GetComponent<BreathingUpgrade>());
+        upgrades.Add(player.AddComponent<DamageUpgrade>());
     }
 
     // Update is called once per frame
@@ -73,7 +67,6 @@ public class UpgradeSystem : MonoBehaviour
             
         } else
         {
-            Debug.Log("TEST2" + upgrade.upgradeName);
             currentUpgrades.Find(upgrade => upgrade).LevelUp();
             if (upgrade.level >= 5)
             {

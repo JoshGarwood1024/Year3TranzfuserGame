@@ -5,9 +5,8 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
 
-    public GameObject prefab;
-    public float damage;
-    public float cooldown;
+    public GameObject WeaponPrefab;
+    public WeaponSO WeaponData;
 
     public bool active;
     float currentCooldown;
@@ -15,7 +14,7 @@ public class Weapon : MonoBehaviour
     // Start is called before the first frame update
     protected virtual void Start()
     {
-        currentCooldown = cooldown;
+        currentCooldown = WeaponData.Cooldown;
     }
 
     // Update is called once per frame
@@ -30,12 +29,18 @@ public class Weapon : MonoBehaviour
 
     protected virtual void Attack()
     {
-        currentCooldown = cooldown;
+        currentCooldown = WeaponData.Cooldown;
     }
 
-    public virtual void Activate()
+    protected virtual void Upgrade() 
     {
+        if(WeaponData.Level < 5) WeaponData.Level++;
+    }
 
+    protected virtual void Activate()
+    {
+        active = true;
+        WeaponData.Level = 1;
     }
 }
 

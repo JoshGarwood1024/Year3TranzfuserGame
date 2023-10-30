@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 7473557223412158751}
   - component: {fileID: 5884907597454271016}
   - component: {fileID: 2228279242986179393}
-  - component: {fileID: 7535245690559069712}
-  - component: {fileID: 4936143344958121130}
+  - component: {fileID: 2555807032875635288}
+  - component: {fileID: -6125905125485259048}
   m_Layer: 6
-  m_Name: Bullet
+  m_Name: Balloon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 6284243862660515516}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.8359756, y: -0.45608598, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: -59249501
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6273726b3d5bd0442af418a93dc6f52f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 46320bff8f8f89646b1f2ba6955bab37, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -114,8 +114,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &7535245690559069712
-CircleCollider2D:
+--- !u!60 &2555807032875635288
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -147,9 +147,60 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.49
---- !u!114 &4936143344958121130
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.1253717, y: 0.4726827}
+      - {x: 0.061149716, y: 0.50326777}
+      - {x: -0.13372374, y: 0.50452}
+      - {x: -0.18878603, y: 0.43911707}
+      - {x: -0.22631454, y: 0.37606537}
+      - {x: -0.22174764, y: 0.15679087}
+      - {x: -0.18796611, y: 0.120126665}
+      - {x: -0.12480974, y: 0.09837191}
+      - {x: -0.12931943, y: 0.030594572}
+      - {x: -0.09539628, y: -0.002932027}
+      - {x: -0.035774827, y: -0.007845685}
+      - {x: -0.06315553, y: -0.12081054}
+      - {x: -0.063856244, y: -0.19167951}
+      - {x: -0.03584659, y: -0.25561842}
+      - {x: -0.0060054064, y: -0.28285238}
+      - {x: -0.005625367, y: -0.33517668}
+      - {x: -0.03359866, y: -0.33910856}
+      - {x: -0.06435132, y: -0.373036}
+      - {x: -0.070979, y: -0.44363028}
+      - {x: -0.030430555, y: -0.47421977}
+      - {x: 0.008829951, y: -0.4731649}
+      - {x: 0.003950715, y: -0.4345963}
+      - {x: -0.027124405, y: -0.42882314}
+      - {x: -0.02649486, y: -0.3779873}
+      - {x: 0.0021033287, y: -0.37706223}
+      - {x: 0.005256057, y: -0.34762534}
+      - {x: 0.036114454, y: -0.3441809}
+      - {x: 0.034469247, y: -0.24879429}
+      - {x: 0.002991438, y: -0.24524257}
+      - {x: 0.0019342899, y: -0.18639186}
+      - {x: -0.026883006, y: -0.18361506}
+      - {x: -0.02703321, y: -0.13031363}
+      - {x: 0.0003349781, y: -0.12856916}
+      - {x: 0.003953457, y: -0.004815519}
+      - {x: 0.062761545, y: -0.0061531663}
+      - {x: 0.095769644, y: 0.028862238}
+      - {x: 0.09536135, y: 0.093309306}
+      - {x: 0.16033399, y: 0.15583761}
+      - {x: 0.19160509, y: 0.21669231}
+      - {x: 0.18885934, y: 0.37513646}
+      - {x: 0.16005492, y: 0.43763646}
+  m_UseDelaunayMesh: 0
+--- !u!114 &-6125905125485259048
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,8 +209,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 6284243862660515516}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d565cd759eee61a48a44d86951e70712, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ca0856562fc03e408f38ae77b107fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 40
-  scoreText: {fileID: 522608984891201515, guid: 87df64ea43bd5d34280c07d7d14f39ee, type: 3}
+  Damage: 0
+  ExplodedSprite: {fileID: 21300000, guid: 202d57b2b6b755140be01891fe7a95f0, type: 3}

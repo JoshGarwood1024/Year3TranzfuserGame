@@ -69,85 +69,10 @@ public class DamageUpgrade : Upgrade
     public override void Equip()
     {
         base.Equip();
-        GameObject.Find("Player").GetComponent<PlayerAttacking>().damage += 2;
     }
 
     public override void LevelUp()
     {
-        GameObject.Find("Player").GetComponent<PlayerAttacking>().damage += 2;
-        level++;
-    }
-}
-
-//----------------WEAPONS-------------------
-public class BreathingUpgrade : Upgrade
-{
-    private void Start()
-    {
-        upgradeName = "Breathing";
-        rarity = 100;
-        baseDescription = "Send a 360 air wave around the player, hurting nearby enemies";
-        equippedDescription = "Increase radius";
-    }
-
-    public override void Equip()
-    {
-        base.Equip();
-        GameObject.Find("Player").GetComponent<PlayerAttacking>().active = true;
-    }
-
-    public override void LevelUp()
-    {
-        GetComponent<CircleCollider2D>().radius += 0.6f;
-        level++;
-    }
-}
-
-
-public class RangeAttack : Upgrade
-{
-    private void Start()
-    {
-        upgradeName = "Sword Projectile";
-        baseDescription = "Launches a sword at a nearby player";
-        equippedDescription = "Reduce cooldown";
-        rarity = 80;
-        level = 0;
-    }
-
-    public override void Equip()
-    {
-        base.Equip();
-        GameObject.Find("Player").GetComponent<Projectile>().active = true;
-    }
-
-    public override void LevelUp()
-    {
-        GameObject.Find("Player").GetComponent<Projectile>().cooldown -= 0.15f;
-        level++;
-    }
-}
-
-public class MeditationUpgrade : Upgrade
-{
-    private void Start()
-    {
-        upgradeName = "Meditation";
-        baseDescription = "SpawnsTrees around the player damaging enemies";
-        equippedDescription = "damage buff";
-        rarity = 100;
-        level = 0;
-    }
-
-    public override void Equip()
-    {
-        base.Equip();
-        GameObject.Find("Player").GetComponent<Meditation>().active = true;
-    }
-
-    public override void LevelUp()
-    {
-        GameObject.Find("Player").GetComponent<Meditation>().cooldown -= 0.15f;
         level++;
     }
 }

@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 2596148709008349759}
   - component: {fileID: 6769274846108484998}
   - component: {fileID: 7595251005432650612}
-  - component: {fileID: -7675471240517505504}
   - component: {fileID: 1437900204506313381}
+  - component: {fileID: 9085913556670058910}
   m_Layer: 0
-  m_Name: TreeWeapon
+  m_Name: MeditationWeaponPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,9 +99,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f0cf3fbdcc7b94fb941f019ee28856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullSize: {x: 3, y: 3, z: 3}
---- !u!70 &-7675471240517505504
-CapsuleCollider2D:
+--- !u!114 &1437900204506313381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4795747764606510335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6cfd58b041efc3469b2f8f1377c97f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FadeOutTime: 3
+--- !u!60 &9085913556670058910
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -132,19 +144,44 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03, y: -0.06}
-  m_Size: {x: 0.5, y: 0.78}
-  m_Direction: 0
---- !u!114 &1437900204506313381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4795747764606510335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6cfd58b041efc3469b2f8f1377c97f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FadeOutTime: 3
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.8125, y: 0.8125}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.041434288, y: 0.3165295}
+      - {x: -0.13968945, y: 0.21662474}
+      - {x: -0.17046261, y: 0.13691211}
+      - {x: -0.22218704, y: 0.13228655}
+      - {x: -0.22262096, y: -0.0024315119}
+      - {x: -0.1649847, y: -0.009504318}
+      - {x: -0.19125175, y: -0.028066635}
+      - {x: -0.19683552, y: -0.094834805}
+      - {x: -0.15760708, y: -0.13262641}
+      - {x: -0.065154076, y: -0.13636315}
+      - {x: -0.066553116, y: -0.21058202}
+      - {x: -0.10134697, y: -0.18354869}
+      - {x: -0.16226196, y: -0.18279326}
+      - {x: -0.19156456, y: -0.2132932}
+      - {x: -0.1938343, y: -0.2545551}
+      - {x: -0.06583214, y: -0.2571069}
+      - {x: -0.06709957, y: -0.30197263}
+      - {x: -0.101820946, y: -0.3059225}
+      - {x: -0.13613605, y: -0.4124049}
+      - {x: 0.12287521, y: -0.40932727}
+      - {x: 0.057551384, y: -0.3013636}
+      - {x: 0.05871296, y: -0.2568661}
+      - {x: 0.1788845, y: -0.24800277}
+      - {x: 0.15504074, y: -0.1858548}
+      - {x: 0.16560364, y: -0.13496244}
+      - {x: 0.2822914, y: 0.00039291382}
+      - {x: 0.28220367, y: 0.09422612}
+      - {x: 0.07363701, y: 0.3226843}
+  m_UseDelaunayMesh: 0

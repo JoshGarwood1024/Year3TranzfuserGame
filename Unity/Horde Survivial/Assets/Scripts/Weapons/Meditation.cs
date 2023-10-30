@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class Meditation : Weapon
 {
-
-    public GameObject treePrefab;
-
     protected override void Start()
     {
         base.Start();   
@@ -32,7 +29,7 @@ public class Meditation : Weapon
         yield return new WaitForSeconds(Random.Range(0.01f, 0.3f));
 
         Vector3 offset = new Vector3(Random.Range(-3, 3), Random.Range(-3, 3));
-        GameObject tree = Instantiate(treePrefab, transform.position + offset, Quaternion.identity);
-        tree.GetComponent<TreeGrowth>().SetDamage(damage);
+        GameObject tree = Instantiate(WeaponPrefab, transform.position + offset, Quaternion.identity);
+        tree.GetComponent<TreeGrowth>().SetDamage(WeaponData.Damage);
     }
 }

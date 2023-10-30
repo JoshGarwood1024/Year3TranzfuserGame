@@ -5,8 +5,14 @@ using UnityEngine;
 public class TreeGrowth : MonoBehaviour
 {
 
-    public Vector3 fullSize;
+    Vector3 fullSize;
     float damage = 0;
+
+    private void Start()
+    {
+        float randomScale = Random.Range(3, 5);
+        fullSize = new Vector3(randomScale, randomScale);
+    }
 
     // Update is called once per frame
     void Update()
