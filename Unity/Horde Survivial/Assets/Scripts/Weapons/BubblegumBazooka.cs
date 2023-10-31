@@ -17,7 +17,7 @@ public class BubblegumBazooka : Weapon
         }
     }
 
-    protected override void Upgrade()
+    public override void Upgrade()
     {
         base.Upgrade();
     }

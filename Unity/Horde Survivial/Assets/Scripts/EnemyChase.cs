@@ -74,6 +74,8 @@ public class EnemyChase : MonoBehaviour
 
     public void Hurt(float dmg)
     {
+        dmg += PlayerData.Instance.DamageBuff;
+
         //Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
         GameObject dmgTxt = Instantiate(damageTextPrefab, transform.position, Quaternion.identity, GameObject.Find("WorldSpaceCanvas").transform);
         dmgTxt.GetComponent<TextMeshProUGUI>().text = dmg.ToString();

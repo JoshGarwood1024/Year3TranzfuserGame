@@ -36,6 +36,7 @@ public class MapGeneration : MonoBehaviour
                 if(generatedMap[x, y] == 1)
                 {
                     player.transform.position = new Vector3(x, y);
+                    Camera.main.transform.position = player.transform.position;
                     break; 
                 }
             }
@@ -123,6 +124,18 @@ public class MapGeneration : MonoBehaviour
 
     void DrawMap()
     {
+        //Draws background
+        for (int _x = -10; _x < width + 10; _x++)
+        {
+            for(int _y = -10; _y < height + 10; _y++)
+            {
+                Vector3 pos = new Vector3(_x + .5f, _y + .5f, 0);
+                Vector3Int gridPos = GetComponent<Tilemap>().WorldToCell(pos);
+
+                backgroundTileMap.SetTile(gridPos, BGTile);
+            }
+        }
+
         if (generatedMap != null)
         {
             for (int x = 0; x < width; x++)
@@ -135,6 +148,7 @@ public class MapGeneration : MonoBehaviour
                     if (generatedMap[x, y] == 1)
                     {
                         GetComponent<Tilemap>().SetTile(gridPos, tile);
+                        backgroundTileMap.SetTile(gridPos, null);
                     } else
                     {                    
                         backgroundTileMap.SetTile(gridPos, BGTile);
@@ -143,4 +157,6 @@ public class MapGeneration : MonoBehaviour
             }
         }
     }
+
+    
 }

@@ -80,9 +80,7 @@ public class LevelSystem : MonoBehaviour
         enemySpawner.GetComponent<EnemySpawner>().LeveledUp(level);
 
         gameObject.GetComponent<CameraShake>().shakeDuration = 0.0f;
-        GameObject.Find("GameManager").GetComponent<UpgradeSystem>().ShowPanel();
-
-        
+        UpgradeManager.Instance.OpenPanel();
     }
     private int CalculateRequiredXP()
     {

@@ -20,7 +20,7 @@ public class Breathing : Weapon
         }
     }
 
-    protected override void Upgrade()
+    public override void Upgrade()
     {
         base.Upgrade();
 

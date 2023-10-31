@@ -32,7 +32,7 @@ public class Weapon : MonoBehaviour
         currentCooldown = WeaponData.Cooldown;
     }
 
-    protected virtual void Upgrade() 
+    public virtual void Upgrade() 
     {
         if(WeaponData.Level < 5) WeaponData.Level++;
     }

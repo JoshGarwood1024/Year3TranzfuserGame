@@ -17,18 +17,10 @@ public abstract class Upgrade : MonoBehaviour
     public virtual void Use() { }
 
     public virtual void GetLevelUpgrade() { }
-    public virtual void LevelUp() { }
-    // Start is called before the first frame update
-    void Start()
-    {
-
+    public virtual void LevelUp() {
+        level++;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        Debug.Log(upgradeName + ": " + level);
-    }
 }
 //-----------UPGRADES-------------
 public class HealthUpgrade : Upgrade
@@ -38,15 +30,14 @@ public class HealthUpgrade : Upgrade
         upgradeName = "Health Upgrade";
         rarity = 100;
         baseDescription = "Increase health by 5";
-        equippedDescription = "Increase health by 5";
+        equippedDescription = baseDescription;
         level = 0;
     }
 
     public override void Equip()
     {
         base.Equip();
-        GameObject.Find("Player").GetComponent<PlayerHealth>().startMHealth += 10;
-        PlayerHealth.PHealth = GameObject.Find("Player").GetComponent<PlayerHealth>().startMHealth;
+        GameObject.Find("Player").GetComponent<PlayerHealth>().startMHealth += 5;
     }
 
     public override void LevelUp()
@@ -69,10 +60,36 @@ public class DamageUpgrade : Upgrade
     public override void Equip()
     {
         base.Equip();
+        PlayerData.Instance.DamageBuff += 2;
     }
 
     public override void LevelUp()
     {
-        level++;
+        PlayerData.Instance.DamageBuff += 2;
     }
 }
+
+//----------WEAPON UPGRADES------------
+public class BalloonBombUpgrade : Upgrade
+{
+    private void Start()
+    {
+        upgradeName = "BalloonBombUpgrade";
+        rarity = 100;
+        baseDescription = "Send an explosive balloon to the nearest enemy";
+        equippedDescription = "Increase damage and balloons sent";
+        level = 0;
+    }
+
+    public override void Equip()
+    {
+        base.Equip();
+        WeaponManager.Instance.gameObject.GetComponent<BalloonBombs>().active = true;
+    }
+
+    public override void LevelUp()
+    {
+        WeaponManager.Instance.gameObject.GetComponent<BalloonBombs>().Upgrade();
+    }
+}
+
