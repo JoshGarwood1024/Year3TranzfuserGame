@@ -24,6 +24,8 @@ public class EnemyChase : MonoBehaviour
 
     private bool moving;
 
+    public GameObject BodyParts;
+
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +45,10 @@ public class EnemyChase : MonoBehaviour
         {
             GameObject xpgo = Instantiate(XP, XpSpawnPoint.position, XpSpawnPoint.rotation);
             xpgo.GetComponent<Rigidbody2D>().AddRelativeForce(Random.insideUnitCircle * 400);
+
+            GameObject bodyPart = Instantiate(BodyParts, XpSpawnPoint.position, XpSpawnPoint.rotation);
+            bodyPart.GetComponent<Rigidbody2D>().AddRelativeForce(Random.insideUnitCircle * 400);
+
             GameObject blood = Instantiate(Blood, XpSpawnPoint.position, XpSpawnPoint.rotation);
             ScoreScript.scoreValue += 1;
 
