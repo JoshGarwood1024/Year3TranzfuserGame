@@ -34,9 +34,9 @@ public class BalloonBombs : Weapon
         }
     }
 
-    public override void Upgrade()
+    public override void Upgrade(int level)
     {
-        base.Upgrade();
+        base.Upgrade(level);
     }
 
 }

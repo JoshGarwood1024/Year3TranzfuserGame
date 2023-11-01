@@ -12,7 +12,7 @@ public abstract class Upgrade : MonoBehaviour
     public int level { get; set; }
 
     public virtual void Equip() {
-        level++;
+        level = 1;
     }
     public virtual void Use() { }
 
@@ -31,7 +31,6 @@ public class HealthUpgrade : Upgrade
         rarity = 100;
         baseDescription = "Increase health by 5";
         equippedDescription = baseDescription;
-        level = 0;
     }
 
     public override void Equip()
@@ -42,8 +41,8 @@ public class HealthUpgrade : Upgrade
 
     public override void LevelUp()
     {
+        base.LevelUp();
         GameObject.Find("Player").GetComponent<PlayerHealth>().startMHealth += 5;
-        level++;
     }
 }
 public class DamageUpgrade : Upgrade
@@ -54,7 +53,6 @@ public class DamageUpgrade : Upgrade
         rarity = 100;
         baseDescription = "Increase your damage by 2";
         equippedDescription = "Increase your damage by 2";
-        level = 0;
     }
 
     public override void Equip()
@@ -65,31 +63,125 @@ public class DamageUpgrade : Upgrade
 
     public override void LevelUp()
     {
+        base.LevelUp();
         PlayerData.Instance.DamageBuff += 2;
     }
 }
+//---------STARTING CLASSES--------
 
+public class BreathingUpgrade : Upgrade
+{
+    private void Start()
+    {
+        upgradeName = "Breathing";
+        rarity = 100;
+        baseDescription = "START CLASS";
+        equippedDescription = "Increase radius";
+    }
+
+    public override void Equip()
+    {
+        base.Equip();
+        WeaponManager.Instance.gameObject.GetComponent<Breathing>().Activate();
+    }
+
+    public override void LevelUp()
+    {
+        base.LevelUp();
+        WeaponManager.Instance.gameObject.GetComponent<Breathing>().Upgrade(level);
+    }
+}
 //----------WEAPON UPGRADES------------
 public class BalloonBombUpgrade : Upgrade
 {
     private void Start()
     {
-        upgradeName = "BalloonBombUpgrade";
+        upgradeName = "Balloon Bomb";
         rarity = 100;
         baseDescription = "Send an explosive balloon to the nearest enemy";
         equippedDescription = "Increase damage and balloons sent";
-        level = 0;
     }
 
     public override void Equip()
     {
         base.Equip();
-        WeaponManager.Instance.gameObject.GetComponent<BalloonBombs>().active = true;
+        WeaponManager.Instance.gameObject.GetComponent<BalloonBombs>().Activate();
     }
 
     public override void LevelUp()
     {
-        WeaponManager.Instance.gameObject.GetComponent<BalloonBombs>().Upgrade();
+        base.LevelUp();
+        WeaponManager.Instance.gameObject.GetComponent<BalloonBombs>().Upgrade(level);
     }
 }
+
+public class PillowBatUpgrade : Upgrade
+{
+    private void Start()
+    {
+        upgradeName = "Pillow Bat";
+        rarity = 100;
+        baseDescription = "Sends a spiralling bat around the player";
+        equippedDescription = "Increase Damage";
+    }
+
+    public override void Equip()
+    {
+        base.Equip();
+        WeaponManager.Instance.gameObject.GetComponent<PillowBat>().Activate();
+    }
+
+    public override void LevelUp()
+    {
+        base.LevelUp();
+        WeaponManager.Instance.gameObject.GetComponent<PillowBat>().Upgrade(level);
+    }
+}
+
+public class BubbleGumBazookaUpgrade : Upgrade
+{
+    private void Start()
+    {
+        upgradeName = "BubbleGum Bazooka";
+        rarity = 100;
+        baseDescription = "Blast a piece of bubblegum in all directions!";
+        equippedDescription = "Increase Damage and reduce cast time";
+    }
+
+    public override void Equip()
+    {
+        base.Equip();
+        WeaponManager.Instance.gameObject.GetComponent<BubblegumBazooka>().Activate();
+    }
+
+    public override void LevelUp()
+    {
+        base.LevelUp();
+        WeaponManager.Instance.gameObject.GetComponent <BubblegumBazooka>().Upgrade(level);
+    }
+}
+
+public class FairyDustBlowerUpgrade : Upgrade
+{
+    private void Start()
+    {
+        upgradeName = "Fairy Dust Blower";
+        rarity = 100;
+        baseDescription = "Blow dust in the face of the enemies";
+        equippedDescription = "Increase Damage and reduce cast time";
+    }
+
+    public override void Equip()
+    {
+        base.Equip();
+        WeaponManager.Instance.gameObject.GetComponent<FairyDustBlower>().Activate();
+    }
+
+    public override void LevelUp()
+    {
+        base.LevelUp();
+        WeaponManager.Instance.gameObject.GetComponent<FairyDustBlower>().Upgrade(level);
+    }
+}
+
 

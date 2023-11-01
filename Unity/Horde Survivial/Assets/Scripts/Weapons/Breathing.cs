@@ -20,13 +20,13 @@ public class Breathing : Weapon
         }
     }
 
-    public override void Upgrade()
+    public override void Upgrade(int level)
     {
-        base.Upgrade();
+        base.Upgrade(level);
 
-        if(WeaponData.Level < 5)
+        if (level <= 5)
         {
-            WeaponData.Level++;
+            Radius += 0.25f;
         }
     }
 }

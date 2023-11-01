@@ -22,9 +22,23 @@ public class UpgradeManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //----MID GAME UPGRADES----
         availableUpgrades.Add(gameObject.AddComponent<DamageUpgrade>());
         availableUpgrades.Add(gameObject.AddComponent<HealthUpgrade>());
-        availableUpgrades.Add(gameObject.AddComponent<BalloonBombUpgrade>());   
+
+        //----WEAPONS----
+        availableUpgrades.Add(gameObject.AddComponent<BalloonBombUpgrade>());
+        availableUpgrades.Add(gameObject.AddComponent<PillowBatUpgrade>());
+        availableUpgrades.Add(gameObject.AddComponent<BubbleGumBazookaUpgrade>());
+        availableUpgrades.Add(gameObject.AddComponent<FairyDustBlowerUpgrade>());
+
+        switch (PlayerManager.Instance.PlayersClass)
+        {
+            case StartingClass.Breathing:
+
+                EquipStartingClass(gameObject.AddComponent<BreathingUpgrade>());
+                break;
+        }
     }
 
     Upgrade[] GetUpgrades()
@@ -79,6 +93,11 @@ public class UpgradeManager : MonoBehaviour
         ChosenUpgrade(chosenUpgrade);
     }
 
+    void EquipStartingClass(Upgrade upgrade)
+    {
+        upgrade.Equip();
+        equippedUpgrades.Add(upgrade);
+    }
 
     public void ChosenUpgrade(Upgrade upgrade)
     {

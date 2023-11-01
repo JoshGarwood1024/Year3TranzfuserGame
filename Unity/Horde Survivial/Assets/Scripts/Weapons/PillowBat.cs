@@ -26,9 +26,9 @@ public class PillowBat : Weapon
         }
     }
 
-    public override void Upgrade()
+    public override void Upgrade(int level)
     {
-        base.Upgrade();
+        base.Upgrade(level);
     }
 
     IEnumerator Dissapear()
