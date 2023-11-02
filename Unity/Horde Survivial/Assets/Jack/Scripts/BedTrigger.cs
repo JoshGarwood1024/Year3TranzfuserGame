@@ -12,7 +12,7 @@ public class BedTrigger : MonoBehaviour
     {
         if (inTrigger && Input.GetKeyDown(KeyCode.E))
         {
-            SceneManager.LoadScene(sceneToLoad);
+            SceneManager.LoadScene(1);
         }
     }
 

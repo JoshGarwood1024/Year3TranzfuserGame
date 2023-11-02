@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 6198605231037571804}
   - component: {fileID: 7128165245533584555}
   - component: {fileID: 5213405896483925855}
+  - component: {fileID: 7421380632520714997}
   m_Layer: 0
-  m_Name: BearPart1
+  m_Name: BodyPart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,3 +113,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7421380632520714997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4502988034936609466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6cfd58b041efc3469b2f8f1377c97f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FadeOutTime: 2
