@@ -1075,7 +1075,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 455843823}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -3316,7 +3316,7 @@ GameObject:
   - component: {fileID: 1162546375}
   - component: {fileID: 1162546376}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: ufo messed up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4304,23 +4304,71 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnTime: 4
   easyEnemies:
-  - {fileID: 4335282665833392999, guid: e444f9d5821e4b64d88fc9f02d073a4f, type: 3}
-  - {fileID: 5365238039471501270, guid: 39cf82abb065eb44b85a478dab7e30af, type: 3}
-  - {fileID: 1667274340660591707, guid: 27bdcc06b3ad8ea4299c6e025ea6ba2c, type: 3}
-  - {fileID: 2588485260913095986, guid: 4c36b71a0e9ef41459844f00b3a268e4, type: 3}
-  - {fileID: 2174737929028727795, guid: b1f97db546041b242bda68dc362e38ec, type: 3}
-  midEnemies:
-  - {fileID: 3919421699315490193, guid: a0759f233f7d335429b7d5bd48429f1f, type: 3}
-  - {fileID: 2495571649410971721, guid: 7603e5dd97dc3df4d961c1e10d5c42e3, type: 3}
-  - {fileID: 9099373456607984273, guid: 281922f25cccdc94cb96fc022185fdd6, type: 3}
-  - {fileID: 7330613027496996304, guid: 0b791e403c1ac9a44bbc5db390a04229, type: 3}
-  - {fileID: 6940328882923952685, guid: 5f8db0d4721dfcc4489af83fa41ee9e8, type: 3}
-  hardEnemies:
+  - {fileID: 3414622476784687679, guid: ecabe5068b3d2f7428586c1c9f1c586b, type: 3}
+  - {fileID: 3529071518982819599, guid: 0c67e1f4f2403bf44a1a61b4bd6664df, type: 3}
+  - {fileID: 1433969841988429384, guid: 84eb4380358f1154e8c0de5fdc0af746, type: 3}
+  - {fileID: 1342150143423576487, guid: 6ecd07048fcd99444932263524ef1017, type: 3}
+  - {fileID: 7528773871277040163, guid: fb4bf77835c5d9a4c909cff6a792a9eb, type: 3}
+  - {fileID: 3404384319661214880, guid: ef2de4caa91535a48a8ea7610b7e8994, type: 3}
   - {fileID: 5365238039471501270, guid: 39cf82abb065eb44b85a478dab7e30af, type: 3}
   - {fileID: 5694278470278911444, guid: 88ab1728c8b666448b9a8784e7875b3e, type: 3}
-  - {fileID: 8480547621169903670, guid: a8d451b3a3b82604883c240c6a9e47d6, type: 3}
-  - {fileID: 2174737929028727795, guid: b1f97db546041b242bda68dc362e38ec, type: 3}
+  - {fileID: 2680480657364492321, guid: d6ca6b623a738494d80c6ef272f5eec8, type: 3}
+  - {fileID: 1862624672220403341, guid: ef132b434b45f374c82d18ac1ae72c68, type: 3}
+  - {fileID: 2229361156102225487, guid: e0962ca7b57c72c45a1a0f1663edc4dc, type: 3}
+  - {fileID: 7330613027496996304, guid: 0b791e403c1ac9a44bbc5db390a04229, type: 3}
+  - {fileID: 4955242216578349679, guid: d2b2e1005121eff47b1f3f2f60efe8d7, type: 3}
+  - {fileID: 6940328882923952685, guid: 5f8db0d4721dfcc4489af83fa41ee9e8, type: 3}
+  - {fileID: 6418954622302520381, guid: adfcad69ac759a14b8c53f9cd5883cbc, type: 3}
   - {fileID: 4147137402478086633, guid: 972555b9bb89c3740a51c9cc3c90a0a5, type: 3}
+  - {fileID: 6418954622302520381, guid: adfcad69ac759a14b8c53f9cd5883cbc, type: 3}
+  - {fileID: 8156541374272819149, guid: d3391c94a4cb3584e82fc24ac622284f, type: 3}
+  - {fileID: 4707218574476620809, guid: e6f046f443b299b4bb4bbec2f78b0599, type: 3}
+  - {fileID: 8480547621169903670, guid: a8d451b3a3b82604883c240c6a9e47d6, type: 3}
+  midEnemies:
+  - {fileID: 1154810550323353955, guid: bba680aad087422438bcaa30202f918d, type: 3}
+  - {fileID: 7528773871277040163, guid: fb4bf77835c5d9a4c909cff6a792a9eb, type: 3}
+  - {fileID: 3860851706335856455, guid: 0df65b92070dadc4da645a3bec1fb1d1, type: 3}
+  - {fileID: 1667274340660591707, guid: 27bdcc06b3ad8ea4299c6e025ea6ba2c, type: 3}
+  - {fileID: 4291540623274074913, guid: 9c97863ecd7310441a13a6b1ca8a9669, type: 3}
+  - {fileID: 2543412097489790162, guid: 8de91472708985c4dbd1e08f443bbbad, type: 3}
+  - {fileID: 1408485997542832376, guid: c41b3393eeda104429aeaec9e63929b2, type: 3}
+  - {fileID: 6170717952764724034, guid: ddf85a6e54832014db888d2adf4b35c1, type: 3}
+  - {fileID: 9099373456607984273, guid: 281922f25cccdc94cb96fc022185fdd6, type: 3}
+  - {fileID: 2588485260913095986, guid: 4c36b71a0e9ef41459844f00b3a268e4, type: 3}
+  - {fileID: 4335282665833392999, guid: e444f9d5821e4b64d88fc9f02d073a4f, type: 3}
+  - {fileID: 1433969841988429384, guid: 84eb4380358f1154e8c0de5fdc0af746, type: 3}
+  - {fileID: 3323137105860185295, guid: 8224a2581891ff54a89b083033a9c631, type: 3}
+  - {fileID: 7156143822168218199, guid: cda2036b214eb434dbe81bc43366a59c, type: 3}
+  - {fileID: 2579596276891620090, guid: 15a6c7e2aa36a0742862eaae79adab11, type: 3}
+  - {fileID: 6848741595461239380, guid: a0e15db2dbbee924ab0567641e845bf4, type: 3}
+  - {fileID: 4430355183185579143, guid: b2ecfb95d016abf45b9197680fe58bbc, type: 3}
+  - {fileID: 3422953566095423038, guid: 1aa3abeb148867945badad486514c282, type: 3}
+  - {fileID: 5250695394149195798, guid: 7dbffd4661eb39a49b3467ac63800071, type: 3}
+  - {fileID: 4677199073086569425, guid: ff0789d4c85fdc94191ca19cc6f37ebf, type: 3}
+  - {fileID: 3860851706335856455, guid: 0df65b92070dadc4da645a3bec1fb1d1, type: 3}
+  hardEnemies:
+  - {fileID: 6546813913054142440, guid: 9a862c6d12c18724784921cb833cb26a, type: 3}
+  - {fileID: 5772177782346986084, guid: 1149ff3429b0dfb40bec935b555e6657, type: 3}
+  - {fileID: 8547680360957035286, guid: d6dae244ea9f7c747a83ee62bcb87472, type: 3}
+  - {fileID: 4942041728026269676, guid: 3eebbfa7dcc8a64428942c87043bb7be, type: 3}
+  - {fileID: 7966428593417992683, guid: 2dbc6504cee95cb48806dcab9cba31ba, type: 3}
+  - {fileID: 3919421699315490193, guid: a0759f233f7d335429b7d5bd48429f1f, type: 3}
+  - {fileID: 9183351303136059030, guid: 0973a384a59dca04b9ea59d1278c200d, type: 3}
+  - {fileID: 5366366179953149259, guid: 2f311d988208af24daa733da6a39c9f9, type: 3}
+  - {fileID: 5815661396532111079, guid: d854f9985a47d614fabdf29a57295ba8, type: 3}
+  - {fileID: 5352343812710270940, guid: 078842ae83b4b974eac42fef87dd805b, type: 3}
+  - {fileID: 2579596276891620090, guid: 15a6c7e2aa36a0742862eaae79adab11, type: 3}
+  - {fileID: 8760286431901295708, guid: d2b5ca9e28713d64fb700569bf40fe0c, type: 3}
+  - {fileID: 3591303835341353870, guid: 61b8b36cad418e8418448052c3e3d282, type: 3}
+  - {fileID: 2770630410154237706, guid: 64d05cafca7d5394d804a614283a5fa4, type: 3}
+  - {fileID: 5348985188192878013, guid: bcfcd680e539c9e42aea67333569d5b9, type: 3}
+  - {fileID: 8819107609192131412, guid: 90fb9ed89c5cd4c408fb4522e4cef721, type: 3}
+  - {fileID: 9017935778161549185, guid: 780f1626db2e00148b76c84063fd8746, type: 3}
+  - {fileID: 6235133629247661197, guid: b2988e5883ba5314f9345c3006a33229, type: 3}
+  - {fileID: 6848741595461239380, guid: a0e15db2dbbee924ab0567641e845bf4, type: 3}
+  - {fileID: 2543412097489790162, guid: 8de91472708985c4dbd1e08f443bbbad, type: 3}
+  - {fileID: 7643468391641895116, guid: 15446901f4785474cad3b914e1bb3c3e, type: 3}
+  - {fileID: 1408485997542832376, guid: c41b3393eeda104429aeaec9e63929b2, type: 3}
   enemyPool: []
   spawners:
   - {fileID: 66040008}

@@ -157,7 +157,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -1433328451, guid: 4973f2b3c75efa3408788e357c2060d6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 2785845738781337057}
   - component: {fileID: 7100534071541700558}
   - component: {fileID: 5041511263524145530}
+  - component: {fileID: -1195509122345064848}
   m_Layer: 8
   m_Name: RocketShip
   m_TagString: Enemy
@@ -452,3 +453,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.76, y: 2.006645}
   m_EdgeRadius: 0
+--- !u!114 &-1195509122345064848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6940328882923952685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e81849af7d80d974da0ac9618f1336b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  speed: 20
+  rotationModifier: 90
