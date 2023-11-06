@@ -9,14 +9,14 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 forceToApply;
     public float forceDamping;
 
-    private float scaleX;
-
     public Animator anim;
+
+    SpriteRenderer sr;
 
     // Start is called before the first frame update
     void Start()
     {
-        scaleX = transform.localScale.x;
+        sr = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -37,16 +37,14 @@ public class PlayerMovement : MonoBehaviour
         }
         rb.velocity = moveForce;
 
-        Vector3 characterScale = transform.localScale;
         if(horz < 0)
         {
-            characterScale.x = -scaleX;
+            sr.flipX = true;
         }
         if (horz > 0)
         {
-            characterScale.x = scaleX;
+            sr.flipX = false;
         }
-        transform.localScale = characterScale;
 
         GetComponent<Animator>().SetFloat("Speed", Mathf.Abs(horz) + Mathf.Abs(vert));
 

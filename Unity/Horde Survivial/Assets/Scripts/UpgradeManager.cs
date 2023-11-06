@@ -31,6 +31,12 @@ public class UpgradeManager : MonoBehaviour
         availableUpgrades.Add(gameObject.AddComponent<PillowBatUpgrade>());
         availableUpgrades.Add(gameObject.AddComponent<BubbleGumBazookaUpgrade>());
         availableUpgrades.Add(gameObject.AddComponent<FairyDustBlowerUpgrade>());
+        availableUpgrades.Add(gameObject.AddComponent<GiggleGunUpgrade>());
+        availableUpgrades.Add(gameObject.AddComponent<BouncyBallUpgrade>());
+        availableUpgrades.Add(gameObject.AddComponent<SockPuppetUpgrade>());
+        availableUpgrades.Add(gameObject.AddComponent<MarshmellowMaceUpgrade>());
+        availableUpgrades.Add(gameObject.AddComponent<JigsawSlicerUpgrade>());
+        availableUpgrades.Add(gameObject.AddComponent<UnicornHornUpgrade>());
 
         switch (PlayerManager.Instance.PlayersClass)
         {
