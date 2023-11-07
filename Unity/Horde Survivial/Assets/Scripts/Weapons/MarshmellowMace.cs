@@ -5,11 +5,13 @@ using UnityEngine;
 public class MarshmellowMace : Weapon
 {
     GameObject mace;
+   // public float macecount;
+
     public override void Activate()
     {
         base.Activate();
 
-        mace = Instantiate(WeaponPrefab, transform.position + new Vector3(1.7f, 0 ,0), WeaponPrefab.transform.rotation, transform);
+        mace = Instantiate(WeaponPrefab, transform.position + new Vector3(4f, 0 ,0), WeaponPrefab.transform.rotation, transform);
         mace.GetComponent<HurtEnemyOnTrigger>().Damage = WeaponData.Damage;
     }
 
@@ -27,4 +29,13 @@ public class MarshmellowMace : Weapon
             mace.transform.RotateAround(transform.position, new Vector3(0,0,1), 180 * Time.deltaTime);
         }
     }
+
+  //  public override void Upgrade(int level)
+//    {
+     //   base.Upgrade(level);
+
+
+    //}
+
+
 }
