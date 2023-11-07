@@ -220,16 +220,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  speed: 1.4
-  Damage: 15
-  EnemyHealth: 0
-  startEnemyHealth: 30
   XP: {fileID: 673465106986425479, guid: 542a4cfa68ff46e49ab4d1a0d28652d2, type: 3}
-  XpSpawnPoint: {fileID: 5357724337095836521}
   Blood: {fileID: 931355830842430980, guid: 79658ee1d807d854d89753e6ba66ecb9, type: 3}
   damageTextPrefab: {fileID: 7353506689705183412, guid: 7bc5fb940bdc09a4084d91581531580e, type: 3}
   BodyPartSprites: []
   BodyPartPrefab: {fileID: 4502988034936609466, guid: 306c88a25f601184aaf56112added087, type: 3}
+  Damage: 15
+  Health: 100
+  AmountSpawnPerWave: 0
+  speed: 1.4
 --- !u!50 &4378440481919742319
 Rigidbody2D:
   serializedVersion: 4

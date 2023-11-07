@@ -23,7 +23,7 @@ public class Weapon : MonoBehaviour
         currentCooldown -= Time.deltaTime;
         if(currentCooldown <= 0 && active)
         {
-            Attack();       
+            Attack();
         }
     }
 

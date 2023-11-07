@@ -11,7 +11,7 @@ public class BouncyBallBehavior : MonoBehaviour
     {
         hitCount++;
 
-        collision.gameObject.GetComponent<EnemyChase>().Hurt(Damage);
+        collision.gameObject.GetComponent<Enemy>().Hurt(Damage);
 
         if (hitCount >= 3) Destroy(gameObject);
     }

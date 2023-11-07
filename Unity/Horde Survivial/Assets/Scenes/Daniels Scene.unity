@@ -4382,24 +4382,44 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 4
-      inSlope: 0
-      outSlope: 0
+      inSlope: -0.03757523
+      outSlope: -0.03757523
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.46391746
     - serializedVersion: 3
-      time: 180000
-      value: 0.7
-      inSlope: 0
-      outSlope: 0
+      time: 0.48450696
+      value: 3.600288
+      inSlope: -2.4271576
+      outSlope: -2.4271576
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.8786173
+      value: 2.5461342
+      inSlope: -1.4456309
+      outSlope: -1.4456309
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1.5
+      inSlope: -0.35899776
+      outSlope: -0.35899776
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 1
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  CurrentTime: 0
+  TotalTimeToProgress: 1800
 --- !u!4 &1632401595
 Transform:
   m_ObjectHideFlags: 0
@@ -5791,7 +5811,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WeaponPrefab: {fileID: 7156587902032863155, guid: 5124625494bd1ec40915def04104a17a, type: 3}
   WeaponData: {fileID: 11400000, guid: 8640a55825b9907488811812bb0adb4e, type: 2}
-  active: 1
+  active: 0
 --- !u!95 &8662598096633106887
 Animator:
   serializedVersion: 5

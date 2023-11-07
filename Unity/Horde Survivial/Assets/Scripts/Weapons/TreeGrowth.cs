@@ -32,7 +32,7 @@ public class TreeGrowth : MonoBehaviour
     {
         if(collision.tag == "Enemy")
         {
-            collision.gameObject.GetComponent<EnemyChase>().Hurt(damage);
+            collision.gameObject.GetComponent<Enemy>().Hurt(damage);
         }
     }
 }

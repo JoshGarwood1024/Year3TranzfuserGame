@@ -50,15 +50,22 @@ public class UpgradeManager : MonoBehaviour
     Upgrade[] GetUpgrades()
     {
         List<Upgrade> possibleUpgrades = new List<Upgrade>();
+        float rarity = Random.Range(0, 101);
 
         foreach (Upgrade u in availableUpgrades)
         {
-            possibleUpgrades.Add(u);
+            if(u.rarity >= rarity)
+            {
+                possibleUpgrades.Add(u);
+            }
         }
 
         foreach (Upgrade u in equippedUpgrades)
         {
-            possibleUpgrades.Add(u);
+            if (u.rarity >= rarity)
+            {
+                possibleUpgrades.Add(u);
+            }
         }
 
         Upgrade[] selectedUpgrades = new Upgrade[3];

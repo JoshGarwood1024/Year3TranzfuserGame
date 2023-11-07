@@ -15,8 +15,8 @@ public class Breathing : Weapon
 
         Collider2D[] collidersHit = Physics2D.OverlapCircleAll(transform.position, Radius);
         foreach (Collider2D e in collidersHit)
-        {     
-            if(e.gameObject.TryGetComponent<EnemyChase>(out EnemyChase eChase)) eChase.Hurt(WeaponData.Damage);
+        {
+            if(e.gameObject.TryGetComponent<Enemy>(out Enemy eChase) && !e.isTrigger) eChase.Hurt(WeaponData.Damage);
         }
     }
 

@@ -10,7 +10,7 @@ public class HurtEnemyOnTrigger : MonoBehaviour
     {
         if(collision.CompareTag("Enemy"))
         {
-            collision.GetComponent<EnemyChase>().Hurt(Damage);
+            collision.GetComponent<Enemy>().Hurt(Damage);
         }
     }
 }

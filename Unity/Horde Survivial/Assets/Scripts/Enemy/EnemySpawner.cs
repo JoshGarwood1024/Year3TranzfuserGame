@@ -5,12 +5,7 @@ using UnityEditor;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public float spawnTime = 4f;
-
-    private float currentSpawnTime, time;
-
     public List<GameObject> easyEnemies, midEnemies, hardEnemies;
-
     public List<GameObject> enemyPool;
 
     private GameObject player;
@@ -18,35 +13,39 @@ public class EnemySpawner : MonoBehaviour
     public List<GameObject> spawners;
 
     public AnimationCurve spawnCurve;
-
+    public float CurrentTime = 0;
+    public float TotalTimeToProgress = 1800.0f;
     private void Start()
     {
         int enemyCount = easyEnemies.Count < 2 ? easyEnemies.Count : 2;
 
         for(int i = 0; i < enemyCount; i++)
         {
-            enemyPool.Add(easyEnemies[i]);
+            enemyPool.Add(easyEnemies[Random.Range(0, easyEnemies.Count)]);
         }
 
         player = GameObject.FindWithTag("Player");
 
-        spawnTime = spawnCurve.Evaluate(Time.time);
+        StartCoroutine(SpawnEnemies());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator SpawnEnemies()
     {
-        spawnTime -= Time.deltaTime;
-
-        if(spawnTime <= 0)
+        while(CurrentTime < TotalTimeToProgress)
         {
-            for(int i = 0; i < spawners.Count; i++)
+            float curveValue = spawnCurve.Evaluate(CurrentTime / TotalTimeToProgress);
+
+            for (int i = 0; i < spawners.Count; i++)
             {
                 Vector3 spawnPos = (new Vector3(Random.insideUnitCircle.x, Random.insideUnitCircle.y, 0) * 10) + spawners[i].transform.position;
-                GameObject enemyTemp = Instantiate(enemyPool[Random.Range(0, enemyPool.Count)], spawnPos, Quaternion.identity);
-                spawnTime = spawnCurve.Evaluate(Time.time);
+                Instantiate(enemyPool[Random.Range(0, enemyPool.Count)], spawnPos, Quaternion.identity);
             }
 
+            yield return new WaitForSeconds(curveValue);
+
+            CurrentTime += curveValue;
+
+            CurrentTime = Mathf.Min(CurrentTime, TotalTimeToProgress);
         }
     }
 
@@ -54,11 +53,6 @@ public class EnemySpawner : MonoBehaviour
     {
         if (player.GetComponent<LevelSystem>().level % 2 == 0)
         {
-            if (currentSpawnTime > 0.7f)
-            {
-                currentSpawnTime -= 0.1f;
-            }
-
             if(level >= 2 && level <= 8)
             {
                 enemyPool.Remove(enemyPool[Random.Range(0, enemyPool.Count)]);

@@ -10,7 +10,7 @@ public class FairyDust : MonoBehaviour
     {
         if(other.CompareTag("Enemy"))
         {
-            other.GetComponent<EnemyChase>().Hurt(dmg);
+            other.GetComponent<Enemy>().Hurt(dmg);
         }
     }
 }

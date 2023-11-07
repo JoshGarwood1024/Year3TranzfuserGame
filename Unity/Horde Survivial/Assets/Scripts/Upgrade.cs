@@ -97,7 +97,7 @@ public class BalloonBombUpgrade : Upgrade
     private void Start()
     {
         upgradeName = "Balloon Bomb";
-        rarity = 100;
+        rarity = 45;
         baseDescription = "Send an explosive balloon to the nearest enemy";
         equippedDescription = "Increase damage and balloons sent";
     }
@@ -120,7 +120,7 @@ public class PillowBatUpgrade : Upgrade
     private void Start()
     {
         upgradeName = "Pillow Bat";
-        rarity = 100;
+        rarity = 75;
         baseDescription = "Sends a spiralling bat around the player";
         equippedDescription = "Increase Damage";
     }
@@ -143,7 +143,7 @@ public class BubbleGumBazookaUpgrade : Upgrade
     private void Start()
     {
         upgradeName = "BubbleGum Bazooka";
-        rarity = 100;
+        rarity = 30;
         baseDescription = "Blast a piece of bubblegum in all directions!";
         equippedDescription = "Increase Damage and reduce cast time";
     }
@@ -166,7 +166,7 @@ public class FairyDustBlowerUpgrade : Upgrade
     private void Start()
     {
         upgradeName = "Fairy Dust Blower";
-        rarity = 100;
+        rarity = 45;
         baseDescription = "Blow dust in the face of the enemies";
         equippedDescription = "Increase Damage and reduce cast time";
     }
@@ -189,7 +189,7 @@ public class GiggleGunUpgrade : Upgrade
     private void Start()
     {
         upgradeName = "Giggle Gun";
-        rarity = 100;
+        rarity = 80;
         baseDescription = "Shoots deadly laughing faces in random directions";
         equippedDescription = "Increase Damage and faces shot";
     }
@@ -212,7 +212,7 @@ public class MarshmellowMaceUpgrade : Upgrade
     private void Start()
     {
         upgradeName = "Marshmellow Mace";
-        rarity = 100;
+        rarity = 50;
         baseDescription = "Constant swining mace around the player";
         equippedDescription = "Increase Damage";
     }
@@ -235,7 +235,7 @@ public class BouncyBallUpgrade : Upgrade
     private void Start()
     {
         upgradeName = "Bouncy Balls";
-        rarity = 100;
+        rarity = 60;
         baseDescription = "Fire a bouncy ball in a random direction hitting off enemies";
         equippedDescription = "Increase Damage and balls fired";
     }
@@ -258,7 +258,7 @@ public class SockPuppetUpgrade : Upgrade
     private void Start()
     {
         upgradeName = "Sock Puppet";
-        rarity = 100;
+        rarity = 70;
         baseDescription = "Sling sock puppets around the player";
         equippedDescription = "Increase damage and puppets slung";
     }
@@ -281,7 +281,7 @@ public class JigsawSlicerUpgrade : Upgrade
     private void Start()
     {
         upgradeName = "Jigsaw Slicer";
-        rarity = 100;
+        rarity = 20;
         baseDescription = "Shoots puzzle pieces in all directions";
         equippedDescription = "Increase damage and decrease cooldown";
     }
@@ -304,7 +304,7 @@ public class UnicornHornUpgrade : Upgrade
     private void Start()
     {
         upgradeName = "Unicorn Horn";
-        rarity = 100;
+        rarity = 30;
         baseDescription = "Fires a unicorns horn towards the mouse";
         equippedDescription = "Increase damage and reduce cooldown";
     }
