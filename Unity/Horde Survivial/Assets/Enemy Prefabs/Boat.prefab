@@ -225,7 +225,7 @@ MonoBehaviour:
   BodyPartSprites: []
   BodyPartPrefab: {fileID: 4502988034936609466, guid: 306c88a25f601184aaf56112added087, type: 3}
   Damage: 10
-  Health: 100
+  Health: 20
   AmountSpawnPerWave: 0
   speed: 1.4
 --- !u!50 &148319890095923381

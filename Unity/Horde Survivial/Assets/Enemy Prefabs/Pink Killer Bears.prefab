@@ -114,7 +114,7 @@ MonoBehaviour:
   - {fileID: -372112621, guid: 0b817d9682e79e04d9a47f25ad457e62, type: 3}
   BodyPartPrefab: {fileID: 4502988034936609466, guid: 306c88a25f601184aaf56112added087, type: 3}
   Damage: 10
-  Health: 100
+  Health: 20
   AmountSpawnPerWave: 0
   speed: 1.4
 --- !u!50 &3337949416089610540
