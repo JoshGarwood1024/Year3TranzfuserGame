@@ -26,7 +26,6 @@ public abstract class Enemy : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");    
     }
 
-    public virtual void Chase() { }
     public virtual void Attack(GameObject p) {
         PlayerHealth.PHealth -= Damage;
         p.GetComponent<CameraShake>().shakeDuration = 0.2f;
@@ -60,7 +59,7 @@ public abstract class Enemy : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    protected void OnCollisionEnter2D(Collision2D collision)
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
@@ -68,7 +67,7 @@ public abstract class Enemy : MonoBehaviour
         }
     }
 
-    protected void Update()
+    protected virtual void Update()
     {
         if(Health <= 0)
         {

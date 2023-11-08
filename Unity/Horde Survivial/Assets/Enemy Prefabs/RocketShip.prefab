@@ -231,11 +231,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8375322399876026134}
   - component: {fileID: 4881930519995769366}
-  - component: {fileID: 1337977385662139692}
   - component: {fileID: 2785845738781337057}
   - component: {fileID: 7100534071541700558}
   - component: {fileID: 5041511263524145530}
-  - component: {fileID: -1195509122345064848}
+  - component: {fileID: -8749793359302616943}
   m_Layer: 8
   m_Name: RocketShip
   m_TagString: Enemy
@@ -313,28 +312,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1337977385662139692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6940328882923952685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 775b0f22546607d4a8253f7dc1c57037, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  XP: {fileID: 673465106986425479, guid: 542a4cfa68ff46e49ab4d1a0d28652d2, type: 3}
-  Blood: {fileID: 931355830842430980, guid: 79658ee1d807d854d89753e6ba66ecb9, type: 3}
-  damageTextPrefab: {fileID: 7353506689705183412, guid: 7bc5fb940bdc09a4084d91581531580e, type: 3}
-  BodyPartSprites: []
-  BodyPartPrefab: {fileID: 4502988034936609466, guid: 306c88a25f601184aaf56112added087, type: 3}
-  Damage: 10
-  Health: 100
-  AmountSpawnPerWave: 0
-  speed: 1.4
 --- !u!50 &2785845738781337057
 Rigidbody2D:
   serializedVersion: 4
@@ -347,7 +324,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1000
+  m_Mass: 1
   m_LinearDrag: 6.19
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -436,7 +413,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.23, y: -0.02}
@@ -452,7 +429,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.76, y: 2.006645}
   m_EdgeRadius: 0
---- !u!114 &-1195509122345064848
+--- !u!114 &-8749793359302616943
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -461,9 +438,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 6940328882923952685}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e81849af7d80d974da0ac9618f1336b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b85272253444ab43ae085237c5a986a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  speed: 20
-  rotationModifier: 90
+  XP: {fileID: 673465106986425479, guid: 542a4cfa68ff46e49ab4d1a0d28652d2, type: 3}
+  Blood: {fileID: 931355830842430980, guid: 79658ee1d807d854d89753e6ba66ecb9, type: 3}
+  damageTextPrefab: {fileID: 7353506689705183412, guid: 7bc5fb940bdc09a4084d91581531580e, type: 3}
+  BodyPartSprites: []
+  BodyPartPrefab: {fileID: 4502988034936609466, guid: 306c88a25f601184aaf56112added087, type: 3}
+  Damage: 30
+  Health: 10
+  AmountSpawnPerWave: 1
+  chargeSpeed: 5
+  chargeDuration: 1.5
+  chargeIndicator: {fileID: 0}

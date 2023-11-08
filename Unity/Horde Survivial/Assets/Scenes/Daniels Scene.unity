@@ -760,7 +760,6 @@ Transform:
   - {fileID: 1292018226}
   - {fileID: 1632401595}
   - {fileID: 15516231}
-  - {fileID: 1404039833}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &175484928
@@ -2452,8 +2451,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 60
   height: 40
-  tile: {fileID: 11400000, guid: 24c221347224e0c4e81ec4c6940e0965, type: 2}
-  BGTile: {fileID: 11400000, guid: d42d234a72e6b4a48bd67ee955bedf5b, type: 2}
+  tile: {fileID: 11400000, guid: f250c50222d44cd40aa222650a0acc3b, type: 2}
+  BGTile: {fileID: 11400000, guid: a8f6657902c5ca74fa8b2da2be5047e7, type: 2}
   backgroundTileMap: {fileID: 1345442493}
   trees: []
   player: {fileID: 6311826421918922189}
@@ -3937,12 +3936,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1404039832}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 184.67516, y: 133.97023, z: 1.447183}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 153793209}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1404039834
 MonoBehaviour:
@@ -4302,7 +4301,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88c3435d465cfde4f94ad7ac0aa6b2fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTime: 4
   easyEnemies:
   - {fileID: 3414622476784687679, guid: ecabe5068b3d2f7428586c1c9f1c586b, type: 3}
   - {fileID: 3529071518982819599, guid: 0c67e1f4f2403bf44a1a61b4bd6664df, type: 3}
@@ -4389,8 +4387,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.46391746
     - serializedVersion: 3
-      time: 0.48450696
-      value: 3.600288
+      time: 0.3286537
+      value: 3.5355906
       inSlope: -2.4271576
       outSlope: -2.4271576
       tangentMode: 0
@@ -4398,14 +4396,14 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.8786173
-      value: 2.5461342
-      inSlope: -1.4456309
-      outSlope: -1.4456309
+      time: 0.878618
+      value: 2.5461428
+      inSlope: 0.15768896
+      outSlope: 0.15768896
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.33333334
+      outWeight: 1
     - serializedVersion: 3
       time: 1
       value: 1.5
@@ -5855,3 +5853,4 @@ SceneRoots:
   - {fileID: 489880999}
   - {fileID: 704690012}
   - {fileID: 153793209}
+  - {fileID: 1404039833}

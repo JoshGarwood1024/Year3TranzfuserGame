@@ -74,7 +74,7 @@ public class BreathingUpgrade : Upgrade
     private void Start()
     {
         upgradeName = "Breathing";
-        rarity = 100;
+        rarity = 80;
         baseDescription = "START CLASS";
         equippedDescription = "Increase radius";
     }
