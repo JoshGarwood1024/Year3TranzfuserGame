@@ -21,9 +21,19 @@ public abstract class Enemy : MonoBehaviour
 
     public float AmountSpawnPerWave;
 
+    public GameObject[] lootItems;
+
     public virtual void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");    
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        if (lootItems.Length == 0)
+        {
+            //Debug.LogError("No loot items defined!");
+            return;
+        }
+
+
     }
 
     public virtual void Attack(GameObject p) {
@@ -43,6 +53,7 @@ public abstract class Enemy : MonoBehaviour
 
     public virtual void Death()
     {
+
         GameObject xpgo = Instantiate(XP, transform.position, transform.rotation);
         xpgo.GetComponent<Rigidbody2D>().AddRelativeForce(Random.insideUnitCircle * 400);
 
@@ -52,6 +63,10 @@ public abstract class Enemy : MonoBehaviour
             bodyPart.GetComponent<SpriteRenderer>().sprite = bp;
             bodyPart.GetComponent<Rigidbody2D>().AddRelativeForce(Random.insideUnitCircle * 200);
         }
+
+        int randomIndex = Random.Range(0, lootItems.Length);
+        GameObject selectedLoot = Instantiate(lootItems[randomIndex], transform.position, Quaternion.identity);
+
 
         Instantiate(Blood, transform.position, transform.rotation);
         ScoreScript.scoreValue += 1;

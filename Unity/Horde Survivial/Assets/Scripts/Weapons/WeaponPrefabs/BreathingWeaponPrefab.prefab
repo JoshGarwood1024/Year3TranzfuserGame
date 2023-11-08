@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7821410999051182983}
   - component: {fileID: 8448084692398391696}
   - component: {fileID: 2860583754016113134}
+  - component: {fileID: 8634031501795495993}
   m_Layer: 0
   m_Name: BreathingWeaponPrefab
   m_TagString: Untagged
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 821874ebd474eb04e8ed1b17f851d884, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,4 +98,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6cfd58b041efc3469b2f8f1377c97f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FadeOutTime: 0.2
+  FadeOutTime: 1
+--- !u!95 &8634031501795495993
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3652122575237043972}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3eee82613c62ea04f841b9c797df5d35, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

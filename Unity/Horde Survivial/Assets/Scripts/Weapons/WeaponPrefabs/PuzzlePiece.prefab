@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2737467540065658317}
   - component: {fileID: 2920809672256463208}
   - component: {fileID: 3886037491176036671}
+  - component: {fileID: 3713839039193656039}
   m_Layer: 6
   m_Name: PuzzlePiece
   m_TagString: Untagged
@@ -124,7 +125,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
+    oldSize: {x: 5.3333335, y: 5.3333335}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -185,3 +186,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a49029ae0f047cf4aabbc2b63c3337df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3713839039193656039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9086631678566734510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1279913272c6fa64ea3c72302eeca686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: {x: 0, y: 0, z: 90}
