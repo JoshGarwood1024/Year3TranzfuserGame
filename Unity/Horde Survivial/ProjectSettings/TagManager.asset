@@ -9,6 +9,7 @@ TagManager:
   - Trigger
   - GameMusic
   - GameSFX
+  - ZoomableObject
   layers:
   - Default
   - TransparentFX
