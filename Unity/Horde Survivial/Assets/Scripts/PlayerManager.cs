@@ -21,7 +21,6 @@ public class PlayerManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
-
     }
 
     public StartingClass PlayersClass { get; private set; }
@@ -41,6 +40,10 @@ public class PlayerManager : MonoBehaviour
         PlayersClass = sc;
     }
 
+    public Sprite GetPetSprite()
+    {
+        return PetSprites[(int)PlayersPet];
+    }
     public void SetPet(string _pet)
     {
         if(!pet) pet = GameObject.Find("PlayersPet"); 
@@ -73,7 +76,7 @@ public enum StartingClass
 
 public enum Pet
 { 
-    Dog,
-    Cat,
-    Bird
+    Dog = 0,
+    Cat = 1,
+    Bird = 2
 }
