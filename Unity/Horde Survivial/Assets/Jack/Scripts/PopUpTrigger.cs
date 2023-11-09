@@ -12,6 +12,8 @@ public class PopUpTrigger : MonoBehaviour
         if (inTrigger && Input.GetKeyDown(KeyCode.E))
         {
             popUp.SetActive(true);
+            PauseGame();
+// Callum, this is to pause the game when options is on
         }
     }
 
@@ -29,5 +31,9 @@ public class PopUpTrigger : MonoBehaviour
         {
             inTrigger = false;
         }
+    }
+    void PauseGame()
+    {
+        Time.timeScale = 0;
     }
 }
