@@ -111,7 +111,7 @@ MonoBehaviour:
   BodyPartPrefab: {fileID: 4502988034936609466, guid: 306c88a25f601184aaf56112added087, type: 3}
   Damage: 10
   Health: 20
-  AmountSpawnPerWave: 0
+  AmountSpawnPerWave: 3
   lootItems:
   - {fileID: 4257302885375577924, guid: 9852cd8cfffc7114f8a595fc974d45e3, type: 3}
   - {fileID: 4257302885375577924, guid: 9852cd8cfffc7114f8a595fc974d45e3, type: 3}

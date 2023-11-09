@@ -8,16 +8,16 @@ public class Breathing : Weapon
 
     protected override void Attack()
     {
-        base.Attack();
-
         GameObject slash = Instantiate(WeaponPrefab, transform.position, Quaternion.identity, transform);
         slash.transform.localScale = slash.transform.localScale * (2 * Radius);
 
         Collider2D[] collidersHit = Physics2D.OverlapCircleAll(transform.position, Radius);
         foreach (Collider2D e in collidersHit)
         {
-            if(e.gameObject.TryGetComponent<Enemy>(out Enemy eChase) && !e.isTrigger) eChase.Hurt(WeaponData.Damage);
+            if(e.gameObject.TryGetComponent<Enemy>(out Enemy enemy) && !e.isTrigger) enemy.Hurt(WeaponData.Damage + DamageIncrease);
         }
+
+        base.Attack();
     }
 
     public override void Upgrade(int level)

@@ -12,6 +12,6 @@ public class BouncyBalls : Weapon
 
         Vector2 randDir = Random.insideUnitCircle * 10;
         bouncyBall.GetComponent<Rigidbody2D>().AddRelativeForce(randDir, ForceMode2D.Impulse);
-        bouncyBall.GetComponent<BouncyBallBehavior>().Damage = WeaponData.Damage;
+        bouncyBall.GetComponent<BouncyBallBehavior>().Damage = WeaponData.Damage + DamageIncrease;
     }
 }

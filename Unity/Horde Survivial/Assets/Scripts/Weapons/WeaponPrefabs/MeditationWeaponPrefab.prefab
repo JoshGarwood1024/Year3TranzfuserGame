@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7595251005432650612}
   - component: {fileID: 1437900204506313381}
   - component: {fileID: 9085913556670058910}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MeditationWeaponPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

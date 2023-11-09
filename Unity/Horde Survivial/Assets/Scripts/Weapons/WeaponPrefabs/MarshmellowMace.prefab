@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2987248340245337184}
   - component: {fileID: 6805068352366533446}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: chain (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7393249614136087261}
   - component: {fileID: 562030557572054232}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: chain (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 222387049736351128}
   - component: {fileID: 8560034997093853726}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: chain (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4905718813500887725}
   - component: {fileID: 1210355697917714225}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: chain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,7 +346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6247669390389290287}
   - component: {fileID: 6649988026768559867}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: chain (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1614088887159987586}
   - component: {fileID: 8952651107713588920}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: chain (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -514,7 +514,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7821573622704367779}
   - component: {fileID: 7472933958009584570}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: chain (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -598,7 +598,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7715847058760991632}
   - component: {fileID: 8230524420238265187}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: chain (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -684,7 +684,7 @@ GameObject:
   - component: {fileID: 3319895949900911028}
   - component: {fileID: 2585339846129453494}
   - component: {fileID: 5440938675840231312}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MarshmellowMace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -845,7 +845,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8522363890030178081}
   - component: {fileID: 8400814764357605657}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: chain (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -929,7 +929,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7411195933809916498}
   - component: {fileID: 631752209731130253}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: chain (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1013,7 +1013,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8881108333060095720}
   - component: {fileID: 3367042646315368960}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: chain (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

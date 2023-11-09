@@ -12,7 +12,7 @@ public class PillowBat : Weapon
         base.Attack();
 
         pillowBat = Instantiate(WeaponPrefab, transform.position + new Vector3(2.5f, 0, 0), WeaponPrefab.transform.rotation, transform);
-        pillowBat.GetComponent<HurtEnemyOnTrigger>().Damage = WeaponData.Damage;
+        pillowBat.GetComponent<HurtEnemyOnTrigger>().Damage = WeaponData.Damage + DamageIncrease;
         StartCoroutine(Dissapear());
     }
 

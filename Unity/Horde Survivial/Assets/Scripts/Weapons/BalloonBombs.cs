@@ -27,7 +27,7 @@ public class BalloonBombs : Weapon
                 GameObject balloon = Instantiate(WeaponPrefab, transform.position, Quaternion.identity);
 
                 balloon.GetComponent<Rigidbody2D>().AddForce(aimDirection, ForceMode2D.Impulse);
-                balloon.GetComponent<Balloon>().Damage = WeaponData.Damage;
+                balloon.GetComponent<Balloon>().Damage = WeaponData.Damage + DamageIncrease;
 
                 return;
             }

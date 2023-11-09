@@ -35,10 +35,13 @@ public class EnemySpawner : MonoBehaviour
         {
             float curveValue = spawnCurve.Evaluate(CurrentTime / TotalTimeToProgress);
 
-            for (int i = 0; i < spawners.Count; i++)
+            foreach(GameObject e in enemyPool)
             {
-                Vector3 spawnPos = (new Vector3(Random.insideUnitCircle.x, Random.insideUnitCircle.y, 0) * 10) + spawners[i].transform.position;
-                Instantiate(enemyPool[Random.Range(0, enemyPool.Count)], spawnPos, Quaternion.identity);
+                for (int i = 0; i < e.GetComponent<Enemy>().AmountSpawnPerWave; i++)
+                {
+                    Vector3 spawnPos = (new Vector3(Random.insideUnitCircle.x, Random.insideUnitCircle.y, 0) * 10) + spawners[i].transform.position;
+                    Instantiate(enemyPool[Random.Range(0, enemyPool.Count)], spawnPos, Quaternion.identity);
+                }
             }
 
             yield return new WaitForSeconds(curveValue);
@@ -51,18 +54,20 @@ public class EnemySpawner : MonoBehaviour
 
     public void LeveledUp(int level)
     {
+        float sc = spawnCurve.Evaluate(CurrentTime / TotalTimeToProgress);
+
         if (player.GetComponent<LevelSystem>().level % 2 == 0)
         {
-            if(level >= 2 && level <= 8)
+            if(sc > 0.2f && sc < 0.5f)
             {
                 enemyPool.Remove(enemyPool[Random.Range(0, enemyPool.Count)]);
                 enemyPool.Add(midEnemies[Random.Range(0, midEnemies.Count)]);
             }
 
-            if (level > 8)
+            if (sc > 0.5f)
             {
                 enemyPool.Remove(enemyPool[Random.Range(0, enemyPool.Count)]);
-                enemyPool.Add(hardEnemies[Random.Range(0, midEnemies.Count)]);
+                enemyPool.Add(hardEnemies[Random.Range(0, hardEnemies.Count)]);
             }
         }
     }

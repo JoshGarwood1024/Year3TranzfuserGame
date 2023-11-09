@@ -30,6 +30,6 @@ public class Meditation : Weapon
 
         Vector3 offset = new Vector3(Random.Range(-3, 3), Random.Range(-3, 3));
         GameObject tree = Instantiate(WeaponPrefab, transform.position + offset, Quaternion.identity);
-        tree.GetComponent<TreeGrowth>().SetDamage(WeaponData.Damage);
+        tree.GetComponent<TreeGrowth>().SetDamage(WeaponData.Damage + DamageIncrease);
     }
 }

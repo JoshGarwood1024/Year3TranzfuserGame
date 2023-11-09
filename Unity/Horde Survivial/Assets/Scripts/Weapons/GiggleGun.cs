@@ -16,6 +16,6 @@ public class GiggleGun : Weapon
 
         laughingFace.GetComponent<Rigidbody2D>().velocity = randDir * 15;
 
-        laughingFace.GetComponent<HurtEnemyOnTrigger>().Damage = WeaponData.Damage;
+        laughingFace.GetComponent<HurtEnemyOnTrigger>().Damage = WeaponData.Damage + DamageIncrease;
     }
 }

@@ -12,7 +12,7 @@ public class MarshmellowMace : Weapon
         base.Activate();
 
         mace = Instantiate(WeaponPrefab, transform.position + new Vector3(4f, 0 ,0), WeaponPrefab.transform.rotation, transform);
-        mace.GetComponent<HurtEnemyOnTrigger>().Damage = WeaponData.Damage;
+        mace.GetComponent<HurtEnemyOnTrigger>().Damage = WeaponData.Damage + DamageIncrease;
     }
 
     protected override void Update()

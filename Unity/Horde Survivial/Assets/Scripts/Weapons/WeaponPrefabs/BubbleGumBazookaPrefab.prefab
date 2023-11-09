@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9156024809046733979}
   - component: {fileID: -5447372976716410105}
   - component: {fileID: -3212273239467837171}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BubbleGumBazookaPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

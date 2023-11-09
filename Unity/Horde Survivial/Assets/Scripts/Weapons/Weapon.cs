@@ -11,10 +11,18 @@ public class Weapon : MonoBehaviour
     public bool active;
     float currentCooldown;
 
+    public bool MaxLevel;
+    public int currentLevel;
+
+    //affected by upgrades
+    public float DamageIncrease = 0;
+    public float CooldownReduction;
+
     // Start is called before the first frame update
     protected virtual void Start()
     {
         currentCooldown = WeaponData.Cooldown;
+        currentLevel = 0;
     }
 
     // Update is called once per frame
@@ -29,11 +37,12 @@ public class Weapon : MonoBehaviour
 
     protected virtual void Attack()
     {
-        currentCooldown = WeaponData.Cooldown;
+        currentCooldown = WeaponData.Cooldown - CooldownReduction;
     }
 
     public virtual void Upgrade(int level) 
     {
+        currentLevel++;
     }
 
     public virtual void Activate()

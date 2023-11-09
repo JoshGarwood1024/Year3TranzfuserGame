@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Pool;
 
 public abstract class Enemy : MonoBehaviour
 {
@@ -23,6 +24,9 @@ public abstract class Enemy : MonoBehaviour
 
     public GameObject[] lootItems;
 
+    [SerializeField]
+    private IObjectPool<GameObject> bodyPartPool;
+
     public virtual void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -32,8 +36,6 @@ public abstract class Enemy : MonoBehaviour
             //Debug.LogError("No loot items defined!");
             return;
         }
-
-
     }
 
     public virtual void Attack(GameObject p) {
