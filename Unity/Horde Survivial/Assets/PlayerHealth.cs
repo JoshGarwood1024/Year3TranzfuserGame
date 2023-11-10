@@ -28,11 +28,9 @@ public class PlayerHealth : MonoBehaviour
 
         if (PHealth <= 0)
         {
-            //SceneManager.LoadScene("DeadScene");
 
-            //PHealth = 100;
-            // Destroy(gameObject);
             SceneManager.LoadScene(0);
         }
+
     }
 }

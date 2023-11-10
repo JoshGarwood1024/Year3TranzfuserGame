@@ -15,5 +15,5 @@ MonoBehaviour:
   WeaponName: Marshmellow Mace
   Description: Have a mace constantly swing around you
   UpgradeDescription: Increase damage and mace count
-  Damage: 50
+  Damage: 30
   Cooldown: 0

@@ -229,7 +229,7 @@ MonoBehaviour:
   - {fileID: -1012568722, guid: 0b817d9682e79e04d9a47f25ad457e62, type: 3}
   BodyPartPrefab: {fileID: 4502988034936609466, guid: 306c88a25f601184aaf56112added087, type: 3}
   Damage: 10
-  Health: 20
+  Health: 60
   AmountSpawnPerWave: 3
   lootItems:
   - {fileID: 4257302885375577924, guid: 9852cd8cfffc7114f8a595fc974d45e3, type: 3}
@@ -252,7 +252,7 @@ MonoBehaviour:
   - {fileID: 652285916190925841, guid: adbfba8e2aaa05e46bfefd385ee11b0d, type: 3}
   - {fileID: 652285916190925841, guid: adbfba8e2aaa05e46bfefd385ee11b0d, type: 3}
   - {fileID: 652285916190925841, guid: adbfba8e2aaa05e46bfefd385ee11b0d, type: 3}
-  speed: 1.4
+  speed: 2.5
 --- !u!50 &6027186394189462784
 Rigidbody2D:
   serializedVersion: 4

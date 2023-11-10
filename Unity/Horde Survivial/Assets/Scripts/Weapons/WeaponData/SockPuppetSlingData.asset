@@ -15,5 +15,5 @@ MonoBehaviour:
   WeaponName: Sock Puppet Sling
   Description: Sling sock puppets around the player
   UpgradeDescription: Increase damage and puppets slung
-  Damage: 40
+  Damage: 35
   Cooldown: 1

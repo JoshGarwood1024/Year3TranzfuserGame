@@ -16,4 +16,4 @@ MonoBehaviour:
   Description: Send an air wave around you hurting enemies
   UpgradeDescription: Increase Radius
   Damage: 30
-  Cooldown: 2
+  Cooldown: 1.25
