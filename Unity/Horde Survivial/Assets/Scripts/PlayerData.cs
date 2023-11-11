@@ -16,6 +16,8 @@ public class PlayerData : MonoBehaviour
     private bool isInvincible = false;
     [SerializeField] private float invincibilityDurationSeconds;
 
+    public Animator animator;
+
     public static PlayerData Instance { get; private set; }
 
     private void Awake()
@@ -75,6 +77,7 @@ public class PlayerData : MonoBehaviour
     }
     private IEnumerator BecomeTemporarilyInvincible()
     {
+        animator.SetBool("IsHit", true);
         Debug.Log("Player turned invincible!");
         isInvincible = true;
 
@@ -82,6 +85,7 @@ public class PlayerData : MonoBehaviour
 
         isInvincible = false;
         Debug.Log("Player is no longer invincible!");
+        animator.SetBool("IsHit", false);
     }
 }
 

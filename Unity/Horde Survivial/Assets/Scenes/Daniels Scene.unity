@@ -10417,7 +10417,8 @@ MonoBehaviour:
   HealthBuff: 0
   healthbar: {fileID: 5784693642764308629}
   StartHealth: 100
-  invincibilityDurationSeconds: 5000
+  invincibilityDurationSeconds: 1
+  animator: {fileID: 8662598096633106887}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
