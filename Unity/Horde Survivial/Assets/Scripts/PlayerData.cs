@@ -13,6 +13,8 @@ public class PlayerData : MonoBehaviour
 
     private float CurrentHealth;
     public float StartHealth;
+    private bool isInvincible = false;
+    [SerializeField] private float invincibilityDurationSeconds;
 
     public static PlayerData Instance { get; private set; }
 
@@ -44,13 +46,16 @@ public class PlayerData : MonoBehaviour
 
     public void DecreaseHealth(float health)
     {
-        if(CurrentHealth - health <= 0)
+        if (isInvincible) return;
+
+        if (CurrentHealth - health <= 0)
         {
             GameManager.Instance.UpdateGameState(GameState.Lose);
             SceneManager.LoadScene(0);
         } else
         {
             CurrentHealth -= health;
+            StartCoroutine(BecomeTemporarilyInvincible());
         }
 
         UpdateHealthBar();
@@ -67,6 +72,16 @@ public class PlayerData : MonoBehaviour
         }
 
         UpdateHealthBar();
+    }
+    private IEnumerator BecomeTemporarilyInvincible()
+    {
+        Debug.Log("Player turned invincible!");
+        isInvincible = true;
+
+        yield return new WaitForSeconds(invincibilityDurationSeconds);
+
+        isInvincible = false;
+        Debug.Log("Player is no longer invincible!");
     }
 }
 
