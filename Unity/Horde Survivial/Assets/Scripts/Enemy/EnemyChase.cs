@@ -32,22 +32,29 @@ public class EnemyChase : Enemy
 
     }
 
+    public override void Attack(GameObject p)
+    {
+        base.Attack(p);
+
+        StartCoroutine(Knockback());
+    }
     public override void Hurt(float dmg)
     {
         base.Hurt(dmg);
 
-        Vector3 dir = player.transform.position - transform.position;
-        dir.Normalize();
-
         StartCoroutine(Knockback());
-
-        rb.velocity = Vector2.zero;
-        rb.AddForce(-dir * 2000, ForceMode2D.Impulse);
     }
 
     IEnumerator Knockback()
     {
         chasing = false;
+
+        Vector3 dir = player.transform.position - transform.position;
+        dir.Normalize();
+
+        rb.velocity = Vector2.zero;
+        rb.AddForce(-dir * 4000, ForceMode2D.Impulse);
+
         yield return new WaitForSeconds(0.4f);
         chasing = true;
     }

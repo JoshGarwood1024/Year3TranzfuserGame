@@ -26,6 +26,7 @@ public class Breathing : Weapon
 
         if (level <= 5)
         {
+            WeaponPrefab.transform.localScale *= 1.1f;
             Radius += 0.25f;
         }
     }

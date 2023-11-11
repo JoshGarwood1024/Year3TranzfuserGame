@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public static float PHealth = 100;
+    public float PHealth = 100;
     public float startMHealth;
     public Image healthbar;
 
@@ -31,6 +31,5 @@ public class PlayerHealth : MonoBehaviour
 
             SceneManager.LoadScene(0);
         }
-
     }
 }

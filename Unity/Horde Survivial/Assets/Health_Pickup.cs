@@ -10,7 +10,8 @@ public class Health_Pickup : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            PlayerHealth.PHealth += 20;
+
+            PlayerData.Instance.IncreaseHealth(20);
             Destroy(this.gameObject);
         }
     }

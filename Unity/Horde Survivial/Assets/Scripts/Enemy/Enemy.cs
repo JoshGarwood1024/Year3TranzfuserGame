@@ -16,6 +16,8 @@ public abstract class Enemy : MonoBehaviour
 
     public List<Sprite> BodyPartSprites;
     public GameObject BodyPartPrefab;
+    public Material flashMaterial;
+    Material originalMaterial;
 
     public float Damage;
     public float Health;
@@ -36,10 +38,12 @@ public abstract class Enemy : MonoBehaviour
             //Debug.LogError("No loot items defined!");
             return;
         }
+
+        originalMaterial = GetComponent<SpriteRenderer>().material;
     }
 
     public virtual void Attack(GameObject p) {
-        PlayerHealth.PHealth -= Damage;
+        PlayerData.Instance.DecreaseHealth(Damage);
         p.GetComponent<CameraShake>().shakeDuration = 0.2f;
     }
 
@@ -50,7 +54,18 @@ public abstract class Enemy : MonoBehaviour
         GameObject dmgTxt = Instantiate(damageTextPrefab, transform.position, Quaternion.identity, GameObject.Find("WorldSpaceCanvas").transform);
         dmgTxt.GetComponent<TextMeshProUGUI>().text = dmg.ToString();
 
+        StartCoroutine(Flash());
+
         Health -= dmg;
+    }
+
+    IEnumerator Flash()
+    {
+        GetComponent<SpriteRenderer>().material = flashMaterial;
+
+        yield return new WaitForSeconds(0.1f);
+
+        GetComponent<SpriteRenderer>().material = originalMaterial;
     }
 
     public virtual void Death()

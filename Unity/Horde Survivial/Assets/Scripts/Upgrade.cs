@@ -36,13 +36,13 @@ public class HealthUpgrade : Upgrade
     public override void Equip()
     {
         base.Equip();
-        GameObject.Find("Player").GetComponent<PlayerHealth>().startMHealth += 5;
+        PlayerData.Instance.IncreaseHealth(5);
     }
 
     public override void LevelUp()
     {
         base.LevelUp();
-        GameObject.Find("Player").GetComponent<PlayerHealth>().startMHealth += 5;
+        PlayerData.Instance.IncreaseHealth(5);
     }
 }
 public class DamageUpgrade : Upgrade

@@ -142,6 +142,7 @@ MonoBehaviour:
   - {fileID: -524552935, guid: 0b817d9682e79e04d9a47f25ad457e62, type: 3}
   - {fileID: 612893151, guid: 0b817d9682e79e04d9a47f25ad457e62, type: 3}
   BodyPartPrefab: {fileID: 4502988034936609466, guid: 306c88a25f601184aaf56112added087, type: 3}
+  flashMaterial: {fileID: 2100000, guid: 0aa366fe36fb4d446ba436e64c6c8df8, type: 2}
   Damage: 10
   Health: 100
   AmountSpawnPerWave: 3
@@ -167,6 +168,7 @@ MonoBehaviour:
   - {fileID: 652285916190925841, guid: adbfba8e2aaa05e46bfefd385ee11b0d, type: 3}
   - {fileID: 652285916190925841, guid: adbfba8e2aaa05e46bfefd385ee11b0d, type: 3}
   speed: 1.5
+  hitParticle: {fileID: 5710591618206416197, guid: 7d0b55682cae61d43856d8e9b6ae69e2, type: 3}
 --- !u!50 &751155330597552340
 Rigidbody2D:
   serializedVersion: 4
