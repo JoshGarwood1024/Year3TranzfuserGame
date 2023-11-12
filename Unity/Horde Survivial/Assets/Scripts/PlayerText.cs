@@ -17,7 +17,7 @@ public class PlayerText : MonoBehaviour
     void Update()
     {
 
-        topText.transform.position = player.transform.position + new Vector3(0, 1);
-        bottomText.transform.position = player.transform.position + new Vector3(0, -1);
+        topText.transform.position = player.transform.position + new Vector3(0, 1.25f);
+        bottomText.transform.position = player.transform.position + new Vector3(0, -1.25f);
     }
 }

@@ -1189,6 +1189,7 @@ Transform:
   - {fileID: 1292018226}
   - {fileID: 1632401595}
   - {fileID: 15516231}
+  - {fileID: 1404039833}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &155527476
@@ -6859,11 +6860,11 @@ Transform:
   m_GameObject: {fileID: 1404039832}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 184.67516, y: 133.97023, z: 1.447183}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 153793209}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1404039834
 MonoBehaviour:
@@ -7857,7 +7858,7 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0.00032043457
-      value: 1.9942436
+      value: 2.4998589
       inSlope: 2
       outSlope: 2
       tangentMode: 0
@@ -7865,17 +7866,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.14054242
-      value: 1.6040606
-      inSlope: -0.22965328
-      outSlope: -0.22965328
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.29128116
-      value: 1.416954
+      time: 0.3264374
+      value: 2.0226974
       inSlope: -0.65277296
       outSlope: -0.65277296
       tangentMode: 0
@@ -7883,8 +7875,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.39730248
-      value: 1.2227721
+      time: 0.70626247
+      value: 1.3429118
       inSlope: -1.0598812
       outSlope: -1.0598812
       tangentMode: 0
@@ -7892,50 +7884,23 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.48842898
-      value: 0.8702488
-      inSlope: -1.0187885
-      outSlope: -1.0187885
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.61284417
-      value: 0.6137829
-      inSlope: -0.89646876
-      outSlope: -0.89646876
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.682761
-      value: 0.47784597
-      inSlope: -1.27238
-      outSlope: -1.27238
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.8073334
-      value: 0.27392873
-      inSlope: -1.1151569
-      outSlope: -1.1151569
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.9987406
-      value: -0.01807499
+      time: 1.2348552
+      value: 0.42244625
       inSlope: 0
       outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
+    - serializedVersion: 3
+      time: 4.531225
+      value: -5.5270405
+      inSlope: -1.1151569
+      outSlope: -1.1151569
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -10129,8 +10094,8 @@ MonoBehaviour:
   FrontXp: {fileID: 175484931}
   BackXp: {fileID: 82883886}
   levelText: {fileID: 1031457686}
-  additionMuiltipler: 150
-  PowerMuiltipler: 2
+  additionMuiltipler: 140
+  PowerMuiltipler: 1
   DivisionMuiltipler: 7
   enemySpawner: {fileID: 1632401593}
 --- !u!114 &7245676098354120584
@@ -10427,4 +10392,3 @@ SceneRoots:
   - {fileID: 489880999}
   - {fileID: 704690012}
   - {fileID: 153793209}
-  - {fileID: 1404039833}

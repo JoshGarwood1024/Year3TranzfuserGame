@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5455827545521557456}
   - component: {fileID: 4609634306965057267}
   - component: {fileID: 2533278066031874657}
+  - component: {fileID: -5600332607442920560}
   m_Layer: 0
   m_Name: HealthBoost
   m_TagString: Untagged
@@ -220,3 +221,16 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &-5600332607442920560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188659603629853688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6cfd58b041efc3469b2f8f1377c97f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FadeOutTime: 16

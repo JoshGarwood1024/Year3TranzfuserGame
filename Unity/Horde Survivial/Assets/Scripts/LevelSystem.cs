@@ -20,7 +20,7 @@ public class LevelSystem : MonoBehaviour
     [Header("Muiltiples")]
     [Range(1f,300f)]
     public float additionMuiltipler = 300;
-    [Range(2f, 4f)]
+    [Range(1f, 4f)]
     public float PowerMuiltipler = 2;
     [Range(7f, 14f)]
     public float DivisionMuiltipler = 7;
