@@ -125,9 +125,9 @@ public class MapGeneration : MonoBehaviour
     void DrawMap()
     {
         //Draws background
-        for (int _x = -10; _x < width + 10; _x++)
+        for (int _x = -20; _x < width + 20; _x++)
         {
-            for(int _y = -10; _y < height + 10; _y++)
+            for(int _y = -20; _y < height + 20; _y++)
             {
                 Vector3 pos = new Vector3(_x + .5f, _y + .5f, 0);
                 Vector3Int gridPos = GetComponent<Tilemap>().WorldToCell(pos);
