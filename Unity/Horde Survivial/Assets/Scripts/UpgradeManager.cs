@@ -13,6 +13,7 @@ public class UpgradeManager : MonoBehaviour
     [SerializeField]
     GameObject UpgradePanel;
 
+    public List<ParticleSystem> gemParticles = new List<ParticleSystem>();
     public static UpgradeManager Instance { get; private set; }
 
     private void Awake()
@@ -97,10 +98,21 @@ public class UpgradeManager : MonoBehaviour
         {
             upgradeSlots[i].GetComponent<UpgradesPanel>().ShowUpgrade(selectedUpgrades[i]);
         }
+
+        foreach(ParticleSystem p in gemParticles)
+        {
+            p.Play();
+        }
     }
 
     public void ClosePanel(Upgrade chosenUpgrade)
     {
+        foreach (ParticleSystem p in gemParticles)
+        {
+            p.Stop();
+            p.Clear();
+        }
+
         UpgradePanel.SetActive(false);
 
         ChosenUpgrade(chosenUpgrade);

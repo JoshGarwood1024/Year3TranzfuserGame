@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 forceToApply;
     public float forceDamping;
 
+    public ParticleSystem RunningParticle;
+
     public Animator anim;
 
     SpriteRenderer sr;
@@ -50,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(Mathf.Abs(horz) + Mathf.Abs(vert) > 0)
         {
+            if(RunningParticle) RunningParticle.Play();
             GetComponent<Animator>().SetTrigger("Squish");
         }
     }
