@@ -14,10 +14,11 @@ public class EnemySpawner : MonoBehaviour
 
     public AnimationCurve spawnCurve;
     public float CurrentTime = 0;
-    public float TotalTimeToProgress = 1800.0f;
+    public float TotalTimeToProgress;
+
     private void Start()
     {
-        int enemyCount = easyEnemies.Count < 2 ? easyEnemies.Count : 2;
+        int enemyCount = easyEnemies.Count < 3 ? easyEnemies.Count : 3;
 
         for(int i = 0; i < enemyCount; i++)
         {
@@ -52,19 +53,27 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        Debug.Log(spawnCurve.Evaluate(CurrentTime / TotalTimeToProgress));
+    }
+
     public void LeveledUp(int level)
     {
+
+        //This number is the seconds between waves
         float sc = spawnCurve.Evaluate(CurrentTime / TotalTimeToProgress);
 
         if (player.GetComponent<LevelSystem>().level % 2 == 0)
         {
-            if(sc > 0.2f && sc < 0.5f)
+            if (sc > 3.5f && sc < 3.95f)
             {
                 enemyPool.Remove(enemyPool[Random.Range(0, enemyPool.Count)]);
                 enemyPool.Add(midEnemies[Random.Range(0, midEnemies.Count)]);
+                return;
             }
 
-            if (sc > 0.5f)
+            if (sc > 2.5f)
             {
                 enemyPool.Remove(enemyPool[Random.Range(0, enemyPool.Count)]);
                 enemyPool.Add(hardEnemies[Random.Range(0, hardEnemies.Count)]);
