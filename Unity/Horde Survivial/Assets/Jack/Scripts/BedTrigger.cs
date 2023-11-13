@@ -2,18 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class BedTrigger : MonoBehaviour
 {
     public string sceneToLoad;
     private bool inTrigger = false;
 
-    public Camera mainCamera;   // Reference to the main camera.
-    public Transform target;    // Reference to the object you want to zoom in on.
-    public float zoomAmount = 2.0f;  // Adjust this value for the zoom level.
-    public float zoomDuration = 1.0f;  // Duration of the zoom effect in seconds.
+    public Camera mainCamera;   
+    public Transform target;    
+    public float zoomAmount = 2.0f;  
+    public float zoomDuration = 1.0f;
 
-    private Camera originalCamera;  // Store the original camera settings
+    public Image image;
+    public float fadeDuration = 2.0f;
+    private float currentAlpha = 0.0f;
+
+
+
+    private Camera originalCamera;  
     private float initialCameraSize;
     private Vector3 initialCameraPosition;
     private float zoomStartTime;
@@ -21,7 +28,7 @@ public class BedTrigger : MonoBehaviour
 
     private void Start()
     {
-        originalCamera = mainCamera;  // Store the original camera settings.
+        originalCamera = mainCamera;  
         initialCameraSize = mainCamera.orthographicSize;
         initialCameraPosition = mainCamera.transform.position;
     }
@@ -36,14 +43,25 @@ public class BedTrigger : MonoBehaviour
                 float t = timeSinceStart / zoomDuration;
                 mainCamera.orthographicSize = Mathf.Lerp(initialCameraSize, initialCameraSize / zoomAmount, t);
                 mainCamera.transform.position = Vector3.Lerp(initialCameraPosition, new Vector3(target.position.x, target.position.y, mainCamera.transform.position.z), t);
+                image.gameObject.SetActive(true);
+                    currentAlpha += Time.deltaTime / fadeDuration;
+                    image.color = new Color(image.color.r, image.color.g, image.color.b, currentAlpha);
             }
             else
             {
                 mainCamera.orthographicSize = initialCameraSize / zoomAmount;
                 mainCamera.transform.position = new Vector3(target.position.x, target.position.y, mainCamera.transform.position.z);
                 isZooming = false;
-                SceneManager.LoadScene(1);
+
+              
+               
+                    SceneManager.LoadScene(1);
+                
             }
+           
+                
+
+                
         }
 
         if (inTrigger && Input.GetKeyDown(KeyCode.E) && !isZooming)
