@@ -10,6 +10,7 @@ TagManager:
   - GameMusic
   - GameSFX
   - ZoomableObject
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - map
   - walls
   - Collectable
-  - 
+  - ParticlesOnWeapons
   - 
   - 
   - 

@@ -6,18 +6,19 @@ public class Balloon : MonoBehaviour
 {
     [HideInInspector]
     public float Damage;
-    
+    public float ExplodeRadius;
+
     public Sprite ExplodedSprite;
 
     private float time = 0.0f;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy") && !collision.collider.isTrigger)
         {
             collision.gameObject.GetComponent<EnemyChase>().Hurt(Damage);
 
-            Collider2D[] surroundingEnemies = Physics2D.OverlapCircleAll(transform.position, 2);
+            Collider2D[] surroundingEnemies = Physics2D.OverlapCircleAll(transform.position, ExplodeRadius);
 
             foreach (Collider2D enemy in surroundingEnemies)
             {

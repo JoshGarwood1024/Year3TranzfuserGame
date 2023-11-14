@@ -11,6 +11,15 @@ public class PillowBat : Weapon
     {
         base.Attack();
 
+        if (MaxLevel)
+        {
+            Collider2D[] collidersHit = Physics2D.OverlapCircleAll(transform.position, 3);
+            foreach (Collider2D e in collidersHit)
+            {
+                if (e.gameObject.TryGetComponent<Enemy>(out Enemy enemy) && !e.isTrigger) enemy.Hurt(30 + DamageIncrease);
+            }
+        }
+
         pillowBat = Instantiate(WeaponPrefab, transform.position + new Vector3(2.5f, 0, 0), WeaponPrefab.transform.rotation, transform);
         pillowBat.GetComponent<HurtEnemyOnTrigger>().Damage = WeaponData.Damage + DamageIncrease;
         StartCoroutine(Dissapear());
@@ -29,6 +38,8 @@ public class PillowBat : Weapon
     public override void Upgrade(int level)
     {
         base.Upgrade(level);
+
+        DamageIncrease += 5;
     }
 
     IEnumerator Dissapear()

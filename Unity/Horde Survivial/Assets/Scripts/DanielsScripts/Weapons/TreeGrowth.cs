@@ -30,7 +30,7 @@ public class TreeGrowth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Enemy")
+        if(collision.tag == "Enemy" && !collision.isTrigger)
         {
             collision.gameObject.GetComponent<Enemy>().Hurt(damage);
         }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-
+    
     public GameObject WeaponPrefab;
     public WeaponSO WeaponData;
 
@@ -42,6 +42,8 @@ public class Weapon : MonoBehaviour
 
     public virtual void Upgrade(int level) 
     {
+        if (level >= 5) MaxLevel = true;
+
         currentLevel++;
     }
 
