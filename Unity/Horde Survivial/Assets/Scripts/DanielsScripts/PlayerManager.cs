@@ -11,6 +11,9 @@ public class PlayerManager : MonoBehaviour
 
     GameObject pet;
 
+    public int PermCurrency = 0;
+    public Dictionary<string, int> PermUpgrades = new Dictionary<string, int>();
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -33,6 +36,29 @@ public class PlayerManager : MonoBehaviour
 
         PlayersPet = Pet.Dog;
         SetPet("Dog");
+
+        PermCurrency = 30;
+    }
+
+    public void BuyUpgrade(PermUpgrade permUpgrade)
+    {
+        int cost = permUpgrade.Cost;
+        string upgradeID = permUpgrade.UpgradeID;
+
+        if(PermCurrency >= cost)
+        {
+            PermCurrency -= cost;
+
+            if(PermUpgrades.ContainsKey(upgradeID))
+            {
+                PermUpgrades[upgradeID]++;
+            } else
+            {
+                PermUpgrades.Add(upgradeID, 1);
+            }
+        }
+
+        Debug.Log("Bought Upgrade: " + upgradeID);
     }
 
     public void SetStartingClass(StartingClass sc)

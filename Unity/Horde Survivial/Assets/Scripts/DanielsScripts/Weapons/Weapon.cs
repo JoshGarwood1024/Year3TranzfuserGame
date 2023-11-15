@@ -35,6 +35,11 @@ public class Weapon : MonoBehaviour
         }
     }
 
+    public virtual void ApplyPermUpgrade(int level)
+    {
+        Debug.Log(WeaponData.WeaponName + "PERM UPGRADE: " + level);
+    }
+
     protected virtual void Attack()
     {
         currentCooldown = WeaponData.Cooldown - CooldownReduction;
