@@ -29,7 +29,19 @@ public class EnemyChase : Enemy
 
             rb.velocity = direction * speed;
         }
+    }
 
+    protected override void Update()
+    {
+        base.Update();
+
+        if(PlayerData.Instance.gameObject.transform.position.x < transform.position.x)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+        } else
+        {
+            GetComponent<SpriteRenderer>().flipX = false; 
+        }
     }
 
     public override void Attack(GameObject p)
@@ -53,7 +65,7 @@ public class EnemyChase : Enemy
         dir.Normalize();
 
         rb.velocity = Vector2.zero;
-        rb.AddForce(-dir * 4000, ForceMode2D.Impulse);
+        rb.AddForce(-dir * 1000, ForceMode2D.Impulse);
 
         yield return new WaitForSeconds(0.4f);
         chasing = true;

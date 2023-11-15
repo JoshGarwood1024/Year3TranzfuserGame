@@ -53,11 +53,6 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        Debug.Log(spawnCurve.Evaluate(CurrentTime / TotalTimeToProgress));
-    }
-
     public void LeveledUp(int level)
     {
 

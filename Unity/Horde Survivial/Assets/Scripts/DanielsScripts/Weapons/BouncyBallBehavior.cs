@@ -25,9 +25,4 @@ public class BouncyBallBehavior : MonoBehaviour
 
         if (hitCount >= 3) Destroy(gameObject);
     }
-
-    private void OnParticleTrigger()
-    {
-        
-    }
 }
