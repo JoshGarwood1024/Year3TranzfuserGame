@@ -18,6 +18,8 @@ public class PlayerData : MonoBehaviour
 
     public Animator animator;
 
+    public GameObject EndMenu;
+
     public static PlayerData Instance { get; private set; }
 
     private void Awake()
@@ -53,7 +55,11 @@ public class PlayerData : MonoBehaviour
         if (CurrentHealth - health <= 0)
         {
             GameManager.Instance.UpdateGameState(GameState.Lose);
-            SceneManager.LoadScene(0);
+            Time.timeScale = 0f;
+            EndMenu.SetActive(true);
+
+
+
         } else
         {
             CurrentHealth -= health;
