@@ -227,7 +227,7 @@ MonoBehaviour:
   flashMaterial: {fileID: 2100000, guid: 0aa366fe36fb4d446ba436e64c6c8df8, type: 2}
   Damage: 15
   Health: 200
-  AmountSpawnPerWave: 3
+  AmountSpawnPerWave: 1
   lootItems:
   - {fileID: 4257302885375577924, guid: 9852cd8cfffc7114f8a595fc974d45e3, type: 3}
   - {fileID: 4257302885375577924, guid: 9852cd8cfffc7114f8a595fc974d45e3, type: 3}
