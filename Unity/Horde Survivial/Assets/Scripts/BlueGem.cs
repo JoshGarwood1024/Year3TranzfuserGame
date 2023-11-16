@@ -42,7 +42,7 @@ public class BlueGem : MonoBehaviour
             LevelSystem levelSystem = collision.gameObject.GetComponent<LevelSystem>();
             if (levelSystem != null)
             {
-                levelSystem.GainExperienceFlatRate(30);
+                levelSystem.GainExperienceFlatRate(20);
                 Destroy(gameObject);
             }
         }

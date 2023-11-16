@@ -11,7 +11,7 @@ public class Health_Pickup : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
 
-            PlayerData.Instance.IncreaseHealth(20);
+            PlayerData.Instance.IncreaseHealth(10);
             Destroy(this.gameObject);
         }
     }

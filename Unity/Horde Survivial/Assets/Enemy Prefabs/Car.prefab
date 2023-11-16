@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -59249501
   m_SortingLayer: 2
-  m_SortingOrder: 1
+  m_SortingOrder: 8
   m_Sprite: {fileID: 21300000, guid: 0a3cb77cde872304d835023426a64cdd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
   BodyPartPrefab: {fileID: 4502988034936609466, guid: 306c88a25f601184aaf56112added087, type: 3}
   flashMaterial: {fileID: 2100000, guid: 0aa366fe36fb4d446ba436e64c6c8df8, type: 2}
   Damage: 15
-  Health: 30
+  Health: 35
   AmountSpawnPerWave: 4
   lootItems:
   - {fileID: 4257302885375577924, guid: 9852cd8cfffc7114f8a595fc974d45e3, type: 3}

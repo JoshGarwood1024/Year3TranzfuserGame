@@ -41,7 +41,7 @@ public class RedGemXP : MonoBehaviour
             LevelSystem levelSystem = collision.gameObject.GetComponent<LevelSystem>();
             if (levelSystem != null)
             {
-                levelSystem.GainExperienceFlatRate(40);
+                levelSystem.GainExperienceFlatRate(25);
                 Destroy(gameObject);
             }
         }

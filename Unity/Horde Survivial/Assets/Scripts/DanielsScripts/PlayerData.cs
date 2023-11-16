@@ -55,8 +55,7 @@ public class PlayerData : MonoBehaviour
         if (CurrentHealth - health <= 0)
         {
             GameManager.Instance.UpdateGameState(GameState.Lose);
-            Time.timeScale = 0f;
-            EndMenu.SetActive(true);
+            EndMenu.GetComponent<EndScreenMenu>().OpenMenu();
 
 
 

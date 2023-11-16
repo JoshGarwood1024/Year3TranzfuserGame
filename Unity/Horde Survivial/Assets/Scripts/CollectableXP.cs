@@ -42,7 +42,7 @@ public class CollectableXP : MonoBehaviour
             LevelSystem levelSystem = collision.gameObject.GetComponent<LevelSystem>();
             if (levelSystem != null)
             {
-                levelSystem.GainExperienceFlatRate(20);
+                levelSystem.GainExperienceFlatRate(10);
                 Destroy(gameObject);
             }
         }

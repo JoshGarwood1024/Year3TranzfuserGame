@@ -300,7 +300,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -59249501
   m_SortingLayer: 2
-  m_SortingOrder: 1
+  m_SortingOrder: 8
   m_Sprite: {fileID: 21300000, guid: 3381283201a14cb4db1723680358658d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -447,6 +447,7 @@ MonoBehaviour:
   damageTextPrefab: {fileID: 7353506689705183412, guid: 7bc5fb940bdc09a4084d91581531580e, type: 3}
   BodyPartSprites: []
   BodyPartPrefab: {fileID: 4502988034936609466, guid: 306c88a25f601184aaf56112added087, type: 3}
+  flashMaterial: {fileID: 0}
   Damage: 30
   Health: 10
   AmountSpawnPerWave: 1
