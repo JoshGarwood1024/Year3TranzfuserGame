@@ -479,8 +479,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29fae47f6af41de4e8fc483086719983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeText: {fileID: 14135142}
-  timeManager: {fileID: 1162546377}
 --- !u!1 &15516229
 GameObject:
   m_ObjectHideFlags: 0
@@ -16686,7 +16684,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa47813aa723e8340a86d669028f3a82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameTime: 0
 --- !u!1 &1230307366
 GameObject:
   m_ObjectHideFlags: 0
@@ -17589,7 +17586,6 @@ MonoBehaviour:
   - {fileID: -227431684, guid: 8d298c5346df5b64e9800f9f9ac9cf0b, type: 3}
   - {fileID: -1195519433, guid: 8d298c5346df5b64e9800f9f9ac9cf0b, type: 3}
   - {fileID: -1638405817, guid: 8d298c5346df5b64e9800f9f9ac9cf0b, type: 3}
-  PermCurrency: 0
 --- !u!1 &1413533256
 GameObject:
   m_ObjectHideFlags: 0
@@ -24068,8 +24064,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29fae47f6af41de4e8fc483086719983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeText: {fileID: 1621194735}
-  timeManager: {fileID: 1162546377}
 --- !u!1 &1632401593
 GameObject:
   m_ObjectHideFlags: 0
@@ -24160,44 +24154,35 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 4
-      inSlope: 0.022679582
-      outSlope: 0.022679582
+      time: -0.008771015
+      value: 6.4988647
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 1
+      outWeight: 0
     - serializedVersion: 3
-      time: 0.2
-      value: 3.7
-      inSlope: -0.32384422
-      outSlope: -0.32384422
+      time: 0.046933964
+      value: 6.0059056
+      inSlope: -12.7441225
+      outSlope: -12.7441225
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.7083726
+      outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.5
-      value: 3
-      inSlope: -0.19853148
-      outSlope: -0.19853148
+      time: 0.101101115
+      value: 5.489328
+      inSlope: -6.5098853
+      outSlope: -6.5098853
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 1
-    - serializedVersion: 3
-      time: 0.7636956
-      value: 2.6434343
-      inSlope: 0.16407797
-      outSlope: 0.16407797
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 1
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
-      value: 2.5
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -32289,7 +32274,6 @@ MonoBehaviour:
   FrontXp: {fileID: 175484931}
   BackXp: {fileID: 82883886}
   levelText: {fileID: 1031457686}
-  levelText2: {fileID: 1457160993}
   additionMuiltipler: 140
   PowerMuiltipler: 1
   DivisionMuiltipler: 7
@@ -32581,7 +32565,6 @@ MonoBehaviour:
   StartHealth: 100
   invincibilityDurationSeconds: 1
   animator: {fileID: 8662598096633106887}
-  EndMenu: {fileID: 1692934114}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
