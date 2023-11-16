@@ -32,7 +32,7 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator SpawnEnemies()
     {
-        while(CurrentTime < TotalTimeToProgress)
+        while (CurrentTime < TotalTimeToProgress && GameManager.Instance.State == GameState.Playing) 
         {
             float curveValue = spawnCurve.Evaluate(CurrentTime / TotalTimeToProgress);
 

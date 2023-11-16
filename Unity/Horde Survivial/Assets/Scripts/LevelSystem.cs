@@ -16,7 +16,6 @@ public class LevelSystem : MonoBehaviour
     public Image FrontXp;
     public Image BackXp;
     public TextMeshProUGUI levelText;
-    public TextMeshProUGUI levelText2;
 
     [Header("Muiltiples")]
     [Range(1f,300f)]
@@ -34,7 +33,6 @@ public class LevelSystem : MonoBehaviour
         BackXp.fillAmount = currentXp / requierdXp;
         requierdXp = CalculateRequiredXP();
         levelText.text = " " + level;
-        levelText2.text = " " + level;
     }
 
     // Update is called once per frame
@@ -78,7 +76,6 @@ public class LevelSystem : MonoBehaviour
         // Can upgrade stats like health here
         requierdXp = CalculateRequiredXP();
         levelText.text = " " + level;
-        levelText2.text = " " + level;
 
         enemySpawner.GetComponent<EnemySpawner>().LeveledUp(level);
 

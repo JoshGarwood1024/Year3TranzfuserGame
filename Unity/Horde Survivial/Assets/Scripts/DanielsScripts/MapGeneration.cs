@@ -22,6 +22,8 @@ public class MapGeneration : MonoBehaviour
     [Range(0, 100)]
     public int fillingPercentage;
 
+    public List<GameObject> EnemySpawners = new List<GameObject>();
+
     void Start()
     {
         seed = Random.Range(1, 9999999).ToString();
@@ -41,6 +43,9 @@ public class MapGeneration : MonoBehaviour
                 }
             }
         }
+
+        SpawnEnemySpawners();
+        GameManager.Instance.UpdateGameState(GameState.Playing);
     }
 
     void CellularAutomata()
@@ -158,5 +163,12 @@ public class MapGeneration : MonoBehaviour
         }
     }
 
-    
+    void SpawnEnemySpawners()
+    {
+        Vector3 playerPos = player.transform.position;
+        EnemySpawners[0].transform.position = playerPos + new Vector3(width / 2, 0);
+        EnemySpawners[1].transform.position = playerPos + new Vector3(0, height / 2);
+        EnemySpawners[2].transform.position = playerPos - new Vector3(width / 2, 0);
+        EnemySpawners[3].transform.position = playerPos - new Vector3(0, height / 2);
+    }
 }

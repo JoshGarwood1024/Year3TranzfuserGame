@@ -25,9 +25,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        UpdateGameState(GameState.Playing);
-
-        
         switch (PlayerManager.Instance.PlayersPet)
         {
             case Pet.Dog:
