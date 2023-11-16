@@ -68,7 +68,7 @@ public class EnemySpawner : MonoBehaviour
                 return;
             }
 
-            if (sc > 2.5f)
+            if (sc > 2.5f && sc < 3.5f)
             {
                 enemyPool.Remove(enemyPool[Random.Range(0, enemyPool.Count)]);
                 enemyPool.Add(hardEnemies[Random.Range(0, hardEnemies.Count)]);
