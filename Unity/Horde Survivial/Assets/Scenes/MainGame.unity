@@ -367,7 +367,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -1, y: -149.5}
+  m_AnchoredPosition: {x: -1, y: -117.69}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &14135142
@@ -453,7 +453,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -0.7809906, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -479,6 +479,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29fae47f6af41de4e8fc483086719983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeText: {fileID: 0}
+  timeManager: {fileID: 0}
 --- !u!1 &15516229
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,7 +582,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -32, y: 56}
+  m_AnchoredPosition: {x: -0.99997, y: 100}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &36251288
@@ -752,8 +754,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -52}
-  m_SizeDelta: {x: 1736.1798, y: 46.446472}
+  m_AnchoredPosition: {x: -0.000000038912, y: -24.40503}
+  m_SizeDelta: {x: 1722.2, y: 48.566}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &39120597
 GameObject:
@@ -1213,8 +1215,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.9999695, y: 0}
-  m_SizeDelta: {x: 1752.1978, y: 45.3}
+  m_AnchoredPosition: {x: 3.4995, y: 0}
+  m_SizeDelta: {x: 1729.2, y: 45.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &95193359
 GameObject:
@@ -1636,8 +1638,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.9999695, y: 0}
-  m_SizeDelta: {x: 1752.1978, y: 45.3}
+  m_AnchoredPosition: {x: 3.4995, y: 0}
+  m_SizeDelta: {x: 1729.2, y: 45.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &175484930
 CanvasRenderer:
@@ -4472,8 +4474,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.9999695, y: 0}
-  m_SizeDelta: {x: 1752.1984, y: 45.3}
+  m_AnchoredPosition: {x: 3.4997, y: 0}
+  m_SizeDelta: {x: 1729.2, y: 45.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &661862378
 MonoBehaviour:
@@ -4879,8 +4881,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -59249501
-  m_SortingLayer: 2
+  m_SortingLayerID: -761309331
+  m_SortingLayer: 3
   m_SortingOrder: -2
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -9826,8 +9828,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -761309331
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -14824,9 +14826,9 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -679023401
+  m_SortingLayer: 1
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -14945,8 +14947,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b44a42968145d344e909af6e601f34e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 60
-  height: 40
+  width: 80
+  height: 60
   tile: {fileID: 11400000, guid: f250c50222d44cd40aa222650a0acc3b, type: 2}
   BGTile: {fileID: 11400000, guid: a8f6657902c5ca74fa8b2da2be5047e7, type: 2}
   backgroundTileMap: {fileID: 1345442493}
@@ -14954,6 +14956,11 @@ MonoBehaviour:
   player: {fileID: 6311826421918922189}
   seed: 
   fillingPercentage: 65
+  EnemySpawners:
+  - {fileID: 66040008}
+  - {fileID: 411842962}
+  - {fileID: 445060043}
+  - {fileID: 968948025}
 --- !u!1 &854515430
 GameObject:
   m_ObjectHideFlags: 0
@@ -15577,7 +15584,7 @@ GameObject:
   - component: {fileID: 1031457687}
   - component: {fileID: 1031457686}
   m_Layer: 5
-  m_Name: Level
+  m_Name: LevelNumber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15696,8 +15703,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 1168, y: -51}
-  m_SizeDelta: {x: 201.6, y: 96.1689}
+  m_AnchoredPosition: {x: 1155, y: -21.083984}
+  m_SizeDelta: {x: 203.7659, y: 84.3543}
   m_Pivot: {x: 6.062433, y: 0.5}
 --- !u!1 &1033703954
 GameObject:
@@ -16684,6 +16691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa47813aa723e8340a86d669028f3a82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameTime: 0
 --- !u!1 &1230307366
 GameObject:
   m_ObjectHideFlags: 0
@@ -17185,9 +17193,9 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -761309331
-  m_SortingLayer: 3
-  m_SortingOrder: -2
+  m_SortingLayerID: -679023401
+  m_SortingLayer: 1
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -17364,8 +17372,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8, y: 0}
-  m_SizeDelta: {x: 1752.1984, y: 45.3}
+  m_AnchoredPosition: {x: 3.4996, y: 0}
+  m_SizeDelta: {x: 1729.2, y: 45.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1377903240
 MonoBehaviour:
@@ -17586,6 +17594,7 @@ MonoBehaviour:
   - {fileID: -227431684, guid: 8d298c5346df5b64e9800f9f9ac9cf0b, type: 3}
   - {fileID: -1195519433, guid: 8d298c5346df5b64e9800f9f9ac9cf0b, type: 3}
   - {fileID: -1638405817, guid: 8d298c5346df5b64e9800f9f9ac9cf0b, type: 3}
+  PermCurrency: 0
 --- !u!1 &1413533256
 GameObject:
   m_ObjectHideFlags: 0
@@ -18024,37 +18033,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1434875887}
   m_CullTransparentMesh: 1
---- !u!1 &1445575225
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1445575226}
-  m_Layer: 0
-  m_Name: Spawner (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1445575226
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1445575225}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 178.5, y: -13.4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1632401595}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1454136603
 GameObject:
   m_ObjectHideFlags: 0
@@ -18089,7 +18067,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: 417.3}
+  m_AnchoredPosition: {x: -1, y: 468}
   m_SizeDelta: {x: 657.2263, y: 150.0182}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1454136605
@@ -18760,8 +18738,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -761309331
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -24064,6 +24042,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29fae47f6af41de4e8fc483086719983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeText: {fileID: 0}
+  timeManager: {fileID: 0}
 --- !u!1 &1632401593
 GameObject:
   m_ObjectHideFlags: 0
@@ -24149,7 +24129,7 @@ MonoBehaviour:
   - {fileID: 411842962}
   - {fileID: 445060043}
   - {fileID: 968948025}
-  - {fileID: 1445575225}
+  - {fileID: 0}
   spawnCurve:
     serializedVersion: 2
     m_Curve:
@@ -24211,7 +24191,6 @@ Transform:
   - {fileID: 411842963}
   - {fileID: 445060044}
   - {fileID: 968948026}
-  - {fileID: 1445575226}
   m_Father: {fileID: 153793209}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1657533065
@@ -24535,8 +24514,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: 466}
-  m_SizeDelta: {x: 657.2263, y: 150.0182}
+  m_AnchoredPosition: {x: -33.6344, y: 516.3547}
+  m_SizeDelta: {x: 664.2872, y: 131.5881}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1693644374
 MonoBehaviour:
@@ -25491,8 +25470,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -761309331
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -31736,7 +31715,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -761309331
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!1 &2408020642199941515
@@ -31912,6 +31891,10 @@ PrefabInstance:
     - target: {fileID: 4427549770133401466, guid: ef6ee2aa54d44054ca5c0622b6072ee3, type: 3}
       propertyPath: m_Name
       value: Head Trohpy3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427549770133401466, guid: ef6ee2aa54d44054ca5c0622b6072ee3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7448870278814729248, guid: ef6ee2aa54d44054ca5c0622b6072ee3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32565,6 +32548,7 @@ MonoBehaviour:
   StartHealth: 100
   invincibilityDurationSeconds: 1
   animator: {fileID: 8662598096633106887}
+  EndMenu: {fileID: 1692934114}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
