@@ -12,17 +12,22 @@ public class EnemySpawner : MonoBehaviour
 
     public List<GameObject> spawners;
 
+    public int EnemiesPerWave;
     public AnimationCurve spawnCurve;
     public float CurrentTime = 0;
     public float TotalTimeToProgress;
 
     private void Start()
     {
-        int enemyCount = easyEnemies.Count < 3 ? easyEnemies.Count : 3;
+        enemyPool = new List<GameObject>();
 
+        
+        int enemyCount = easyEnemies.Count < EnemiesPerWave ? easyEnemies.Count : EnemiesPerWave;
+
+        Debug.Log(enemyCount);
         for(int i = 0; i < enemyCount; i++)
         {
-            enemyPool.Add(easyEnemies[Random.Range(0, easyEnemies.Count)]);
+            enemyPool.Add(easyEnemies[i]);
         }
 
         player = GameObject.FindWithTag("Player");
@@ -30,9 +35,16 @@ public class EnemySpawner : MonoBehaviour
         StartCoroutine(SpawnEnemies());
     }
 
+    private void OnApplicationQuit()
+    {
+        easyEnemies = new List<GameObject>();
+        midEnemies = new List<GameObject>();
+        hardEnemies = new List<GameObject>();
+    }
+
     IEnumerator SpawnEnemies()
     {
-        while (CurrentTime < TotalTimeToProgress && GameManager.Instance.State == GameState.Playing) 
+        while (CurrentTime < TotalTimeToProgress) 
         {
             float curveValue = spawnCurve.Evaluate(CurrentTime / TotalTimeToProgress);
 
@@ -40,8 +52,20 @@ public class EnemySpawner : MonoBehaviour
             {
                 for (int i = 0; i < e.GetComponent<Enemy>().AmountSpawnPerWave; i++)
                 {
-                    Vector3 spawnPos = (new Vector3(Random.insideUnitCircle.x, Random.insideUnitCircle.y, 0) * 10) + spawners[i].transform.position;
-                    Instantiate(enemyPool[Random.Range(0, enemyPool.Count)], spawnPos, Quaternion.identity);
+                    GameObject spawner = spawners[Random.Range(0, spawners.Count)];
+                    Debug.Log(spawner.name);
+                    Vector3 spawnPos = Vector3.zero;
+
+                    if(spawner.name == spawners[0].name || spawner.name == spawners[2].name)
+                    {
+                        spawnPos = (new Vector3(0, Random.Range(-20, 20)) + spawner.transform.position);
+                    } 
+                    else if(spawner.name == spawners[1].name || spawner.name == spawners[3].name)
+                    {
+                        spawnPos = (new Vector3(Random.Range(-20, 20), 0) + spawner.transform.position);
+                    }
+                    
+                    Instantiate(e, spawnPos, Quaternion.identity);
                 }
             }
 

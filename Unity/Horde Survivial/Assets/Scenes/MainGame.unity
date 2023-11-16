@@ -24129,7 +24129,7 @@ MonoBehaviour:
   - {fileID: 411842962}
   - {fileID: 445060043}
   - {fileID: 968948025}
-  - {fileID: 0}
+  EnemiesPerWave: 20
   spawnCurve:
     serializedVersion: 2
     m_Curve:
