@@ -118,7 +118,7 @@ TextureImporter:
         width: 13
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -126,6 +126,27 @@ TextureImporter:
       bones: []
       spriteID: df65b44fc6f32f64a99f567e90f8532a
       internalID: -1070870490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrobotIdle_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 607b86516dc6c6d44a1fa26538d033c0
+      internalID: 1901082863
       vertices: []
       indices: 
       edges: []
@@ -142,6 +163,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       BrobotIdle_0: -1070870490
+      BrobotIdle_1: 1901082863
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

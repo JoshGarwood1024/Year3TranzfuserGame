@@ -118,7 +118,7 @@ TextureImporter:
         width: 20
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -126,6 +126,27 @@ TextureImporter:
       bones: []
       spriteID: 9dcdcfb91a4db2c4a91f4fcb58b720a6
       internalID: 1268782451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deady Bear Blue_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b1e172d80955bd4ab151bb5d9765214
+      internalID: -1516236249
       vertices: []
       indices: 
       edges: []
@@ -142,6 +163,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Deady Bear Blue_0: 1268782451
+      Deady Bear Blue_1: -1516236249
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

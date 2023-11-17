@@ -11,6 +11,8 @@ TagManager:
   - GameSFX
   - ZoomableObject
   - Wall
+  - Pets
+  - playerBody
   layers:
   - Default
   - TransparentFX

@@ -31,6 +31,8 @@ public class EndScreenMenu : MonoBehaviour
     public void LoadAgain()
     {
         SceneManager.LoadScene("MainGame");
+        PermCurrency.PermCur = 0;
+        ScoreScript.scoreValue = 0;
         Time.timeScale = 1f;
     }
 
@@ -39,6 +41,8 @@ public class EndScreenMenu : MonoBehaviour
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex - 1);
         Time.timeScale = 1f;
+        ScoreScript.scoreValue = 0;
+        PermCurrency.PermCur = 0;
     }
 
 

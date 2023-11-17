@@ -4,30 +4,31 @@ using UnityEngine;
 
 public class Follow_Player : MonoBehaviour
 {
-    public Transform player;         
-    public float floatSpeed = 2.0f;    
-    public float floatDistance = 2.0f;
+    public string playerTag = "Pets"; // Set the tag of your player GameObject
+    public float followSpeed = 5f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        if (player == null)
+        // Find the player GameObject using the specified tag
+        GameObject player = GameObject.FindWithTag(playerTag);
+
+        // Ensure that the player GameObject is found
+        if (player != null)
         {
-            Debug.LogError("Player reference not set in the inspector!");
-            return;
+            // Calculate the direction from the current position to the player's position
+            Vector3 directionToPlayer = player.transform.position - transform.position;
+
+            // Normalize the direction vector to ensure consistent movement speed in all directions
+            directionToPlayer.Normalize();
+
+            // Move towards the player
+            transform.position += directionToPlayer * followSpeed * Time.deltaTime;
         }
-
-      
-        Vector3 targetPosition = player.position - player.forward * floatDistance;
-
-      
-        transform.position = Vector3.Lerp(transform.position, targetPosition, floatSpeed * Time.deltaTime);
+        else
+        {
+            Debug.LogWarning("Player with tag '" + playerTag + "' not found!");
+        }
     }
 }
+
 

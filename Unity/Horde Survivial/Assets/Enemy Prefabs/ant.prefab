@@ -127,8 +127,8 @@ GameObject:
   - component: {fileID: 6306930984054718295}
   - component: {fileID: 5354937864601556381}
   - component: {fileID: 6916190158624744481}
-  - component: {fileID: 937636749296138791}
-  - component: {fileID: 6641303547136840107}
+  - component: {fileID: 7373706876404609516}
+  - component: {fileID: 1817416024049453524}
   m_Layer: 8
   m_Name: ant
   m_TagString: Enemy
@@ -231,13 +231,33 @@ MonoBehaviour:
   - {fileID: 4257302885375577924, guid: 9852cd8cfffc7114f8a595fc974d45e3, type: 3}
   - {fileID: 4257302885375577924, guid: 9852cd8cfffc7114f8a595fc974d45e3, type: 3}
   - {fileID: 1188659603629853688, guid: 862525c78fb82464db5eae0e628690d9, type: 3}
-  - {fileID: 1188659603629853688, guid: 862525c78fb82464db5eae0e628690d9, type: 3}
+  - {fileID: 8260282162301647525, guid: 745d47f27727cbb4aa69aa55d398501e, type: 3}
   - {fileID: 7798834106342287136, guid: 2ac683cd2242bb340b62331e29bd259d, type: 3}
   - {fileID: 8260282162301647525, guid: 745d47f27727cbb4aa69aa55d398501e, type: 3}
   - {fileID: 8260282162301647525, guid: 745d47f27727cbb4aa69aa55d398501e, type: 3}
   - {fileID: 8260282162301647525, guid: 745d47f27727cbb4aa69aa55d398501e, type: 3}
   - {fileID: 396356284543191003, guid: 7b65b0a3b76026448b18b1172c9f22b9, type: 3}
   - {fileID: 396356284543191003, guid: 7b65b0a3b76026448b18b1172c9f22b9, type: 3}
+  - {fileID: 4257302885375577924, guid: 9852cd8cfffc7114f8a595fc974d45e3, type: 3}
+  - {fileID: 4257302885375577924, guid: 9852cd8cfffc7114f8a595fc974d45e3, type: 3}
+  - {fileID: 396356284543191003, guid: 7b65b0a3b76026448b18b1172c9f22b9, type: 3}
+  - {fileID: 8260282162301647525, guid: 745d47f27727cbb4aa69aa55d398501e, type: 3}
+  - {fileID: 8260282162301647525, guid: 745d47f27727cbb4aa69aa55d398501e, type: 3}
+  - {fileID: 1188659603629853688, guid: 862525c78fb82464db5eae0e628690d9, type: 3}
+  - {fileID: 652285916190925841, guid: adbfba8e2aaa05e46bfefd385ee11b0d, type: 3}
+  - {fileID: 652285916190925841, guid: adbfba8e2aaa05e46bfefd385ee11b0d, type: 3}
+  - {fileID: 652285916190925841, guid: adbfba8e2aaa05e46bfefd385ee11b0d, type: 3}
+  - {fileID: 652285916190925841, guid: adbfba8e2aaa05e46bfefd385ee11b0d, type: 3}
+  - {fileID: 652285916190925841, guid: adbfba8e2aaa05e46bfefd385ee11b0d, type: 3}
+  - {fileID: 652285916190925841, guid: adbfba8e2aaa05e46bfefd385ee11b0d, type: 3}
+  - {fileID: 652285916190925841, guid: adbfba8e2aaa05e46bfefd385ee11b0d, type: 3}
+  - {fileID: 652285916190925841, guid: adbfba8e2aaa05e46bfefd385ee11b0d, type: 3}
+  - {fileID: 652285916190925841, guid: adbfba8e2aaa05e46bfefd385ee11b0d, type: 3}
+  - {fileID: 652285916190925841, guid: adbfba8e2aaa05e46bfefd385ee11b0d, type: 3}
+  - {fileID: 652285916190925841, guid: adbfba8e2aaa05e46bfefd385ee11b0d, type: 3}
+  - {fileID: 652285916190925841, guid: adbfba8e2aaa05e46bfefd385ee11b0d, type: 3}
+  - {fileID: 652285916190925841, guid: adbfba8e2aaa05e46bfefd385ee11b0d, type: 3}
+  - {fileID: 652285916190925841, guid: adbfba8e2aaa05e46bfefd385ee11b0d, type: 3}
   - {fileID: 652285916190925841, guid: adbfba8e2aaa05e46bfefd385ee11b0d, type: 3}
   - {fileID: 652285916190925841, guid: adbfba8e2aaa05e46bfefd385ee11b0d, type: 3}
   - {fileID: 652285916190925841, guid: adbfba8e2aaa05e46bfefd385ee11b0d, type: 3}
@@ -276,8 +296,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &937636749296138791
-BoxCollider2D:
+--- !u!60 &7373706876404609516
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -308,7 +328,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07024765, y: 0.009356499}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -318,11 +338,27 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.657032, y: 4.034477}
-  m_EdgeRadius: 0
---- !u!61 &6641303547136840107
-BoxCollider2D:
+  m_Points:
+    m_Paths:
+    - - {x: 1.1360741, y: -0.3949709}
+      - {x: 0.4649105, y: 0.396358}
+      - {x: 0.4862919, y: 1.0243049}
+      - {x: 0.21795654, y: 1.9613504}
+      - {x: -0.33812714, y: 1.9951687}
+      - {x: -0.6442661, y: 1.0012226}
+      - {x: -0.7103634, y: 0.21067715}
+      - {x: -1.2819843, y: -0.289814}
+      - {x: -1.0531425, y: -0.8453436}
+      - {x: -0.44020462, y: -0.5156436}
+      - {x: -0.41036224, y: -1.6416681}
+      - {x: -0.6893902, y: -1.9415846}
+      - {x: 0.621891, y: -1.9872632}
+      - {x: 0.30273056, y: -1.568423}
+      - {x: 0.31036377, y: -0.47120118}
+      - {x: 1.0542068, y: -0.73400307}
+  m_UseDelaunayMesh: 0
+--- !u!60 &1817416024049453524
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -353,7 +389,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09834707, y: -0.0042312145}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -363,6 +399,22 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.6682732, y: 4.095001}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.1360741, y: -0.3949709}
+      - {x: 0.4649105, y: 0.396358}
+      - {x: 0.4862919, y: 1.0243049}
+      - {x: 0.21795654, y: 1.9613504}
+      - {x: -0.33812714, y: 1.9951687}
+      - {x: -0.6442661, y: 1.0012226}
+      - {x: -0.7103634, y: 0.21067715}
+      - {x: -1.2819843, y: -0.289814}
+      - {x: -1.0531425, y: -0.8453436}
+      - {x: -0.44020462, y: -0.5156436}
+      - {x: -0.41036224, y: -1.6416681}
+      - {x: -0.6893902, y: -1.9415846}
+      - {x: 0.621891, y: -1.9872632}
+      - {x: 0.30273056, y: -1.568423}
+      - {x: 0.31036377, y: -0.47120118}
+      - {x: 1.0542068, y: -0.73400307}
+  m_UseDelaunayMesh: 0

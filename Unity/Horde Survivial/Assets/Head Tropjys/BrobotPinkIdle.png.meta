@@ -118,7 +118,7 @@ TextureImporter:
         width: 13
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -126,6 +126,27 @@ TextureImporter:
       bones: []
       spriteID: 0b2e4f300c6b9dd4cb472540950c381c
       internalID: -905103867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrobotPinkIdle_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9480bde7b5ac3f469bef6a4991db417
+      internalID: 1029403999
       vertices: []
       indices: 
       edges: []
@@ -142,6 +163,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       BrobotPinkIdle_0: -905103867
+      BrobotPinkIdle_1: 1029403999
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
