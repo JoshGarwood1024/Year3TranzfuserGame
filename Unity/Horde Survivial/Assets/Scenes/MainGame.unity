@@ -479,8 +479,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29fae47f6af41de4e8fc483086719983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeText: {fileID: 0}
-  timeManager: {fileID: 0}
+  timeText: {fileID: 14135142}
+  timeManager: {fileID: 1162546377}
 --- !u!1 &15516229
 GameObject:
   m_ObjectHideFlags: 0
@@ -16554,7 +16554,7 @@ GameObject:
   - component: {fileID: 1162546376}
   - component: {fileID: 1162546377}
   m_Layer: 5
-  m_Name: ufo messed up
+  m_Name: UFOMessedUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24480,6 +24480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a99a8f80d333202489d4723f1fefb461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelText: {fileID: 0}
 --- !u!1 &1693644372
 GameObject:
   m_ObjectHideFlags: 0
@@ -32257,6 +32258,7 @@ MonoBehaviour:
   FrontXp: {fileID: 175484931}
   BackXp: {fileID: 82883886}
   levelText: {fileID: 1031457686}
+  levelText2: {fileID: 0}
   additionMuiltipler: 140
   PowerMuiltipler: 1
   DivisionMuiltipler: 7
@@ -32544,7 +32546,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DamageBuff: 0
   HealthBuff: 0
+  timeManager: {fileID: 0}
   healthbar: {fileID: 5784693642764308629}
+  UFOMessedUp: {fileID: 1162546370}
   StartHealth: 100
   invincibilityDurationSeconds: 1
   animator: {fileID: 8662598096633106887}

@@ -8,8 +8,10 @@ public class PlayerData : MonoBehaviour
 {
     public float DamageBuff = 0;
     public float HealthBuff = 0;
-
+    public TimeManager timeManager; //refererncing this for high score when player dies - CL
     public Image healthbar;
+
+    public GameObject UFOMessedUp;
 
     private float CurrentHealth;
     public float StartHealth;
@@ -36,7 +38,8 @@ public class PlayerData : MonoBehaviour
 
     private void Start()
     {
-        CurrentHealth = StartHealth;    
+        CurrentHealth = StartHealth;
+        UFOMessedUp.GetComponent<TimeManager>();
     }
     private void Update()
     {
@@ -56,8 +59,10 @@ public class PlayerData : MonoBehaviour
         {
             GameManager.Instance.UpdateGameState(GameState.Lose);
             EndMenu.GetComponent<EndScreenMenu>().OpenMenu();
-
-
+            if (PlayerPrefs.GetInt("Highscore2") > timeManager.gameTime)
+            {
+                timeManager.SetHighscore();
+            }
 
         } else
         {

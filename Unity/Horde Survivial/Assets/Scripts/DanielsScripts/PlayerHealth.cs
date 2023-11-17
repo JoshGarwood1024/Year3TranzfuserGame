@@ -9,14 +9,12 @@ public class PlayerHealth : MonoBehaviour
     public float PHealth = 100;
     public float startMHealth;
     public Image healthbar;
-
-
+    public GameObject UFOMessedUp;
 
     // Start is called before the first frame update
     void Start()
     {
         PHealth = startMHealth;
-
     }
     // Update is called once per frame
     void Update()
@@ -28,7 +26,6 @@ public class PlayerHealth : MonoBehaviour
 
         if (PHealth <= 0)
         {
-
             SceneManager.LoadScene(0);
         }
     }
