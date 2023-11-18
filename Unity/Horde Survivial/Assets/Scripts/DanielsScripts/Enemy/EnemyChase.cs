@@ -8,7 +8,6 @@ public class EnemyChase : Enemy
 {
     Rigidbody2D rb;
     public float speed;
-
     bool chasing;
 
     public override void Start()

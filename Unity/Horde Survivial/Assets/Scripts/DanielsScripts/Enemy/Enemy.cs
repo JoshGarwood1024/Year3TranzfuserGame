@@ -21,6 +21,7 @@ public abstract class Enemy : MonoBehaviour
 
     public float Damage;
     public float Health;
+    public int TotalEnemiesKilledInSession;
 
     public float AmountSpawnPerWave;
 
@@ -42,7 +43,8 @@ public abstract class Enemy : MonoBehaviour
         originalMaterial = GetComponent<SpriteRenderer>().material;
     }
 
-    public virtual void Attack(GameObject p) {
+    public virtual void Attack(GameObject p)
+    {
         PlayerData.Instance.DecreaseHealth(Damage);
         p.GetComponent<CameraShake>().shakeDuration = 0.2f;
     }
@@ -101,10 +103,11 @@ public abstract class Enemy : MonoBehaviour
 
     protected virtual void Update()
     {
-        if(Health <= 0)
+        if (Health <= 0)
         {
+            PlayerPrefs.SetInt("Total Enemies Killed", (PlayerPrefs.GetInt("Total Enemies Killed")+1));
             Death();
         }
     }
-
 }
+
