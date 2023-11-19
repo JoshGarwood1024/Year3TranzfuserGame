@@ -2301,7 +2301,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &282469199
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24679,6 +24679,7 @@ MonoBehaviour:
   - {fileID: 5250695394149195798, guid: 7dbffd4661eb39a49b3467ac63800071, type: 3}
   - {fileID: 4677199073086569425, guid: ff0789d4c85fdc94191ca19cc6f37ebf, type: 3}
   - {fileID: 8640362272300519942, guid: 13dd9f1c4e18bc4408c520ba5397a728, type: 3}
+  - {fileID: 7156143822168218199, guid: cda2036b214eb434dbe81bc43366a59c, type: 3}
   hardEnemies:
   - {fileID: 6546813913054142440, guid: 9a862c6d12c18724784921cb833cb26a, type: 3}
   - {fileID: 5772177782346986084, guid: 1149ff3429b0dfb40bec935b555e6657, type: 3}

@@ -162,7 +162,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9099373456607984273}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -196,7 +196,7 @@ SpriteRenderer:
   m_SortingLayerID: -59249501
   m_SortingLayer: 2
   m_SortingOrder: 8
-  m_Sprite: {fileID: -1385920992, guid: 9c8d1784605fcbd4c8db2dfdc6f83b58, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f4ca199eccc7204590409d381cba717, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -228,6 +228,7 @@ MonoBehaviour:
   flashMaterial: {fileID: 2100000, guid: 0aa366fe36fb4d446ba436e64c6c8df8, type: 2}
   Damage: 15
   Health: 10
+  TotalEnemiesKilledInSession: 0
   AmountSpawnPerWave: 2
   lootItems:
   - {fileID: 4257302885375577924, guid: 9852cd8cfffc7114f8a595fc974d45e3, type: 3}
@@ -355,7 +356,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.125, y: 2}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -411,7 +412,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.125, y: 2}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

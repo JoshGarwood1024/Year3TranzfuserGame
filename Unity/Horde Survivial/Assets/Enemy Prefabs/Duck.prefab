@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2684539287703445475}
   - component: {fileID: 6947804472253118067}
   - component: {fileID: 8023579964532161208}
-  - component: {fileID: 2375912663636637131}
   - component: {fileID: 1175314411684500224}
   - component: {fileID: 7190643675510305586}
   m_Layer: 8
@@ -105,13 +104,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   XP: {fileID: 673465106986425479, guid: 542a4cfa68ff46e49ab4d1a0d28652d2, type: 3}
-  Blood: {fileID: 931355830842430980, guid: 79658ee1d807d854d89753e6ba66ecb9, type: 3}
+  Blood: {fileID: 4942465065097350310, guid: 19fcb3f3acd57f344b350a992c43ac83, type: 3}
   damageTextPrefab: {fileID: 7353506689705183412, guid: 7bc5fb940bdc09a4084d91581531580e, type: 3}
   BodyPartSprites: []
   BodyPartPrefab: {fileID: 4502988034936609466, guid: 306c88a25f601184aaf56112added087, type: 3}
   flashMaterial: {fileID: 2100000, guid: 0aa366fe36fb4d446ba436e64c6c8df8, type: 2}
   Damage: 5
   Health: 5
+  TotalEnemiesKilledInSession: 0
   AmountSpawnPerWave: 5
   lootItems:
   - {fileID: 4257302885375577924, guid: 9852cd8cfffc7114f8a595fc974d45e3, type: 3}
@@ -182,27 +182,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!95 &2375912663636637131
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2680480657364492321}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 02228e7d1b5436b4fb8d51618ec25923, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!60 &1175314411684500224
 PolygonCollider2D:
   m_ObjectHideFlags: 0
