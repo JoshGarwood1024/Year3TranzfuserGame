@@ -2333,9 +2333,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e85536e49ff27bd40a4c184a0204148e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeDuration: 2
-  currentAlpha: 1
-  image: {fileID: 0}
 --- !u!114 &282469201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24712,7 +24709,7 @@ MonoBehaviour:
   - {fileID: 411842962}
   - {fileID: 445060043}
   - {fileID: 968948025}
-  EnemiesPerWave: 20
+  EnemiesPerWave: 3
   spawnCurve:
     serializedVersion: 2
     m_Curve:
@@ -32964,8 +32961,8 @@ MonoBehaviour:
   FrontXp: {fileID: 175484931}
   BackXp: {fileID: 82883886}
   levelText: {fileID: 1031457686}
-  additionMuiltipler: 140
-  PowerMuiltipler: 1
+  additionMuiltipler: 300
+  PowerMuiltipler: 1.49
   DivisionMuiltipler: 7
   enemySpawner: {fileID: 1632401593}
 --- !u!114 &7245676098354120584

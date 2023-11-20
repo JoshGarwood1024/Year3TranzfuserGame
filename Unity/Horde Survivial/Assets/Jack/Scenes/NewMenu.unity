@@ -4485,7 +4485,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
       - m_Target: {fileID: 995578410}
         m_TargetAssemblyTypeName: UIFadeOut, Assembly-CSharp
         m_MethodName: FadeOut
@@ -4497,7 +4497,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
       - m_Target: {fileID: 1566900044}
         m_TargetAssemblyTypeName: resumegame, Assembly-CSharp
         m_MethodName: ResumeGame
@@ -4509,7 +4509,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &868583965
 MonoBehaviour:
   m_ObjectHideFlags: 0
