@@ -34,7 +34,7 @@ public class BalloonBombs : Weapon
             GameObject balloon = Instantiate(WeaponPrefab, transform.position, Quaternion.identity);
 
             balloon.GetComponent<Rigidbody2D>().AddForce(aimDirection, ForceMode2D.Impulse);
-            balloon.GetComponent<Balloon>().Damage = WeaponData.Damage + DamageIncrease;
+            balloon.GetComponent<Balloon>().Damage = WeaponData.Damage + DamageIncrease + PermDamageIncrease;
             balloon.GetComponent<Balloon>().ExplodeRadius = MaxLevel ? 4 : 2;
         }
     }
@@ -59,6 +59,17 @@ public class BalloonBombs : Weapon
 
         DamageIncrease += 10;
         bombs++;
+    }
+
+    public override void ApplyPermUpgrade(int level)
+    {
+        base.ApplyPermUpgrade(level);
+
+        for (int i = 0; i < level; i++)
+        {
+            CooldownReduction += 0.25f;
+            PermDamageIncrease += 25;
+        }
     }
 
 }

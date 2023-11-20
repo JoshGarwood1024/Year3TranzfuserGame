@@ -13,11 +13,12 @@ public class FairyDustBlower : Weapon
         {
             GameObject rp = Instantiate(WeaponPrefab, transform);
             rp.transform.Rotate(new Vector3(0, 180, 0));
-            rp.GetComponent<FairyDust>().dmg = WeaponData.Damage + DamageIncrease;
+            rp.GetComponent<FairyDust>().dmg = WeaponData.Damage + DamageIncrease + PermDamageIncrease;
         } 
 
         GameObject p = Instantiate(WeaponPrefab, transform);
         p.GetComponent<FairyDust>().dmg = WeaponData.Damage + DamageIncrease;
+        if(PlayerData.Instance.gameObject.GetComponent<SpriteRenderer>().flipX) p.transform.Rotate(new Vector3(0, 180, 0));
     }
 
     public override void Upgrade(int level)
@@ -26,6 +27,17 @@ public class FairyDustBlower : Weapon
 
         DamageIncrease += 10;
         CooldownReduction += 0.25f;
+    }
+
+    public override void ApplyPermUpgrade(int level)
+    {
+        base.ApplyPermUpgrade(level);
+
+        for (int i = 0; i < level; i++)
+        {
+            CooldownReduction += 0.25f;
+            PermDamageIncrease += 10;
+        }
     }
 
 }

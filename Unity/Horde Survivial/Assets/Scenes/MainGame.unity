@@ -2334,6 +2334,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 2
+  currentAlpha: 1
+  image: {fileID: 0}
 --- !u!114 &282469201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32379,6 +32381,7 @@ MonoBehaviour:
   currentLevel: 0
   DamageIncrease: 0
   CooldownReduction: 0
+  PermDamageIncrease: 0
 --- !u!1 &1628572926314077538
 GameObject:
   m_ObjectHideFlags: 0
@@ -32680,6 +32683,7 @@ MonoBehaviour:
   currentLevel: 0
   DamageIncrease: 0
   CooldownReduction: 0
+  PermDamageIncrease: 0
   Radius: 8
 --- !u!114 &5112420904056325763
 MonoBehaviour:
@@ -32939,6 +32943,7 @@ MonoBehaviour:
   currentLevel: 0
   DamageIncrease: 0
   CooldownReduction: 0
+  PermDamageIncrease: 0
   Radius: 1
   ParticleEffect: {fileID: 106278241}
 --- !u!114 &7153588171631167497
@@ -33041,6 +33046,7 @@ MonoBehaviour:
   currentLevel: 0
   DamageIncrease: 0
   CooldownReduction: 0
+  PermDamageIncrease: 0
 --- !u!114 &8450944451762848754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33060,6 +33066,7 @@ MonoBehaviour:
   currentLevel: 0
   DamageIncrease: 0
   CooldownReduction: 0
+  PermDamageIncrease: 0
 --- !u!114 &8450944451762848755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33079,6 +33086,7 @@ MonoBehaviour:
   currentLevel: 0
   DamageIncrease: 0
   CooldownReduction: 0
+  PermDamageIncrease: 0
 --- !u!114 &8450944451762848756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33110,6 +33118,7 @@ MonoBehaviour:
   currentLevel: 0
   DamageIncrease: 0
   CooldownReduction: 0
+  PermDamageIncrease: 0
 --- !u!114 &8450944451762848758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33129,6 +33138,7 @@ MonoBehaviour:
   currentLevel: 0
   DamageIncrease: 0
   CooldownReduction: 0
+  PermDamageIncrease: 0
   numberOfMaces: 0
 --- !u!114 &8450944451762848759
 MonoBehaviour:
@@ -33149,6 +33159,7 @@ MonoBehaviour:
   currentLevel: 0
   DamageIncrease: 0
   CooldownReduction: 0
+  PermDamageIncrease: 0
 --- !u!114 &8450944451762848760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33168,6 +33179,7 @@ MonoBehaviour:
   currentLevel: 0
   DamageIncrease: 0
   CooldownReduction: 0
+  PermDamageIncrease: 0
 --- !u!114 &8450944451762848761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33187,6 +33199,7 @@ MonoBehaviour:
   currentLevel: 0
   DamageIncrease: 0
   CooldownReduction: 0
+  PermDamageIncrease: 0
   puzzlePieceSprites:
   - {fileID: 21300000, guid: 02bb19c2b1ffaab4ab34a7cee1e7c8b2, type: 3}
   - {fileID: 21300000, guid: 358ef29bb45c88d4ca28ce9b4e6be5da, type: 3}
@@ -33211,6 +33224,7 @@ MonoBehaviour:
   currentLevel: 0
   DamageIncrease: 0
   CooldownReduction: 0
+  PermDamageIncrease: 0
 --- !u!95 &8662598096633106887
 Animator:
   serializedVersion: 5
@@ -33246,6 +33260,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DamageBuff: 0
   HealthBuff: 0
+  SpeedBuffMultiplier: 0
+  PickupRangeBuffMultiplier: 0
   timeManager: {fileID: 0}
   healthbar: {fileID: 5784693642764308629}
   UFOMessedUp: {fileID: 1162546370}

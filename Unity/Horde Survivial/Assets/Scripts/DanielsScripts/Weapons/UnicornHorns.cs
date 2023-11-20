@@ -28,7 +28,7 @@ public class UnicornHorns : Weapon
 
         GameObject horn = Instantiate(WeaponPrefab, transform.position, WeaponPrefab.transform.rotation);
         horn.GetComponent<Rigidbody2D>().velocity = mousePos * 2;
-        horn.GetComponent<HurtEnemyOnTrigger>().Damage = WeaponData.Damage + DamageIncrease;
+        horn.GetComponent<HurtEnemyOnTrigger>().Damage = WeaponData.Damage + DamageIncrease + PermDamageIncrease;
         if (exploding) horn.AddComponent<ExplodeOnTrigger>().dmg = 75;
 
         var angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
@@ -47,6 +47,16 @@ public class UnicornHorns : Weapon
         if(level == 5)
         {
             exploding = true;
+        }
+    }
+
+    public override void ApplyPermUpgrade(int level)
+    {
+        base.ApplyPermUpgrade(level);
+
+        for (int i = 0; i < level; i++)
+        {
+            CooldownReduction += 0.15f;
         }
     }
 }

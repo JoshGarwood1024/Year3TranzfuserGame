@@ -12,7 +12,7 @@ public class Breathing : Weapon
         var sh = ParticleEffect.shape;
         sh.radius = Radius;
         ParticleEffect.Play();
-        ParticleEffect.gameObject.GetComponent<FairyDust>().dmg = WeaponData.Damage + DamageIncrease;
+        ParticleEffect.gameObject.GetComponent<FairyDust>().dmg = WeaponData.Damage + DamageIncrease + PermDamageIncrease;
 
         base.Attack();
     }
@@ -20,11 +20,6 @@ public class Breathing : Weapon
     protected override void Update()
     {
         base.Update();
-
-        if(Input.GetKeyDown(KeyCode.N))
-        {
-            Upgrade(currentLevel);
-        }
     }
     public override void Upgrade(int level)
     {
@@ -34,5 +29,17 @@ public class Breathing : Weapon
         {
             Radius += 0.25f;
         }
+    }
+
+    public override void ApplyPermUpgrade(int level)
+    {
+        base.ApplyPermUpgrade(level);
+
+        for(int i = 0; i < level; i++)
+        {
+            CooldownReduction = 0.1f;
+            PermDamageIncrease += 20;
+        }
+
     }
 }

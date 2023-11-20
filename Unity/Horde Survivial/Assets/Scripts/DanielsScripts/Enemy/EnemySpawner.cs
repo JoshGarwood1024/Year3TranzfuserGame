@@ -53,7 +53,6 @@ public class EnemySpawner : MonoBehaviour
                 for (int i = 0; i < e.GetComponent<Enemy>().AmountSpawnPerWave; i++)
                 {
                     GameObject spawner = spawners[Random.Range(0, spawners.Count)];
-                    Debug.Log(spawner.name);
                     Vector3 spawnPos = Vector3.zero;
 
                     if(spawner.name == spawners[0].name || spawner.name == spawners[2].name)

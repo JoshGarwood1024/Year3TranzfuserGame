@@ -14,14 +14,14 @@ public class SockPuppetSling : Weapon
         {
             GameObject sockPuppet = Instantiate(WeaponPrefab, transform.position, transform.rotation);
             sockPuppet.GetComponent<Rigidbody2D>().velocity = Random.insideUnitCircle * 4;
-            sockPuppet.AddComponent<SockPuppet>().attackDmg = 30;
+            sockPuppet.AddComponent<SockPuppet>().attackDmg = 30 + PermDamageIncrease;
         } else
         {
             for (int i = 0; i < puppetCount; i++)
             {
                 GameObject sockPuppet = Instantiate(WeaponPrefab, transform.position, transform.rotation);
                 sockPuppet.GetComponent<Rigidbody2D>().velocity = Random.insideUnitCircle * 15;
-                sockPuppet.AddComponent<HurtEnemyOnTrigger>().Damage = WeaponData.Damage + DamageIncrease;
+                sockPuppet.AddComponent<HurtEnemyOnTrigger>().Damage = WeaponData.Damage + DamageIncrease + PermDamageIncrease;
                 sockPuppet.AddComponent<DestroyOnImpactTrigger>();
             }
         }
@@ -40,6 +40,16 @@ public class SockPuppetSling : Weapon
         puppetCount++;
 
         if (MaxLevel) CooldownReduction = -10;
+    }
+
+    public override void ApplyPermUpgrade(int level)
+    {
+        base.ApplyPermUpgrade(level);
+
+        for(int i = 0; i < level; i++)
+        {
+            PermDamageIncrease += 20;
+        }
     }
 }
 

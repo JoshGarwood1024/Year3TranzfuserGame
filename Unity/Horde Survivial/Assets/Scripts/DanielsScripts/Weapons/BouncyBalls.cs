@@ -6,6 +6,7 @@ public class BouncyBalls : Weapon
 {
 
     int numOfBalls;
+    float extraBounces = 0;
 
     protected override void Start()
     {
@@ -23,8 +24,9 @@ public class BouncyBalls : Weapon
 
             Vector2 randDir = Random.insideUnitCircle * 10;
             bouncyBall.GetComponent<Rigidbody2D>().AddRelativeForce(randDir, ForceMode2D.Impulse);
-            bouncyBall.GetComponent<BouncyBallBehavior>().Damage = WeaponData.Damage + DamageIncrease;
-            if(MaxLevel) bouncyBall.GetComponent<BouncyBallBehavior>().maxLevel = true;
+            bouncyBall.GetComponent<BouncyBallBehavior>().Damage = WeaponData.Damage + DamageIncrease + PermDamageIncrease;
+            bouncyBall.GetComponent<BouncyBallBehavior>().bounceAllowance = 3 + extraBounces;
+            if (MaxLevel) bouncyBall.GetComponent<BouncyBallBehavior>().maxLevel = true;
         }
     }
 
@@ -34,5 +36,16 @@ public class BouncyBalls : Weapon
 
         DamageIncrease += 10;
         numOfBalls++;
+    }
+
+    public override void ApplyPermUpgrade(int level)
+    {
+        base.ApplyPermUpgrade(level);
+
+        for (int i = 0; i < level; i++)
+        {
+            CooldownReduction += 0.1f;
+            extraBounces += 1;
+        }
     }
 }

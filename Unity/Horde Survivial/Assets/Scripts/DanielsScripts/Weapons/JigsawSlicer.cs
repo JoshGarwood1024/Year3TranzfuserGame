@@ -15,7 +15,7 @@ public class JigsawSlicer : Weapon
 
             Vector3 dir = Quaternion.Euler(0f, 0f, i) * new Vector3(1f, 0f, 0f).normalized;
             puzzle.GetComponent<Rigidbody2D>().velocity = dir * 15;
-            puzzle.GetComponent<HurtEnemyOnTrigger>().Damage = MaxLevel? 150 : WeaponData.Damage + DamageIncrease;
+            puzzle.GetComponent<HurtEnemyOnTrigger>().Damage = MaxLevel? 150 + PermDamageIncrease : WeaponData.Damage + DamageIncrease + PermDamageIncrease;
             puzzle.GetComponent<SpriteRenderer>().sprite = puzzlePieceSprites[Random.Range(0, puzzlePieceSprites.Count)];
 
             if(Random.Range(0, 101) > 10 * currentLevel)
@@ -24,7 +24,7 @@ public class JigsawSlicer : Weapon
 
                 dir = Quaternion.Euler(0f, 0f, i) * new Vector3(1f, 0f, 0f).normalized;
                 Extrapuzzle.GetComponent<Rigidbody2D>().velocity = dir * 15;
-                Extrapuzzle.GetComponent<HurtEnemyOnTrigger>().Damage = MaxLevel ? 150 : WeaponData.Damage + DamageIncrease;
+                Extrapuzzle.GetComponent<HurtEnemyOnTrigger>().Damage = MaxLevel ? 150 : WeaponData.Damage + DamageIncrease + PermDamageIncrease;
                 Extrapuzzle.GetComponent<SpriteRenderer>().sprite = puzzlePieceSprites[Random.Range(0, puzzlePieceSprites.Count)];
             
                 if(MaxLevel) Extrapuzzle.transform.localScale *= 1.3f;
@@ -40,5 +40,15 @@ public class JigsawSlicer : Weapon
 
         DamageIncrease += 10;
         if (WeaponData.Cooldown - CooldownReduction > 0.5f) CooldownReduction += 0.3f;
+    }
+
+    public override void ApplyPermUpgrade(int level)
+    {
+        base.ApplyPermUpgrade(level);
+        
+        for (int i = 0; i < level; i++)
+        {
+            PermDamageIncrease += 20;
+        }
     }
 }

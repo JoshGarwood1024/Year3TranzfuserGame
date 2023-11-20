@@ -13,6 +13,7 @@ public class MarshmellowMace : Weapon
 
     [SerializeField]
     int numberOfMaces;
+    float permRotationIncrease = 1;
 
     protected override void Start()
     {
@@ -38,7 +39,7 @@ public class MarshmellowMace : Weapon
     {
         base.Update();
 
-        maceParent.transform.Rotate(Vector3.forward * 60f * Time.deltaTime);
+        maceParent.transform.Rotate(Vector3.forward * 60f * permRotationIncrease * Time.deltaTime);
     }
 
     public override void Upgrade(int level)
@@ -63,7 +64,7 @@ public class MarshmellowMace : Weapon
         spawnPosition *= 1.7f;
 
         GameObject mace = Instantiate(WeaponPrefab, transform.position + spawnPosition, Quaternion.identity);
-        mace.GetOrAddComponent<HurtEnemyOnTrigger>().Damage = 150;
+        mace.GetOrAddComponent<HurtEnemyOnTrigger>().Damage = 150 + PermDamageIncrease;
         mace.transform.parent = maceParent.transform;
         mace.transform.rotation = Quaternion.Euler(0f, 0f, angle - 45f);
         mace.transform.localScale *= 1.7f;
@@ -80,23 +81,25 @@ public class MarshmellowMace : Weapon
         SpawnMaces();
     }
 
+    public override void ApplyPermUpgrade(int level)
+    {
+        base.ApplyPermUpgrade(level);
+
+        for (int i = 0; i < level; i++)
+        {
+            permRotationIncrease += 0.1f;
+        }
+    }
     void SpawnMaces()
     {
         for (int i = 0; i < numberOfMaces; i++)
         {
-            // Calculate angle for even distribution
             float angle = i * 360f / numberOfMaces;
-
-            // Calculate position based on angle and radius
             Vector3 spawnPosition = new Vector3(Mathf.Cos(angle * Mathf.Deg2Rad) * 2, Mathf.Sin(angle * Mathf.Deg2Rad) * 2, 0f);
 
-            // Instantiate mace at the calculated position
             GameObject mace = Instantiate(WeaponPrefab, transform.position + spawnPosition, Quaternion.identity);
-            mace.GetOrAddComponent<HurtEnemyOnTrigger>().Damage = WeaponData.Damage + DamageIncrease;
-
+            mace.GetOrAddComponent<HurtEnemyOnTrigger>().Damage = WeaponData.Damage + DamageIncrease + PermDamageIncrease;
             mace.transform.rotation = Quaternion.Euler(0f, 0f, angle - 45f);
-
-            // Set the mace as a child of the RotatingMaceController
             mace.transform.parent = maceParent.transform;
         }
     }

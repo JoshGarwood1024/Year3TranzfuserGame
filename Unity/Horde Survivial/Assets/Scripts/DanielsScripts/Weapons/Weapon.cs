@@ -17,6 +17,7 @@ public class Weapon : MonoBehaviour
     //affected by upgrades
     public float DamageIncrease = 0;
     public float CooldownReduction;
+    public float PermDamageIncrease = 0;
 
     // Start is called before the first frame update
     protected virtual void Start()
@@ -37,7 +38,7 @@ public class Weapon : MonoBehaviour
 
     public virtual void ApplyPermUpgrade(int level)
     {
-        Debug.Log(WeaponData.WeaponName + "PERM UPGRADE: " + level);
+
     }
 
     protected virtual void Attack()

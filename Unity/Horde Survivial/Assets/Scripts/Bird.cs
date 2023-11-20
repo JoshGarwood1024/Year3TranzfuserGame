@@ -16,14 +16,6 @@ public class Bird : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Movement != null)
-        {
-            float originalSpeed = Movement.moveSpeed;
 
-            float newSpeed = originalSpeed * 2;
-
-            Debug.Log("Original Speed: " + originalSpeed);
-            Debug.Log("New Speed: " + newSpeed);
-        }
     }
 }

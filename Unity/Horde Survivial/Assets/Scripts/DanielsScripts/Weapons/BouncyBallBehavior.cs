@@ -8,6 +8,7 @@ public class BouncyBallBehavior : MonoBehaviour
     public float Damage;
     public ParticleSystem fireTrail;
     public bool maxLevel = false;
+    public float bounceAllowance;
 
     private void Start()
     {

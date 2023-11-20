@@ -57,8 +57,6 @@ public class PlayerManager : MonoBehaviour
                 PermUpgrades.Add(upgradeID, 1);
             }
         }
-
-        Debug.Log("Bought Upgrade: " + upgradeID);
     }
 
     public void SetStartingClass(StartingClass sc)

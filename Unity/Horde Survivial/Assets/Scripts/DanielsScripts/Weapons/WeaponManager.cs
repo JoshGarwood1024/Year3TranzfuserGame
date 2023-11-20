@@ -42,7 +42,18 @@ public class WeaponManager : MonoBehaviour
                             PlayerData.Instance.HealthBuff += 25;
                         }
                         break;
-                    //speed
+                    case "Speed":
+                        for (int i = 0; i < level; i++)
+                        {
+                            PlayerData.Instance.SpeedBuffMultiplier += 0.5f;
+                        }
+                        break;
+                    case "PickupRange":
+                        for (int i = 0; i < level; i++)
+                        {
+                            PlayerData.Instance.PickupRangeBuffMultiplier += 0.25f;
+                        }
+                        break;
                 }
 
 

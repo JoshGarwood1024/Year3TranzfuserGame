@@ -8,6 +8,9 @@ public class PlayerData : MonoBehaviour
 {
     public float DamageBuff = 0;
     public float HealthBuff = 0;
+    public float SpeedBuffMultiplier = 1;
+    public float PickupRangeBuffMultiplier = 1;
+
     public TimeManager timeManager; //refererncing this for high score when player dies - CL
     public Image healthbar;
 

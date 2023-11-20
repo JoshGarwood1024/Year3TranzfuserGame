@@ -21,7 +21,7 @@ public class PillowBat : Weapon
         }
 
         pillowBat = Instantiate(WeaponPrefab, transform.position + new Vector3(2.5f, 0, 0), WeaponPrefab.transform.rotation, transform);
-        pillowBat.GetComponent<HurtEnemyOnTrigger>().Damage = WeaponData.Damage + DamageIncrease;
+        pillowBat.GetComponent<HurtEnemyOnTrigger>().Damage = WeaponData.Damage + DamageIncrease + PermDamageIncrease;
         StartCoroutine(Dissapear());
     }
 
@@ -32,6 +32,17 @@ public class PillowBat : Weapon
         if(pillowBat)
         {
             pillowBat.transform.RotateAround(transform.position, new Vector3(0, 0, 1), 540 * Time.deltaTime);
+        }
+    }
+
+    public override void ApplyPermUpgrade(int level)
+    {
+        base.ApplyPermUpgrade(level);
+
+        for(int i = 0; i < level; i++)
+        {
+            CooldownReduction += 0.1f;
+            PermDamageIncrease += 10;
         }
     }
 
