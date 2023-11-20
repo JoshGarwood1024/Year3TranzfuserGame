@@ -2333,6 +2333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e85536e49ff27bd40a4c184a0204148e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeDuration: 2
 --- !u!114 &282469201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16953,6 +16954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameTime: 0
+  gameTimeInSeconds: 0
 --- !u!1 &1230307366
 GameObject:
   m_ObjectHideFlags: 0
@@ -17866,6 +17868,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1404039833}
   - component: {fileID: 1404039834}
+  - component: {fileID: 1404039835}
   m_Layer: 0
   m_Name: PlayerManager
   m_TagString: Untagged
@@ -17905,6 +17908,18 @@ MonoBehaviour:
   - {fileID: -1195519433, guid: 8d298c5346df5b64e9800f9f9ac9cf0b, type: 3}
   - {fileID: -1638405817, guid: 8d298c5346df5b64e9800f9f9ac9cf0b, type: 3}
   PermCurrency: 0
+--- !u!114 &1404039835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404039832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ab8c51bfd1b7c349b6b7e9bfd1e8ac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1413533256
 GameObject:
   m_ObjectHideFlags: 0
@@ -33151,7 +33166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WeaponPrefab: {fileID: 6457572692812782626, guid: bb36abbaaef537c4bb56d911230852d2, type: 3}
   WeaponData: {fileID: 11400000, guid: be03d928f29e667499d08609581c2641, type: 2}
-  active: 1
+  active: 0
   MaxLevel: 0
   currentLevel: 0
   DamageIncrease: 0

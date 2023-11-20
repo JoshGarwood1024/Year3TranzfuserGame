@@ -64,7 +64,8 @@ public class PlayerData : MonoBehaviour
         {
             GameManager.Instance.UpdateGameState(GameState.Lose);
             EndMenu.GetComponent<EndScreenMenu>().OpenMenu();
-            if (PlayerPrefs.GetInt("Highscore2") > timeManager.gameTime)
+            timeManager.SetTotalTimeSurvived();
+            if (PlayerPrefs.GetInt("Highscore") > timeManager.gameTime)
             {
                 timeManager.SetHighscore();
             }
