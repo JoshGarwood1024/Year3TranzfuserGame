@@ -29,7 +29,8 @@ public class PlayerMovement : MonoBehaviour
         float vert = Input.GetAxisRaw("Vertical");
 
         Vector2 playerInput = new Vector2(horz, vert).normalized;
-        Vector2 moveForce = playerInput * moveSpeed * PlayerData.Instance.SpeedBuffMultiplier;
+        if(PlayerData.Instance) moveSpeed *= PlayerData.Instance.SpeedBuffMultiplier;
+        Vector2 moveForce = playerInput * moveSpeed;
         moveForce += forceToApply;
         forceToApply /= forceDamping;
         
