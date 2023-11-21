@@ -22,7 +22,11 @@ public class WeaponManager : MonoBehaviour
     {
         Dictionary<string, int> pu = PlayerManager.Instance.PermUpgrades;
 
-        foreach(KeyValuePair<string,int> entry in pu)
+        PlayerData.Instance.SpeedBuffMultiplier = 1;
+        PlayerData.Instance.PickupRangeBuffMultiplier = 1;
+
+        
+        foreach (KeyValuePair<string,int> entry in pu)
         {
             string upgradeID = entry.Key;
             int level = entry.Value;
@@ -59,5 +63,7 @@ public class WeaponManager : MonoBehaviour
 
             }
         }
+
+        GetComponentInParent<PlayerMovement>().IncreaseMoveSpeed(PlayerData.Instance.SpeedBuffMultiplier);
     }
 }

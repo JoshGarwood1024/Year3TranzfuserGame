@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class resumegame : MonoBehaviour
 {
@@ -9,19 +10,13 @@ public class resumegame : MonoBehaviour
     public GameObject Dog;
     public GameObject PetMenu;
 
+    public TextMeshProUGUI permCurrencyText;
 
-
-    // Start is called before the first frame update
-    void Start()
+    public void UpdateCurrency()
     {
-        
+        if (permCurrencyText) permCurrencyText.text = PlayerManager.Instance.PermCurrency.ToString(); 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void back()
     {
         PetMenu.SetActive(false);

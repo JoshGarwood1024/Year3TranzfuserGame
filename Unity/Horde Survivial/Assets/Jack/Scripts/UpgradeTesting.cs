@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UpgradeTesting : MonoBehaviour
 {
@@ -12,7 +13,10 @@ public class UpgradeTesting : MonoBehaviour
     public Color upgradedColor;
     public int maxUpgrades = 4;
 
-    private int currentUpgrades = 0;
+    int upgradeLevel;
+
+    public PermUpgrade permUpgrade;
+    public TextMeshProUGUI permCurrencyText;
 
     private void Start()
     {
@@ -20,21 +24,46 @@ public class UpgradeTesting : MonoBehaviour
         minusButton.onClick.AddListener(MinusButtonClick);
     }
 
+    private void OnEnable()
+    {
+        UpdateCurrencyText();
+
+        upgradeLevel = !PlayerManager.Instance.PermUpgrades.ContainsKey(permUpgrade.UpgradeID) ? 0 : PlayerManager.Instance.PermUpgrades[permUpgrade.UpgradeID];
+
+        for (int i = 0; i < targetImages.Length; i++)
+        {
+            RemoveUpgrade(i);
+        }
+
+        for(int i = 0; i < upgradeLevel; i++)
+        {
+            UpgradeButtonClick(i);
+        }
+    }
+
+    void UpdateCurrencyText()
+    {
+        permCurrencyText.text = PlayerManager.Instance.PermCurrency.ToString();
+    }
+
     void PlusButtonClick()
     {
-        if (currentUpgrades < maxUpgrades)
+        if (PlayerManager.Instance.BuyUpgrade(permUpgrade))
         {
-            UpgradeButtonClick(currentUpgrades);
-            currentUpgrades++;
+            upgradeLevel = !PlayerManager.Instance.PermUpgrades.ContainsKey(permUpgrade.UpgradeID) ? 0 : PlayerManager.Instance.PermUpgrades[permUpgrade.UpgradeID];
+            UpgradeButtonClick(upgradeLevel - 1);
+            UpdateCurrencyText();
         }
     }
 
     void MinusButtonClick()
     {
-        if (currentUpgrades > 0)
+        upgradeLevel = !PlayerManager.Instance.PermUpgrades.ContainsKey(permUpgrade.UpgradeID) ? 0 : PlayerManager.Instance.PermUpgrades[permUpgrade.UpgradeID];
+
+        if (PlayerManager.Instance.RefundUpgrade(permUpgrade))
         {
-            currentUpgrades--;
-            RemoveUpgrade(currentUpgrades);
+            RemoveUpgrade(upgradeLevel - 1);
+            UpdateCurrencyText();
         }
     }
 

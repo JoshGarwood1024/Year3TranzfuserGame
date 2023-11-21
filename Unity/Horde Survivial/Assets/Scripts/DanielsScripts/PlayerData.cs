@@ -43,8 +43,6 @@ public class PlayerData : MonoBehaviour
     {
         CurrentHealth = StartHealth;
         UFOMessedUp.GetComponent<TimeManager>();
-        SpeedBuffMultiplier = 1;
-        PickupRangeBuffMultiplier = 1;
     }
     private void Update()
     {

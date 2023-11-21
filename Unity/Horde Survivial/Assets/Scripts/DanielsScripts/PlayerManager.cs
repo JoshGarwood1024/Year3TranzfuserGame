@@ -40,23 +40,45 @@ public class PlayerManager : MonoBehaviour
         PermCurrency = 30;
     }
 
-    public void BuyUpgrade(PermUpgrade permUpgrade)
+    public bool BuyUpgrade(PermUpgrade permUpgrade)
     {
         int cost = permUpgrade.Cost;
         string upgradeID = permUpgrade.UpgradeID;
 
-        if(PermCurrency >= cost)
+        if (PermCurrency >= cost)
         {
-            PermCurrency -= cost;
-
             if(PermUpgrades.ContainsKey(upgradeID))
             {
+                if (PermUpgrades[upgradeID] == 4) return false;
+
                 PermUpgrades[upgradeID]++;
             } else
             {
                 PermUpgrades.Add(upgradeID, 1);
             }
+          
+            PermCurrency -= cost;
+            return true;
         }
+
+        return false;
+    }
+
+    public bool RefundUpgrade(PermUpgrade permUpgrade)
+    {
+        string upgradeID = permUpgrade.UpgradeID;
+
+        if (PermUpgrades.ContainsKey(upgradeID))
+        {
+            PermCurrency += permUpgrade.Cost;
+            PermUpgrades[upgradeID]--;
+
+            if (PermUpgrades[upgradeID] == 0) PermUpgrades.Remove(upgradeID);
+
+            return true;
+        }
+
+        return false;
     }
 
     public void SetStartingClass(StartingClass sc)

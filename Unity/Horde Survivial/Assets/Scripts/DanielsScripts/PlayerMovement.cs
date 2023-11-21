@@ -29,11 +29,11 @@ public class PlayerMovement : MonoBehaviour
         float vert = Input.GetAxisRaw("Vertical");
 
         Vector2 playerInput = new Vector2(horz, vert).normalized;
-        if(PlayerData.Instance) moveSpeed *= PlayerData.Instance.SpeedBuffMultiplier;
         Vector2 moveForce = playerInput * moveSpeed;
         moveForce += forceToApply;
         forceToApply /= forceDamping;
-        
+
+        Debug.Log(moveForce);
         if(Mathf.Abs(forceToApply.x) <= 0.01f && Mathf.Abs(forceToApply.y) <= 0.01f)
         {
             forceToApply = Vector2.zero;
@@ -56,5 +56,10 @@ public class PlayerMovement : MonoBehaviour
             if(RunningParticle) RunningParticle.Play();
             GetComponent<Animator>().SetTrigger("Squish");
         }
+    }
+
+    public void IncreaseMoveSpeed(float num)
+    {
+        moveSpeed += num;
     }
 }
