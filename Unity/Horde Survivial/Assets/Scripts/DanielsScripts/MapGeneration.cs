@@ -24,6 +24,8 @@ public class MapGeneration : MonoBehaviour
 
     public List<GameObject> EnemySpawners = new List<GameObject>();
 
+    public GameObject Fountain;
+
     void Start()
     {
         seed = Random.Range(1, 9999999).ToString();
@@ -44,8 +46,35 @@ public class MapGeneration : MonoBehaviour
             }
         }
 
+        SpawnFountains();
         SpawnEnemySpawners();
         GameManager.Instance.UpdateGameState(GameState.Playing);
+    }
+
+    void SpawnFountains()
+    {
+        for(int i = 0; i < Random.Range(2,5); i++)
+        {
+            int attempts = 0;
+            while(true)
+            {
+                attempts++;
+
+                int x = Random.Range(0, width);
+                int y = Random.Range(0, height);
+
+                Vector3 pos = new Vector3(x + .5f, y + .5f, 0);
+                if (generatedMap[x, y] == 1 && Vector3.Distance(pos, player.transform.position) > 5)
+                {
+                    Instantiate(Fountain, pos, Quaternion.identity);
+
+                    break;
+                }
+
+                if (attempts >= 5) break;
+            }
+        }
+
     }
 
     void CellularAutomata()

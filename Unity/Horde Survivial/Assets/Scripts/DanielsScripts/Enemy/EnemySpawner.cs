@@ -23,8 +23,6 @@ public class EnemySpawner : MonoBehaviour
 
         
         int enemyCount = easyEnemies.Count < EnemiesPerWave ? easyEnemies.Count : EnemiesPerWave;
-
-        Debug.Log(enemyCount);
         for(int i = 0; i < enemyCount; i++)
         {
             enemyPool.Add(easyEnemies[i]);
@@ -84,18 +82,15 @@ public class EnemySpawner : MonoBehaviour
 
         if (player.GetComponent<LevelSystem>().level % 2 == 0)
         {
-            if (sc > 3.5f && sc < 3.95f)
-            {
-                enemyPool.Remove(enemyPool[Random.Range(0, enemyPool.Count)]);
-                enemyPool.Add(midEnemies[Random.Range(0, midEnemies.Count)]);
-                return;
-            }
-
             if (sc > 2.5f && sc < 3.5f)
             {
                 enemyPool.Remove(enemyPool[Random.Range(0, enemyPool.Count)]);
                 enemyPool.Add(hardEnemies[Random.Range(0, hardEnemies.Count)]);
+                return;
             }
+
+             enemyPool.Remove(enemyPool[Random.Range(0, enemyPool.Count)]);
+             enemyPool.Add(midEnemies[Random.Range(0, midEnemies.Count)]);
         }
     }
 }

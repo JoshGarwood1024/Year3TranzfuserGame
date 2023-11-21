@@ -47,7 +47,6 @@ public class GameManager : MonoBehaviour
 
     public void UpdateGameState(GameState newState)
     {
-        Debug.Log("GAME STATE CHANGED");
         State = newState;
 
         switch (newState)
@@ -56,7 +55,7 @@ public class GameManager : MonoBehaviour
                 Time.timeScale = 1.0f;
                 break;
             case GameState.Paused:
-                Time.timeScale = 1.0f;
+                Time.timeScale = 0.0f;
                 break;
             case GameState.Win:
                 break;
