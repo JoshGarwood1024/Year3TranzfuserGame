@@ -7,7 +7,7 @@ public class EnemySpawner : MonoBehaviour
 {
     public List<GameObject> easyEnemies, midEnemies, hardEnemies;
     public List<GameObject> enemyPool;
-
+    public float EnemySpawnAdditionTimer = 0f;
     private GameObject player;
 
     public List<GameObject> spawners;
@@ -21,9 +21,9 @@ public class EnemySpawner : MonoBehaviour
     {
         enemyPool = new List<GameObject>();
 
-        
+
         int enemyCount = easyEnemies.Count < EnemiesPerWave ? easyEnemies.Count : EnemiesPerWave;
-        for(int i = 0; i < enemyCount; i++)
+        for (int i = 0; i < enemyCount; i++)
         {
             enemyPool.Add(easyEnemies[i]);
         }
@@ -31,6 +31,17 @@ public class EnemySpawner : MonoBehaviour
         player = GameObject.FindWithTag("Player");
 
         StartCoroutine(SpawnEnemies());
+    }
+
+    public void Update()
+    {
+        EnemySpawnAdditionTimer += Time.deltaTime;
+        if (EnemySpawnAdditionTimer > 30f)
+        {
+            EnemiesPerWave++;
+            Debug.Log("Adding another enemy per spawn!");
+            EnemySpawnAdditionTimer = 0f;
+        }
     }
 
     private void OnApplicationQuit()
