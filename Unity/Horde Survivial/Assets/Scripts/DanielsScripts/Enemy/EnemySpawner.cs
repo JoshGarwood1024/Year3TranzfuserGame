@@ -93,7 +93,7 @@ public class EnemySpawner : MonoBehaviour
 
         if (player.GetComponent<LevelSystem>().level % 2 == 0)
         {
-            if (sc > 2.5f && sc < 3.5f)
+            if (sc > 2.5f && sc < 5)
             {
                 enemyPool.Remove(enemyPool[Random.Range(0, enemyPool.Count)]);
                 enemyPool.Add(hardEnemies[Random.Range(0, hardEnemies.Count)]);

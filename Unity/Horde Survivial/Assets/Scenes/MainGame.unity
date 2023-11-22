@@ -25230,6 +25230,7 @@ MonoBehaviour:
   - {fileID: 2941765106485510641, guid: 2256c23749be2a448978a3dd9ae8c091, type: 3}
   - {fileID: 4111839582177714935, guid: 229d2b24465cfe7418b8894b9a1c4242, type: 3}
   enemyPool: []
+  EnemySpawnAdditionTimer: 0
   spawners:
   - {fileID: 66040008}
   - {fileID: 411842962}

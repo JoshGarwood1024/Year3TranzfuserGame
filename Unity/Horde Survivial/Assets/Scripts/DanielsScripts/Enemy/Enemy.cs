@@ -59,6 +59,8 @@ public abstract class Enemy : MonoBehaviour
         StartCoroutine(Flash());
 
         Health -= dmg;
+
+        if (Health <= 0) Death();
     }
 
     IEnumerator Flash()
@@ -72,6 +74,7 @@ public abstract class Enemy : MonoBehaviour
 
     public virtual void Death()
     {
+        PlayerPrefs.SetInt("Total Enemies Killed", (PlayerPrefs.GetInt("Total Enemies Killed") + 1));
 
         GameObject xpgo = Instantiate(XP, transform.position, transform.rotation);
         xpgo.GetComponent<Rigidbody2D>().AddRelativeForce(Random.insideUnitCircle * 400);
@@ -103,10 +106,12 @@ public abstract class Enemy : MonoBehaviour
 
     protected virtual void Update()
     {
-        if (Health <= 0)
+        if(transform.position.y > player.transform.position.y)
         {
-            PlayerPrefs.SetInt("Total Enemies Killed", (PlayerPrefs.GetInt("Total Enemies Killed")+1));
-            Death();
+            GetComponent<SpriteRenderer>().sortingOrder = -1;
+        } else
+        {
+            GetComponent<SpriteRenderer>().sortingOrder = 1;
         }
     }
 }
