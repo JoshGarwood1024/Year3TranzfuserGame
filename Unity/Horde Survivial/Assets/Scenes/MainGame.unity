@@ -9113,6 +9113,7 @@ MonoBehaviour:
   Cat: {fileID: 0}
   Dog: {fileID: 0}
   PetMenu: {fileID: 0}
+  permCurrencyText: {fileID: 0}
 --- !u!1 &760034202
 GameObject:
   m_ObjectHideFlags: 0
@@ -18320,6 +18321,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab8c51bfd1b7c349b6b7e9bfd1e8ac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Head1: {fileID: 0}
+  Head2: {fileID: 0}
+  Head3: {fileID: 0}
 --- !u!1 &1418886372
 GameObject:
   m_ObjectHideFlags: 0
@@ -25226,6 +25230,7 @@ MonoBehaviour:
   - {fileID: 2941765106485510641, guid: 2256c23749be2a448978a3dd9ae8c091, type: 3}
   - {fileID: 4111839582177714935, guid: 229d2b24465cfe7418b8894b9a1c4242, type: 3}
   enemyPool: []
+  EnemySpawnAdditionTimer: 0
   spawners:
   - {fileID: 66040008}
   - {fileID: 411842962}
