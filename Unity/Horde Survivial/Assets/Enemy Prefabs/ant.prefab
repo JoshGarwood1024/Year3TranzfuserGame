@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: 6916190158624744481}
   - component: {fileID: 7643234548651817223}
   - component: {fileID: 870143985373861023}
+  - component: {fileID: 600373537766232554}
   m_Layer: 8
   m_Name: ant
   m_TagString: Enemy
@@ -422,3 +423,24 @@ PolygonCollider2D:
       - {x: 1.1473732, y: -0.6948004}
       - {x: 0.98231316, y: -0.21248674}
   m_UseDelaunayMesh: 0
+--- !u!95 &600373537766232554
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6546813913054142440}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3d47ab8e2e5c0ae41aaf9229569715f4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a32db46cf36ff2c4c97a67fa93a9580d
+guid: 2a447f26905e8bb4f848a9962b484f86
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 8
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,60 +106,110 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: 4
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Carl_0
+      name: Joe 1_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 17
-        width: 11
-        height: 15
+        x: 5
+        y: 64
+        width: 21
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1757c3132215ade4f9dbea44b07b2b16
-      internalID: 449502743
+      spriteID: d39c295e8cd94e541b278d202d47542c
+      internalID: 795928046
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Carl_1
+      name: Joe 1_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
+        x: 37
+        y: 64
+        width: 21
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41ac278e8815ff848a30278fa41ba6c7
-      internalID: -1904318354
+      spriteID: 0852a7e65b27eff40aa4f58d5ac4bb5a
+      internalID: 345766264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joe 1_2
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 32
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61909da02869da64381449b9d18cfc9d
+      internalID: 1754601278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joe 1_3
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 32
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c9069805844ea44d834e3a247389296
+      internalID: -1619242898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joe 1_4
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 0
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d16f5badaa8e9e54d868e1ed3d698319
+      internalID: 1704629025
       vertices: []
       indices: 
       edges: []
@@ -175,8 +225,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Carl_0: 449502743
-      Carl_1: -1904318354
+      Joe 1_0: 795928046
+      Joe 1_1: 345766264
+      Joe 1_2: 1754601278
+      Joe 1_3: -1619242898
+      Joe 1_4: 1704629025
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

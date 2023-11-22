@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 5107306400967055283}
   - component: {fileID: 3180440633427811506}
   - component: {fileID: 5668911089308706620}
-  - component: {fileID: 7216958583103409947}
+  - component: {fileID: 8252214581738513877}
   m_Layer: 8
   m_Name: longneck
   m_TagString: Enemy
@@ -422,7 +422,7 @@ PolygonCollider2D:
       - {x: 0.7410908, y: 0.19302559}
       - {x: 0.3659836, y: 1.3167156}
   m_UseDelaunayMesh: 0
---- !u!95 &7216958583103409947
+--- !u!95 &8252214581738513877
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -432,7 +432,7 @@ Animator:
   m_GameObject: {fileID: 5815661396532111079}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4ee38d351b6e7484a84413c2bdddf5cd, type: 2}
+  m_Controller: {fileID: 9100000, guid: a7a88f6113bb44047965327552d473ff, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

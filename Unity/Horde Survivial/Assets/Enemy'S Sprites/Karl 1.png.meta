@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a32db46cf36ff2c4c97a67fa93a9580d
+guid: bf44fb31aa8c09d4d81bedfba9f73c9a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,45 +106,137 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: 4
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Carl_0
+      name: Karl 1_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 17
-        width: 11
-        height: 15
+        x: 0
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1757c3132215ade4f9dbea44b07b2b16
-      internalID: 449502743
+      spriteID: aea96782b5a099e4bb6a12ebb75fcd79
+      internalID: -830523715
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Carl_1
+      name: Karl 1_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d50160d5d1364c41878fd4f9e9070cb
+      internalID: -2033371596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Karl 1_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 854687bae17b31146a64487c6ed00ac7
+      internalID: -34804722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Karl 1_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25dc134f6758cf647acb31d114ed60ab
+      internalID: 1749524046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Karl 1_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f22f6c25684e4e54e97463c4fcfae6ee
+      internalID: -516967044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Karl 1_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a0e46c0c4ec284b97f9ab03926dfa0
+      internalID: -1722934899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Karl 1_6
       rect:
         serializedVersion: 2
         x: 0
@@ -152,14 +244,35 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41ac278e8815ff848a30278fa41ba6c7
-      internalID: -1904318354
+      spriteID: 3ee79592da018f14bbdd341e31a3ce04
+      internalID: 422888662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Karl 1_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05939eb6c4f84d14abddd44371d3825e
+      internalID: 978549257
       vertices: []
       indices: 
       edges: []
@@ -175,8 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Carl_0: 449502743
-      Carl_1: -1904318354
+      Karl 1_0: -830523715
+      Karl 1_1: -2033371596
+      Karl 1_2: -34804722
+      Karl 1_3: 1749524046
+      Karl 1_4: -516967044
+      Karl 1_5: -1722934899
+      Karl 1_6: 422888662
+      Karl 1_7: 978549257
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

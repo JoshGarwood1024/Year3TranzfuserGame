@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a32db46cf36ff2c4c97a67fa93a9580d
+guid: 5cf489486a961fd4cb3b0399cae99e3e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,60 +106,173 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: 4
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Carl_0
+      name: Hell Rat 1_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 17
-        width: 11
-        height: 15
+        x: 2
+        y: 64
+        width: 28
+        height: 31
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1757c3132215ade4f9dbea44b07b2b16
-      internalID: 449502743
+      spriteID: c1ef75daca4a6184e84284a51e551c0e
+      internalID: 1251150615
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Carl_1
+      name: Hell Rat 1_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 34
+        y: 64
+        width: 28
+        height: 31
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41ac278e8815ff848a30278fa41ba6c7
-      internalID: -1904318354
+      spriteID: 980a00264b67f554f944ea8cc7381b9e
+      internalID: 1695142358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell Rat 1_2
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 64
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a403a9ebe7d39b49a38776a938eea0f
+      internalID: -1519807889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell Rat 1_3
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 32
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e36331d325408594aad78f6f1a897b56
+      internalID: -1727723433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell Rat 1_4
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 32
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c927254fee76ce34c96ebc90b706f1f3
+      internalID: -1522998091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell Rat 1_5
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 32
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 280d7aedbc7279348b6677919ba30f70
+      internalID: -1916714792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell Rat 1_6
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 0
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75c55ea650266534bbc3fa0474a59250
+      internalID: 569605902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell Rat 1_7
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 0
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac03a9833018c2d488d5a060c960cfaf
+      internalID: 246771357
       vertices: []
       indices: 
       edges: []
@@ -175,8 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Carl_0: 449502743
-      Carl_1: -1904318354
+      Hell Rat 1_0: 1251150615
+      Hell Rat 1_1: 1695142358
+      Hell Rat 1_2: -1519807889
+      Hell Rat 1_3: -1727723433
+      Hell Rat 1_4: -1522998091
+      Hell Rat 1_5: -1916714792
+      Hell Rat 1_6: 569605902
+      Hell Rat 1_7: 246771357
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

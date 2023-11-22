@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4560531037216501046}
   - component: {fileID: 4971658579387073826}
   - component: {fileID: 8031427536679592571}
+  - component: {fileID: 8927398179300113096}
   m_Layer: 8
   m_Name: carl
   m_TagString: Enemy
@@ -220,7 +221,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 1.9375}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 0.6875, y: 0.9375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -286,7 +287,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 1.9375}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 0.6875, y: 0.9375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -316,6 +317,27 @@ PolygonCollider2D:
       - {x: 0.35306358, y: -0.60706353}
       - {x: 0.379467, y: -0.41289234}
   m_UseDelaunayMesh: 0
+--- !u!95 &8927398179300113096
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4942041728026269676}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: db357aa160fb1604e91ddcf4f773226d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7789193534142045492
 GameObject:
   m_ObjectHideFlags: 0

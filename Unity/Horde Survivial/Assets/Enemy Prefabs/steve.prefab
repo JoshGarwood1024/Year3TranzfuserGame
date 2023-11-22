@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3219349860116471764}
   - component: {fileID: 6378488124728004871}
   - component: {fileID: 7831485789780002962}
+  - component: {fileID: 8649365138099814873}
   m_Layer: 8
   m_Name: steve
   m_TagString: Enemy
@@ -291,6 +292,27 @@ PolygonCollider2D:
       - {x: 2.095909, y: -1.5413787}
       - {x: 2.1655147, y: 0.40754652}
   m_UseDelaunayMesh: 0
+--- !u!95 &8649365138099814873
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802570502483281926}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e650c5435b6e75642a54dea26e4e60ab, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5635368808520607677
 GameObject:
   m_ObjectHideFlags: 0
