@@ -340,6 +340,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Bug_11
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 35
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b60789ce651cc484aae525be3dfcd873
+      internalID: 898926928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bug_12
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 33
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfdd877d06bb62e4cafa94bbc11d7e05
+      internalID: 1509139660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bug_13
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 14
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08733997b27dac743bcb0012024a0f71
+      internalID: -1539472180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -354,6 +417,9 @@ TextureImporter:
       Bug_0: 362585562
       Bug_1: 2041319346
       Bug_10: 361634641
+      Bug_11: 898926928
+      Bug_12: 1509139660
+      Bug_13: -1539472180
       Bug_2: 1831509576
       Bug_3: -666319267
       Bug_4: -1163785590

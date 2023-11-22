@@ -118,7 +118,7 @@ TextureImporter:
         width: 7
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -139,7 +139,7 @@ TextureImporter:
         width: 7
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,7 +160,7 @@ TextureImporter:
         width: 7
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -181,7 +181,7 @@ TextureImporter:
         width: 7
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -202,7 +202,7 @@ TextureImporter:
         width: 7
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -223,7 +223,7 @@ TextureImporter:
         width: 7
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,7 +244,7 @@ TextureImporter:
         width: 7
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -265,7 +265,7 @@ TextureImporter:
         width: 7
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -286,7 +286,7 @@ TextureImporter:
         width: 7
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -294,6 +294,69 @@ TextureImporter:
       bones: []
       spriteID: 83645b993e5082d42898cd14919d5f64
       internalID: 1235422272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeThatAtOnePointMayOrMayNotHaveGoneOnAnOdyssey_9
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 64
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6ff8ccd2a27a3d4bbfda56ffcd9aedd
+      internalID: 1670047382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeThatAtOnePointMayOrMayNotHaveGoneOnAnOdyssey_10
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 75
+        width: 5
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d021244caebb04cac262186b7d41e3
+      internalID: 110833270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeThatAtOnePointMayOrMayNotHaveGoneOnAnOdyssey_11
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 84
+        width: 5
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcbc8882b25ee8341bc5cbcdb974dd7b
+      internalID: -1942998402
       vertices: []
       indices: 
       edges: []
@@ -311,6 +374,8 @@ TextureImporter:
     nameFileIdTable:
       SnakeThatAtOnePointMayOrMayNotHaveGoneOnAnOdyssey_0: 718656251
       SnakeThatAtOnePointMayOrMayNotHaveGoneOnAnOdyssey_1: 1778827370
+      SnakeThatAtOnePointMayOrMayNotHaveGoneOnAnOdyssey_10: 110833270
+      SnakeThatAtOnePointMayOrMayNotHaveGoneOnAnOdyssey_11: -1942998402
       SnakeThatAtOnePointMayOrMayNotHaveGoneOnAnOdyssey_2: -2116575688
       SnakeThatAtOnePointMayOrMayNotHaveGoneOnAnOdyssey_3: -1277585334
       SnakeThatAtOnePointMayOrMayNotHaveGoneOnAnOdyssey_4: -737995011
@@ -318,6 +383,7 @@ TextureImporter:
       SnakeThatAtOnePointMayOrMayNotHaveGoneOnAnOdyssey_6: -885025430
       SnakeThatAtOnePointMayOrMayNotHaveGoneOnAnOdyssey_7: 1177919088
       SnakeThatAtOnePointMayOrMayNotHaveGoneOnAnOdyssey_8: 1235422272
+      SnakeThatAtOnePointMayOrMayNotHaveGoneOnAnOdyssey_9: 1670047382
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

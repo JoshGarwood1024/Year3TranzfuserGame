@@ -9113,6 +9113,7 @@ MonoBehaviour:
   Cat: {fileID: 0}
   Dog: {fileID: 0}
   PetMenu: {fileID: 0}
+  permCurrencyText: {fileID: 0}
 --- !u!1 &760034202
 GameObject:
   m_ObjectHideFlags: 0
@@ -18320,6 +18321,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab8c51bfd1b7c349b6b7e9bfd1e8ac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Head1: {fileID: 0}
+  Head2: {fileID: 0}
+  Head3: {fileID: 0}
 --- !u!1 &1418886372
 GameObject:
   m_ObjectHideFlags: 0
@@ -33623,8 +33627,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.11912346, y: -0.33775115}
-      - {x: -0.051480293, y: -0.31994295}
+    - - {x: 0.23841476, y: 0.0013332367}
+      - {x: 0.085329056, y: 0.25292397}
+      - {x: -0.007144928, y: 0.25666642}
+      - {x: -0.06518364, y: 0.2546234}
+      - {x: -0.16179657, y: 0.060194016}
+      - {x: -0.21506596, y: -0.11240244}
       - {x: -0.20674038, y: -0.34244227}
       - {x: -0.37954617, y: -0.50187063}
       - {x: -0.38984585, y: -0.67656434}

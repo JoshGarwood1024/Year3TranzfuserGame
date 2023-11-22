@@ -144,7 +144,7 @@ TextureImporter:
         width: 25
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -165,7 +165,7 @@ TextureImporter:
         width: 25
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -186,7 +186,7 @@ TextureImporter:
         width: 25
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -207,7 +207,7 @@ TextureImporter:
         width: 25
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -228,7 +228,7 @@ TextureImporter:
         width: 25
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,6 +236,69 @@ TextureImporter:
       bones: []
       spriteID: 1ab40684aab39e44f841b0452747112f
       internalID: 972523318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Goonmanian Gooner_5
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 52
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0278e49962e1ba249bbdb08ac2edd65d
+      internalID: 2060381351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Goonmanian Gooner_6
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 35
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03162609a7263104c9201908edb3c606
+      internalID: 2140410712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Goonmanian Gooner_7
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dff93997bc10b0441aefbd09d38d14f9
+      internalID: 774481138
       vertices: []
       indices: 
       edges: []
@@ -256,6 +319,9 @@ TextureImporter:
       The Goonmanian Gooner_2: 675895314
       The Goonmanian Gooner_3: 890647624
       The Goonmanian Gooner_4: 972523318
+      The Goonmanian Gooner_5: 2060381351
+      The Goonmanian Gooner_6: 2140410712
+      The Goonmanian Gooner_7: 774481138
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
