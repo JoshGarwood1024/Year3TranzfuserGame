@@ -31,6 +31,7 @@ public class EnemySpawner : MonoBehaviour
         player = GameObject.FindWithTag("Player");
 
         StartCoroutine(SpawnEnemies());
+        //create coroutine to keep adding enemies
     }
 
     public void Update()
@@ -38,8 +39,12 @@ public class EnemySpawner : MonoBehaviour
         EnemySpawnAdditionTimer += Time.deltaTime;
         if (EnemySpawnAdditionTimer > 30f)
         {
-            EnemiesPerWave++;
-            Debug.Log("Adding another enemy per spawn!");
+            if (EnemiesPerWave < 7)
+            {
+                EnemiesPerWave++;
+                enemyPool.Add(midEnemies[Random.Range(0, midEnemies.Count)]);
+            }
+
             EnemySpawnAdditionTimer = 0f;
         }
     }
