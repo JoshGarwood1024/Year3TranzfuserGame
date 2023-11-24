@@ -8,7 +8,7 @@ public class addDamageBuff : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            PlayerData.Instance.DamageBuff += 2;
+            PlayerData.Instance.DamageBuff += 1;
             Destroy(this.gameObject);
         }
     }
