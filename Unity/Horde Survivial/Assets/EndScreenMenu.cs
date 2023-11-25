@@ -25,13 +25,13 @@ public class EndScreenMenu : MonoBehaviour
         int level = PlayerData.Instance.gameObject.GetComponent<LevelSystem>().level;
         PlayerData.Instance.gameObject.GetComponent<CameraShake>().shakeAmount = 0;
         LevelText.text = level.ToString();
+        PlayerPrefs.SetInt("PermCurrency", PlayerManager.Instance.PermCurrency);
         Time.timeScale = 0f;
     }
 
     public void LoadAgain()
     {
         SceneManager.LoadScene("MainGame");
-        PermCurrency.PermCur = 0;
         ScoreScript.scoreValue = 0;
         Time.timeScale = 1f;
     }
@@ -42,7 +42,6 @@ public class EndScreenMenu : MonoBehaviour
         SceneManager.LoadScene(currentSceneIndex - 1);
         Time.timeScale = 1f;
         ScoreScript.scoreValue = 0;
-        PermCurrency.PermCur = 0;
     }
 
 

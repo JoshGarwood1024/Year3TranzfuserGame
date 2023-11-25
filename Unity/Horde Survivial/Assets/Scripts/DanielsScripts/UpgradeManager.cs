@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class UpgradeManager : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class UpgradeManager : MonoBehaviour
 
     [SerializeField]
     GameObject UpgradePanel;
+
+    public TextMeshProUGUI DamageBuffText, SpeedText, WeaponListText;
 
     public List<ParticleSystem> gemParticles = new List<ParticleSystem>();
     public static UpgradeManager Instance { get; private set; }
@@ -89,6 +92,12 @@ public class UpgradeManager : MonoBehaviour
 
     public void OpenPanel()
     {
+        //STATS PAGE
+        DamageBuffText.text = "Damage Buff: " + PlayerData.Instance.DamageBuff;
+        SpeedText.text = "Speed: " + PlayerData.Instance.gameObject.GetComponent<PlayerMovement>().moveSpeed;
+        WeaponListText.text = string.Join("\n -", PlayerManager.Instance.weaponList);
+
+        //UPGRADES PAGE
         Time.timeScale = 0.0f;
         UpgradePanel.SetActive(true);
 

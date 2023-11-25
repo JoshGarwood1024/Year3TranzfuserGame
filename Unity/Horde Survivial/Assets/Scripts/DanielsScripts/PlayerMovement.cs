@@ -33,7 +33,6 @@ public class PlayerMovement : MonoBehaviour
         moveForce += forceToApply;
         forceToApply /= forceDamping;
 
-        Debug.Log(moveForce);
         if(Mathf.Abs(forceToApply.x) <= 0.01f && Mathf.Abs(forceToApply.y) <= 0.01f)
         {
             forceToApply = Vector2.zero;

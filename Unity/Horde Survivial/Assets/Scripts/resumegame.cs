@@ -12,9 +12,9 @@ public class resumegame : MonoBehaviour
 
     public TextMeshProUGUI permCurrencyText;
 
-    public void UpdateCurrency()
+    private void OnEnable()
     {
-        if (permCurrencyText) permCurrencyText.text = PlayerManager.Instance.PermCurrency.ToString(); 
+        if (permCurrencyText) permCurrencyText.text = PlayerManager.Instance.PermCurrency.ToString();
     }
 
     public void back()

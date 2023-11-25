@@ -9,8 +9,9 @@ public class permCurrencyPickUp : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            PermCurrency.PermCur += 1;
+            PlayerManager.Instance.PermCurrency += 1;
             Destroy(gameObject);
+            UIManager.Instance.UpdateUI();
         }
     }
 }

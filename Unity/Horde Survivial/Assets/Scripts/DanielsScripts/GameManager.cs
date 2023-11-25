@@ -22,28 +22,6 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        switch (PlayerManager.Instance.PlayersPet)
-        {
-            case Pet.Dog:
-                PlayerManager.Instance.SetPet("Dog");
-                break;
-            case Pet.Cat:
-                PlayerManager.Instance.SetPet("Cat");
-                break;
-            case Pet.Bird:
-                PlayerManager.Instance.SetPet("Bird");
-                break;
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     public void UpdateGameState(GameState newState)
     {

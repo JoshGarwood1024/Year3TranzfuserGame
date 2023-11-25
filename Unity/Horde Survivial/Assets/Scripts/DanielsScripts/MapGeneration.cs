@@ -53,7 +53,7 @@ public class MapGeneration : MonoBehaviour
 
     void SpawnFountains()
     {
-        for(int i = 0; i < Random.Range(2,5); i++)
+        for(int i = 0; i < Random.Range(4,8); i++)
         {
             int attempts = 0;
             while(true)
@@ -195,9 +195,9 @@ public class MapGeneration : MonoBehaviour
     void SpawnEnemySpawners()
     {
         Vector3 playerPos = player.transform.position;
-        EnemySpawners[0].transform.position = playerPos + new Vector3(width / 2, 0);
-        EnemySpawners[1].transform.position = playerPos + new Vector3(0, height / 2);
-        EnemySpawners[2].transform.position = playerPos - new Vector3(width / 2, 0);
-        EnemySpawners[3].transform.position = playerPos - new Vector3(0, height / 2);
+        EnemySpawners[0].transform.position = playerPos + new Vector3((width / 2 + 5), 0);
+        EnemySpawners[1].transform.position = playerPos + new Vector3(0, (height / 2)+5);
+        EnemySpawners[2].transform.position = playerPos - new Vector3((width / 2 + 5), 0);
+        EnemySpawners[3].transform.position = playerPos - new Vector3(0, (height / 2) + 5);
     }
 }

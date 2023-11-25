@@ -14,6 +14,8 @@ public class PlayerManager : MonoBehaviour
     public int PermCurrency = 0;
     public Dictionary<string, int> PermUpgrades = new Dictionary<string, int>();
 
+    public List<string> weaponList = new List<string>();
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -35,9 +37,8 @@ public class PlayerManager : MonoBehaviour
         pet = GameObject.Find("PlayersPet");
 
         PlayersPet = Pet.Dog;
-        SetPet("Dog");
 
-        PermCurrency = 30;
+        PermCurrency = PlayerPrefs.GetInt("PermCurrency", 0);
     }
 
     public bool BuyUpgrade(PermUpgrade permUpgrade)
@@ -89,26 +90,6 @@ public class PlayerManager : MonoBehaviour
     public Sprite GetPetSprite()
     {
         return PetSprites[(int)PlayersPet];
-    }
-    public void SetPet(string _pet)
-    {
-        if(!pet) pet = GameObject.Find("PlayersPet"); 
-
-        switch (_pet)
-        {
-            case "Dog":
-                pet.GetComponent<SpriteRenderer>().sprite = PetSprites[0];
-                PlayersPet = Pet.Dog;
-                break;
-            case "Cat":
-                pet.GetComponent<SpriteRenderer>().sprite = PetSprites[1];
-                PlayersPet = Pet.Cat;
-                break;
-            case "Bird":
-                pet.GetComponent<SpriteRenderer>().sprite = PetSprites[2];
-                PlayersPet = Pet.Bird;
-                break;
-        }
     }
 }
 

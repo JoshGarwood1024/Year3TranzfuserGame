@@ -17,7 +17,6 @@ public class TimeManager : MonoBehaviour
         if (timer > 1f)
         {
             SetTotalTimeSurvived();
-            Debug.Log(PlayerPrefs.GetInt("Total Time Survived4"));
             timer = 0f;
         }
 

@@ -92,13 +92,9 @@ public class EnemySpawner : MonoBehaviour
 
     public void LeveledUp(int level)
     {
-
-        //This number is the seconds between waves
-        float sc = spawnCurve.Evaluate(CurrentTime / TotalTimeToProgress);
-
         if (player.GetComponent<LevelSystem>().level % 2 == 0)
         {
-            if (sc > 2.5f && sc < 5)
+            if (CurrentTime > 300)
             {
                 enemyPool.Remove(enemyPool[Random.Range(0, enemyPool.Count)]);
                 enemyPool.Add(hardEnemies[Random.Range(0, hardEnemies.Count)]);
