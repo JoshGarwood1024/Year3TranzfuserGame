@@ -28,6 +28,10 @@ public class PlayerManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    private void OnApplicationQuit()
+    {
+        Save();
+    }
     public StartingClass PlayersClass { get; private set; }
     public Pet PlayersPet { get; private set; }
     private void Start()
@@ -43,8 +47,8 @@ public class PlayerManager : MonoBehaviour
 
     public bool BuyUpgrade(PermUpgrade permUpgrade)
     {
-        int cost = permUpgrade.Cost;
         string upgradeID = permUpgrade.UpgradeID;
+        int cost = PermUpgrades.ContainsKey(upgradeID) ? permUpgrade.Cost + PermUpgrades[upgradeID] * 2 : permUpgrade.Cost;
 
         if (PermCurrency >= cost)
         {
@@ -68,13 +72,14 @@ public class PlayerManager : MonoBehaviour
     public bool RefundUpgrade(PermUpgrade permUpgrade)
     {
         string upgradeID = permUpgrade.UpgradeID;
+        int refund = PermUpgrades.ContainsKey(upgradeID) ? permUpgrade.Cost + (PermUpgrades[upgradeID] - 1) * 2 : permUpgrade.Cost;
 
         if (PermUpgrades.ContainsKey(upgradeID))
         {
-            PermCurrency += permUpgrade.Cost;
+            PermCurrency += refund;
             PermUpgrades[upgradeID]--;
 
-            if (PermUpgrades[upgradeID] == 0) PermUpgrades.Remove(upgradeID);
+            if (PermUpgrades[upgradeID] <= 0) PermUpgrades.Remove(upgradeID);
 
             return true;
         }
@@ -91,6 +96,12 @@ public class PlayerManager : MonoBehaviour
     {
         return PetSprites[(int)PlayersPet];
     }
+
+    public void Save()
+    {
+        PlayerPrefs.SetInt("PermCurrency", PermCurrency);
+    }
+
 }
 
 public enum StartingClass

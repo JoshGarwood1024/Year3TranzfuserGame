@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c4e5505b9b12760488602278da0cca5d, type: 3}
-  m_Name: BouncyBalls
+  m_Name: SockPuppet
   m_EditorClassIdentifier: 
-  UpgradeID: BouncyBalls
+  UpgradeID: SockPuppetSling
   Cost: 5
   Description: 

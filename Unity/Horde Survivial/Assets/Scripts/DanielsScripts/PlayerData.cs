@@ -62,6 +62,7 @@ public class PlayerData : MonoBehaviour
         {
             GameManager.Instance.UpdateGameState(GameState.Lose);
             EndMenu.GetComponent<EndScreenMenu>().OpenMenu();
+            PlayerManager.Instance.Save();
             timeManager.SetTotalTimeSurvived();
             if (PlayerPrefs.GetInt("Highscore") > timeManager.gameTime)
             {

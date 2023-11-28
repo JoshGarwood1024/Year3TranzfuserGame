@@ -513,6 +513,8 @@ GameObject:
   - component: {fileID: 53241652}
   - component: {fileID: 53241651}
   - component: {fileID: 53241650}
+  - component: {fileID: 53241654}
+  - component: {fileID: 53241653}
   m_Layer: 5
   m_Name: Speed
   m_TagString: Untagged
@@ -667,6 +669,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 53241648}
   m_CullTransparentMesh: 1
+--- !u!114 &53241653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53241648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d846133bc227fa40a4d70fedee8a4c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HoverBoxGameObject: {fileID: 565793453}
+  Description: Increase Speed
+--- !u!61 &53241654
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53241648}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 90.42}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 300, y: 300}
+  m_EdgeRadius: 0
 --- !u!1 &56907602
 GameObject:
   m_ObjectHideFlags: 0
@@ -1733,6 +1794,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 147478863}
   m_CullTransparentMesh: 1
+--- !u!1 &150822210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 150822211}
+  - component: {fileID: 150822213}
+  - component: {fileID: 150822212}
+  m_Layer: 5
+  m_Name: Description
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &150822211
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150822210}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 565793454}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 463.835, y: 180.071}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &150822212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150822210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Description
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: dafe3b3f005e7ea43a2ac98bb86873cc, type: 2}
+  m_sharedMaterial: {fileID: 5478585082622224915, guid: dafe3b3f005e7ea43a2ac98bb86873cc, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 52.21
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 52.21
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &150822213
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150822210}
+  m_CullTransparentMesh: 1
 --- !u!1 &171240263
 GameObject:
   m_ObjectHideFlags: 0
@@ -2527,6 +2722,8 @@ GameObject:
   - component: {fileID: 272004485}
   - component: {fileID: 272004484}
   - component: {fileID: 272004483}
+  - component: {fileID: 272004487}
+  - component: {fileID: 272004486}
   m_Layer: 5
   m_Name: PillowBat
   m_TagString: Untagged
@@ -2582,7 +2779,7 @@ MonoBehaviour:
   originalColor: {r: 0.5647059, g: 0.5372549, b: 0.5372549, a: 1}
   upgradedColor: {r: 0, g: 1, b: 0.06039834, a: 1}
   maxUpgrades: 4
-  permUpgrade: {fileID: 0}
+  permUpgrade: {fileID: 11400000, guid: ec18465fdab142d4c84afcc3933a2781, type: 2}
   permCurrencyText: {fileID: 1639546959}
 --- !u!114 &272004484
 MonoBehaviour:
@@ -2681,6 +2878,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272004481}
   m_CullTransparentMesh: 1
+--- !u!114 &272004486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272004481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d846133bc227fa40a4d70fedee8a4c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HoverBoxGameObject: {fileID: 565793453}
+  Description: Increase fire rate and damage
+--- !u!61 &272004487
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272004481}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 90.42}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 300, y: 300}
+  m_EdgeRadius: 0
 --- !u!224 &279130422 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2361972413356535438, guid: 87075c3fe450593428a5c0cb222d9715, type: 3}
@@ -4726,6 +4982,8 @@ GameObject:
   - component: {fileID: 471896229}
   - component: {fileID: 471896228}
   - component: {fileID: 471896227}
+  - component: {fileID: 471896231}
+  - component: {fileID: 471896230}
   m_Layer: 5
   m_Name: JigsawSlicer
   m_TagString: Untagged
@@ -4781,7 +5039,7 @@ MonoBehaviour:
   originalColor: {r: 0.5647059, g: 0.5372549, b: 0.5372549, a: 1}
   upgradedColor: {r: 0, g: 1, b: 0.06039834, a: 1}
   maxUpgrades: 4
-  permUpgrade: {fileID: 0}
+  permUpgrade: {fileID: 11400000, guid: 7110e505ff77ddc40bd1e746265c9285, type: 2}
   permCurrencyText: {fileID: 1639546959}
 --- !u!114 &471896228
 MonoBehaviour:
@@ -4880,6 +5138,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 471896225}
   m_CullTransparentMesh: 1
+--- !u!114 &471896230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471896225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d846133bc227fa40a4d70fedee8a4c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HoverBoxGameObject: {fileID: 565793453}
+  Description: Increase damage
+--- !u!61 &471896231
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471896225}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 90.42}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 300, y: 300}
+  m_EdgeRadius: 0
 --- !u!1 &476495735
 GameObject:
   m_ObjectHideFlags: 0
@@ -5703,6 +6020,82 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562234613}
+  m_CullTransparentMesh: 1
+--- !u!1 &565793453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 565793454}
+  - component: {fileID: 565793456}
+  - component: {fileID: 565793455}
+  m_Layer: 5
+  m_Name: HoverBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &565793454
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565793453}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 150822211}
+  m_Father: {fileID: 859877522}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5292499, y: 0.5}
+  m_AnchorMax: {x: 0.5292499, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 587.551, y: 157.34}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &565793455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565793453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 022548a88c421fd45bec58415315d2ea, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &565793456
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565793453}
   m_CullTransparentMesh: 1
 --- !u!1 &570778098
 GameObject:
@@ -7250,6 +7643,8 @@ GameObject:
   - component: {fileID: 679581016}
   - component: {fileID: 679581015}
   - component: {fileID: 679581017}
+  - component: {fileID: 679581019}
+  - component: {fileID: 679581018}
   m_Layer: 5
   m_Name: Health
   m_TagString: Untagged
@@ -7404,6 +7799,65 @@ MonoBehaviour:
   maxUpgrades: 4
   permUpgrade: {fileID: 11400000, guid: 8104274a3de144b45967a365c20a10e7, type: 2}
   permCurrencyText: {fileID: 1639546959}
+--- !u!114 &679581018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679581013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d846133bc227fa40a4d70fedee8a4c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HoverBoxGameObject: {fileID: 565793453}
+  Description: Increase Health
+--- !u!61 &679581019
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679581013}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.15, y: 90.42}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 300, y: 300}
+  m_EdgeRadius: 0
 --- !u!1 &680352523
 GameObject:
   m_ObjectHideFlags: 0
@@ -7416,6 +7870,8 @@ GameObject:
   - component: {fileID: 680352527}
   - component: {fileID: 680352526}
   - component: {fileID: 680352525}
+  - component: {fileID: 680352529}
+  - component: {fileID: 680352528}
   m_Layer: 5
   m_Name: MarshmellowMace
   m_TagString: Untagged
@@ -7471,7 +7927,7 @@ MonoBehaviour:
   originalColor: {r: 0.5647059, g: 0.5372549, b: 0.5372549, a: 1}
   upgradedColor: {r: 0, g: 1, b: 0.06039834, a: 1}
   maxUpgrades: 4
-  permUpgrade: {fileID: 0}
+  permUpgrade: {fileID: 11400000, guid: 7b8e05ee3f3a69d43955d2e96eaa36e1, type: 2}
   permCurrencyText: {fileID: 1639546959}
 --- !u!114 &680352526
 MonoBehaviour:
@@ -7570,6 +8026,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 680352523}
   m_CullTransparentMesh: 1
+--- !u!114 &680352528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680352523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d846133bc227fa40a4d70fedee8a4c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HoverBoxGameObject: {fileID: 565793453}
+  Description: Increase spinning speed
+--- !u!61 &680352529
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680352523}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 90.42}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 300, y: 300}
+  m_EdgeRadius: 0
 --- !u!1 &688632340
 GameObject:
   m_ObjectHideFlags: 0
@@ -7582,6 +8097,8 @@ GameObject:
   - component: {fileID: 688632344}
   - component: {fileID: 688632343}
   - component: {fileID: 688632342}
+  - component: {fileID: 688632346}
+  - component: {fileID: 688632345}
   m_Layer: 5
   m_Name: BouncyBalls
   m_TagString: Untagged
@@ -7637,7 +8154,7 @@ MonoBehaviour:
   originalColor: {r: 0.5647059, g: 0.5372549, b: 0.5372549, a: 1}
   upgradedColor: {r: 0, g: 1, b: 0.06039834, a: 1}
   maxUpgrades: 4
-  permUpgrade: {fileID: 0}
+  permUpgrade: {fileID: 11400000, guid: 50187138cb3dbcd49a52906568d84727, type: 2}
   permCurrencyText: {fileID: 1639546959}
 --- !u!114 &688632343
 MonoBehaviour:
@@ -7736,6 +8253,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688632340}
   m_CullTransparentMesh: 1
+--- !u!114 &688632345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688632340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d846133bc227fa40a4d70fedee8a4c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HoverBoxGameObject: {fileID: 565793453}
+  Description: Increase fire rate and bounces
+--- !u!61 &688632346
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688632340}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 90.42}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 300, y: 300}
+  m_EdgeRadius: 0
 --- !u!1 &694738006
 GameObject:
   m_ObjectHideFlags: 0
@@ -8991,6 +9567,8 @@ GameObject:
   - component: {fileID: 854772855}
   - component: {fileID: 854772854}
   - component: {fileID: 854772853}
+  - component: {fileID: 854772857}
+  - component: {fileID: 854772856}
   m_Layer: 5
   m_Name: Balloon
   m_TagString: Untagged
@@ -9046,7 +9624,7 @@ MonoBehaviour:
   originalColor: {r: 0.5647059, g: 0.5372549, b: 0.5372549, a: 1}
   upgradedColor: {r: 0, g: 1, b: 0.06039834, a: 1}
   maxUpgrades: 4
-  permUpgrade: {fileID: 0}
+  permUpgrade: {fileID: 11400000, guid: b7ff8be57e3b7b84298e356ae0dc13b7, type: 2}
   permCurrencyText: {fileID: 1639546959}
 --- !u!114 &854772854
 MonoBehaviour:
@@ -9145,6 +9723,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 854772851}
   m_CullTransparentMesh: 1
+--- !u!114 &854772856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854772851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d846133bc227fa40a4d70fedee8a4c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HoverBoxGameObject: {fileID: 565793453}
+  Description: Increase fire rate and damge
+--- !u!61 &854772857
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854772851}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 90.42}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 300, y: 300}
+  m_EdgeRadius: 0
 --- !u!1001 &854780625
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9317,6 +9954,7 @@ RectTransform:
   - {fileID: 1404718387}
   - {fileID: 1566900043}
   - {fileID: 937583911}
+  - {fileID: 565793454}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -9958,6 +10596,8 @@ GameObject:
   - component: {fileID: 871199485}
   - component: {fileID: 871199484}
   - component: {fileID: 871199483}
+  - component: {fileID: 871199487}
+  - component: {fileID: 871199486}
   m_Layer: 5
   m_Name: SockPuppet
   m_TagString: Untagged
@@ -10013,7 +10653,7 @@ MonoBehaviour:
   originalColor: {r: 0.5647059, g: 0.5372549, b: 0.5372549, a: 1}
   upgradedColor: {r: 0, g: 1, b: 0.06039834, a: 1}
   maxUpgrades: 4
-  permUpgrade: {fileID: 0}
+  permUpgrade: {fileID: 11400000, guid: 750546d53481a4a4a83861c14d9e49d7, type: 2}
   permCurrencyText: {fileID: 1639546959}
 --- !u!114 &871199484
 MonoBehaviour:
@@ -10112,6 +10752,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871199481}
   m_CullTransparentMesh: 1
+--- !u!114 &871199486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871199481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d846133bc227fa40a4d70fedee8a4c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HoverBoxGameObject: {fileID: 565793453}
+  Description: Increase damage
+--- !u!61 &871199487
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871199481}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 90.42}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 300, y: 300}
+  m_EdgeRadius: 0
 --- !u!1 &875472492
 GameObject:
   m_ObjectHideFlags: 0
@@ -11407,6 +12106,8 @@ GameObject:
   - component: {fileID: 968603153}
   - component: {fileID: 968603152}
   - component: {fileID: 968603151}
+  - component: {fileID: 968603155}
+  - component: {fileID: 968603154}
   m_Layer: 5
   m_Name: UnicornHorns
   m_TagString: Untagged
@@ -11462,7 +12163,7 @@ MonoBehaviour:
   originalColor: {r: 0.5647059, g: 0.5372549, b: 0.5372549, a: 1}
   upgradedColor: {r: 0, g: 1, b: 0.06039834, a: 1}
   maxUpgrades: 4
-  permUpgrade: {fileID: 0}
+  permUpgrade: {fileID: 11400000, guid: c785ccc8abf60884ea17bbfac7c455ce, type: 2}
   permCurrencyText: {fileID: 1639546959}
 --- !u!114 &968603152
 MonoBehaviour:
@@ -11561,6 +12262,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 968603149}
   m_CullTransparentMesh: 1
+--- !u!114 &968603154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968603149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d846133bc227fa40a4d70fedee8a4c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HoverBoxGameObject: {fileID: 565793453}
+  Description: Increase fire rate
+--- !u!61 &968603155
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968603149}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 90.42}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 300, y: 300}
+  m_EdgeRadius: 0
 --- !u!1 &969270998
 GameObject:
   m_ObjectHideFlags: 0
@@ -12446,7 +13206,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 997298275}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d64bca067c219734d99c0842c6acae13, type: 3}
   m_Name: 
@@ -12559,6 +13319,8 @@ GameObject:
   - component: {fileID: 1031619659}
   - component: {fileID: 1031619658}
   - component: {fileID: 1031619657}
+  - component: {fileID: 1031619661}
+  - component: {fileID: 1031619660}
   m_Layer: 5
   m_Name: GiggleGun
   m_TagString: Untagged
@@ -12614,7 +13376,7 @@ MonoBehaviour:
   originalColor: {r: 0.5647059, g: 0.5372549, b: 0.5372549, a: 1}
   upgradedColor: {r: 0, g: 1, b: 0.06039834, a: 1}
   maxUpgrades: 4
-  permUpgrade: {fileID: 0}
+  permUpgrade: {fileID: 11400000, guid: 0e0e54a66799cfd4daa1e3ece4ecbd25, type: 2}
   permCurrencyText: {fileID: 1639546959}
 --- !u!114 &1031619658
 MonoBehaviour:
@@ -12713,6 +13475,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031619655}
   m_CullTransparentMesh: 1
+--- !u!114 &1031619660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031619655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d846133bc227fa40a4d70fedee8a4c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HoverBoxGameObject: {fileID: 565793453}
+  Description: Increase fire rate and damage
+--- !u!61 &1031619661
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031619655}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 90.42}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 300, y: 300}
+  m_EdgeRadius: 0
 --- !u!1 &1039032020
 GameObject:
   m_ObjectHideFlags: 0
@@ -13352,6 +14173,8 @@ GameObject:
   - component: {fileID: 1085348245}
   - component: {fileID: 1085348244}
   - component: {fileID: 1085348243}
+  - component: {fileID: 1085348247}
+  - component: {fileID: 1085348246}
   m_Layer: 5
   m_Name: BubblegumBazooka
   m_TagString: Untagged
@@ -13407,7 +14230,7 @@ MonoBehaviour:
   originalColor: {r: 0.5647059, g: 0.5372549, b: 0.5372549, a: 1}
   upgradedColor: {r: 0, g: 1, b: 0.06039834, a: 1}
   maxUpgrades: 4
-  permUpgrade: {fileID: 0}
+  permUpgrade: {fileID: 11400000, guid: c7c9eba532b7b1b46bb04edccae5f43e, type: 2}
   permCurrencyText: {fileID: 1639546959}
 --- !u!114 &1085348244
 MonoBehaviour:
@@ -13506,6 +14329,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085348241}
   m_CullTransparentMesh: 1
+--- !u!114 &1085348246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085348241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d846133bc227fa40a4d70fedee8a4c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HoverBoxGameObject: {fileID: 565793453}
+  Description: Increase fire rate and damage
+--- !u!61 &1085348247
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085348241}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 90.42}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 300, y: 300}
+  m_EdgeRadius: 0
 --- !u!1 &1101538657
 GameObject:
   m_ObjectHideFlags: 0
@@ -21115,6 +21997,8 @@ GameObject:
   - component: {fileID: 1700737831}
   - component: {fileID: 1700737830}
   - component: {fileID: 1700737829}
+  - component: {fileID: 1700737833}
+  - component: {fileID: 1700737832}
   m_Layer: 5
   m_Name: Pickup Range
   m_TagString: Untagged
@@ -21269,6 +22153,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1700737827}
   m_CullTransparentMesh: 1
+--- !u!114 &1700737832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700737827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d846133bc227fa40a4d70fedee8a4c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HoverBoxGameObject: {fileID: 565793453}
+  Description: Increase Pickup Range
+--- !u!61 &1700737833
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700737827}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 90.42}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 300, y: 300}
+  m_EdgeRadius: 0
 --- !u!1 &1710309084
 GameObject:
   m_ObjectHideFlags: 0
@@ -21763,6 +22706,7 @@ GameObject:
   - component: {fileID: 1728744800}
   - component: {fileID: 1728744803}
   - component: {fileID: 1728744804}
+  - component: {fileID: 1728744805}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -21903,6 +22847,22 @@ MonoBehaviour:
   target: {fileID: 0}
   offset: {x: 0, y: 0, z: -10}
   damping: 0
+--- !u!114 &1728744805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728744799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56666c5a40171f54783dd416a44f42bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_MaxRayIntersections: 0
 --- !u!1 &1729163352
 GameObject:
   m_ObjectHideFlags: 0
@@ -22441,7 +23401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -24015,6 +24975,8 @@ GameObject:
   - component: {fileID: 1832153736}
   - component: {fileID: 1832153735}
   - component: {fileID: 1832153734}
+  - component: {fileID: 1832153738}
+  - component: {fileID: 1832153737}
   m_Layer: 5
   m_Name: FairyDust
   m_TagString: Untagged
@@ -24070,7 +25032,7 @@ MonoBehaviour:
   originalColor: {r: 0.5647059, g: 0.5372549, b: 0.5372549, a: 1}
   upgradedColor: {r: 0, g: 1, b: 0.06039834, a: 1}
   maxUpgrades: 4
-  permUpgrade: {fileID: 0}
+  permUpgrade: {fileID: 11400000, guid: 4175a64d7bf8ceb4a9082bd3b89e3de0, type: 2}
   permCurrencyText: {fileID: 1639546959}
 --- !u!114 &1832153735
 MonoBehaviour:
@@ -24169,6 +25131,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1832153732}
   m_CullTransparentMesh: 1
+--- !u!114 &1832153737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832153732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d846133bc227fa40a4d70fedee8a4c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HoverBoxGameObject: {fileID: 565793453}
+  Description: Increase fire rate and damage
+--- !u!61 &1832153738
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832153732}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 90.42}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 300, y: 300}
+  m_EdgeRadius: 0
 --- !u!1001 &1838638077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26762,6 +27783,8 @@ GameObject:
   - component: {fileID: 2063369577}
   - component: {fileID: 2063369576}
   - component: {fileID: 2063369575}
+  - component: {fileID: 2063369579}
+  - component: {fileID: 2063369578}
   m_Layer: 5
   m_Name: Breathing
   m_TagString: Untagged
@@ -26817,7 +27840,7 @@ MonoBehaviour:
   originalColor: {r: 0.5647059, g: 0.5372549, b: 0.5372549, a: 1}
   upgradedColor: {r: 0, g: 1, b: 0.06039834, a: 1}
   maxUpgrades: 4
-  permUpgrade: {fileID: 0}
+  permUpgrade: {fileID: 11400000, guid: f1f9403b3d7b2034f948c5be69e574ad, type: 2}
   permCurrencyText: {fileID: 1639546959}
 --- !u!114 &2063369576
 MonoBehaviour:
@@ -26916,6 +27939,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2063369573}
   m_CullTransparentMesh: 1
+--- !u!114 &2063369578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063369573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d846133bc227fa40a4d70fedee8a4c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HoverBoxGameObject: {fileID: 565793453}
+  Description: Increase fire rate and damage
+--- !u!61 &2063369579
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063369573}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 90.42}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 300, y: 300}
+  m_EdgeRadius: 0
 --- !u!1 &2064802835
 GameObject:
   m_ObjectHideFlags: 0

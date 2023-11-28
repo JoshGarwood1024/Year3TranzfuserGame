@@ -56,6 +56,11 @@ public class UpgradeTesting : MonoBehaviour
         }
     }
 
+    public int GetCost()
+    {
+        return permUpgrade.Cost + upgradeLevel * 2;
+    }
+
     void MinusButtonClick()
     {
         upgradeLevel = !PlayerManager.Instance.PermUpgrades.ContainsKey(permUpgrade.UpgradeID) ? 0 : PlayerManager.Instance.PermUpgrades[permUpgrade.UpgradeID];
