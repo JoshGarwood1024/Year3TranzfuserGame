@@ -29,22 +29,22 @@ public class HealthUpgrade : Upgrade
 {
     private void Start()
     {
-        upgradeName = "Health Upgrade";
+        upgradeName = "Max Health Upgrade";
         rarity = 100;
-        baseDescription = "Increase health by 5";
+        baseDescription = "Increase max health by 5";
         equippedDescription = baseDescription;
     }
 
     public override void Equip()
     {
         base.Equip();
-        PlayerData.Instance.IncreaseHealth(5);
+        PlayerData.Instance.HealthBuff += 5;
     }
 
     public override void LevelUp()
     {
         base.LevelUp();
-        PlayerData.Instance.IncreaseHealth(5);
+        PlayerData.Instance.HealthBuff += 5;
     }
 }
 public class DamageUpgrade : Upgrade

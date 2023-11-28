@@ -41,7 +41,7 @@ public class PlayerData : MonoBehaviour
 
     private void Start()
     {
-        CurrentHealth = StartHealth;
+        CurrentHealth = StartHealth + HealthBuff;
         UFOMessedUp.GetComponent<TimeManager>();
     }
     private void Update()
@@ -51,7 +51,7 @@ public class PlayerData : MonoBehaviour
 
     public void UpdateHealthBar()
     {
-        healthbar.fillAmount = CurrentHealth / StartHealth;
+        healthbar.fillAmount = CurrentHealth / StartHealth + HealthBuff;
     }
 
     public void DecreaseHealth(float health)
@@ -80,9 +80,9 @@ public class PlayerData : MonoBehaviour
 
     public void IncreaseHealth(float health)
     {
-        if(CurrentHealth + health > StartHealth)
+        if(CurrentHealth + health > StartHealth + HealthBuff)
         {
-            CurrentHealth = StartHealth;
+            CurrentHealth = StartHealth + HealthBuff;
         } else
         {
             CurrentHealth += health;

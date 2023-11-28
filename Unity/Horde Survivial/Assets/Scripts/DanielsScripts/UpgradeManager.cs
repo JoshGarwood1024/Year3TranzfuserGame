@@ -14,7 +14,7 @@ public class UpgradeManager : MonoBehaviour
     [SerializeField]
     GameObject UpgradePanel;
 
-    public TextMeshProUGUI DamageBuffText, SpeedText, WeaponListText;
+    public TextMeshProUGUI DamageBuffText, SpeedText, WeaponListText, HealthText;
 
     public List<ParticleSystem> gemParticles = new List<ParticleSystem>();
     public static UpgradeManager Instance { get; private set; }
@@ -96,6 +96,7 @@ public class UpgradeManager : MonoBehaviour
         DamageBuffText.text = "Damage Buff: " + PlayerData.Instance.DamageBuff;
         SpeedText.text = "Speed: " + PlayerData.Instance.gameObject.GetComponent<PlayerMovement>().moveSpeed;
         WeaponListText.text = string.Join("\n -", PlayerManager.Instance.weaponList);
+        HealthText.text = "Max Health: " + (PlayerData.Instance.StartHealth + PlayerData.Instance.HealthBuff);
 
         //UPGRADES PAGE
         Time.timeScale = 0.0f;

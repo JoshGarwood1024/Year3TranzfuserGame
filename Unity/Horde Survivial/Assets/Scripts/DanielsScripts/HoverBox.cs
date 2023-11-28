@@ -17,9 +17,9 @@ public class HoverBox : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     private void Update()
     {
-        if (hovering) timeHovering += Time.deltaTime;
+        if (hovering) timeHovering += Time.unscaledDeltaTime;
 
-        if(timeHovering > 0.5f && !HoverBoxGameObject.activeSelf)
+        if (timeHovering > 0.2f && !HoverBoxGameObject.activeSelf)
         {
             HoverBoxGameObject.SetActive(true);
             HoverBoxGameObject.GetComponentInChildren<TextMeshProUGUI>().text = TryGetComponent<UpgradeTesting>(out UpgradeTesting ut) ? Description + "\nCost: " + ut.GetCost() : Description;
