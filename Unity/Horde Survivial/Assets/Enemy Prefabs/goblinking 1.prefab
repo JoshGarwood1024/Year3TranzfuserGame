@@ -198,8 +198,8 @@ MonoBehaviour:
   - {fileID: -331082732, guid: 75e92208ebeb14e4fac10d7407d73a6e, type: 3}
   BodyPartPrefab: {fileID: 4502988034936609466, guid: 306c88a25f601184aaf56112added087, type: 3}
   flashMaterial: {fileID: 2100000, guid: 0aa366fe36fb4d446ba436e64c6c8df8, type: 2}
-  Damage: 10
-  Health: 20
+  Damage: 15
+  Health: 40
   TotalEnemiesKilledInSession: 0
   AmountSpawnPerWave: 2
   lootItems:

@@ -15,5 +15,5 @@ MonoBehaviour:
   WeaponName: Unicorn Horn
   Description: Fires a unicorns horn towards the mouse
   UpgradeDescription: Increase damage and reduce cooldown
-  Damage: 20
+  Damage: 15
   Cooldown: 2.3

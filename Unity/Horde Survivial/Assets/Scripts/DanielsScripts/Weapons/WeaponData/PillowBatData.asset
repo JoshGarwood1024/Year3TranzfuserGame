@@ -15,6 +15,5 @@ MonoBehaviour:
   WeaponName: Pillow Bat
   Description: Swing a.. bat made of pillows around???
   UpgradeDescription: Increase pillow toughness
-  Level: 0
-  Damage: 25
+  Damage: 15
   Cooldown: 2

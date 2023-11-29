@@ -15,5 +15,5 @@ MonoBehaviour:
   WeaponName: Giggle Gun
   Description: Fire a laughing face in a random direction
   UpgradeDescription: Increase damage and faces shot
-  Damage: 30
+  Damage: 15
   Cooldown: 1

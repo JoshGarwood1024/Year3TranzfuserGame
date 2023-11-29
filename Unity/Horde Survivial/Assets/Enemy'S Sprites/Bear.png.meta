@@ -244,7 +244,7 @@ TextureImporter:
         width: 19
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -252,6 +252,48 @@ TextureImporter:
       bones: []
       spriteID: c26e528914334044e9db92cb4dc10a7c
       internalID: -1668933169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear_7
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 37
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adecc74b308a7cc4bada9679be2c43a0
+      internalID: 1455336085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear_8
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 32
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b0cd63b753f15842a5dfd4924f4d9dd
+      internalID: -232833352
       vertices: []
       indices: 
       edges: []
@@ -274,6 +316,8 @@ TextureImporter:
       Bear_4: -13445613
       Bear_5: -1326472315
       Bear_6: -1668933169
+      Bear_7: 1455336085
+      Bear_8: -232833352
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

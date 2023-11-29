@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 3368340849161078747}
   - component: {fileID: 585591061196087922}
   - component: {fileID: 7700016175992185013}
+  - component: {fileID: -3364328022918778415}
   m_Layer: 11
   m_Name: BlueGem
   m_TagString: Untagged
@@ -173,7 +174,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8260282162301647525}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6cfd58b041efc3469b2f8f1377c97f2, type: 3}
   m_Name: 
@@ -297,3 +298,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c54d5bb894258c74fa520f493f5b87cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-3364328022918778415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8260282162301647525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f3d27df5a8779c4a91c0364aeb8a8aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seconds: 24

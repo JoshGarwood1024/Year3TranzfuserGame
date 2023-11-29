@@ -15,5 +15,5 @@ MonoBehaviour:
   WeaponName: Jigsaw Slicer
   Description: Shoots puzzle pieces in all directions
   UpgradeDescription: Increase damage and decrease cooldown
-  Damage: 30
+  Damage: 15
   Cooldown: 5

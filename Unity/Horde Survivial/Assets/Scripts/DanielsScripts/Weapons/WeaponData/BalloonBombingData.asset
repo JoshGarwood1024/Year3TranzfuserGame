@@ -15,6 +15,5 @@ MonoBehaviour:
   WeaponName: Balloon Bombing
   Description: Send an explosive balloon to the nearest enemy
   UpgradeDescription: Increase Balloons Sent
-  Level: 0
-  Damage: 25
+  Damage: 10
   Cooldown: 2

@@ -15,5 +15,5 @@ MonoBehaviour:
   WeaponName: Bouncy Ball
   Description: Fire a bouncy ball that hits off enemies
   UpgradeDescription: Increase damage and bouncy ball count
-  Damage: 20
+  Damage: 10
   Cooldown: 2.5
