@@ -12,14 +12,8 @@ public class finalspawn : MonoBehaviour
     public GameObject objectToSpawn5;
     public GameObject objectToSpawn6;
     public GameObject objectToSpawn7;
-    public GameObject objectToSpawn8;
-    public GameObject objectToSpawn9;
-    public GameObject objectToSpawn10;
-    public GameObject objectToSpawn11;
-    public GameObject objectToSpawn12;
-    public GameObject objectToSpawn13;
-    public GameObject objectToSpawn14;
-    public GameObject objectToSpawn15;
+
+
 
     void Start()
     {
@@ -41,14 +35,8 @@ public class finalspawn : MonoBehaviour
         Instantiate(objectToSpawn5, transform.position, transform.rotation);
         Instantiate(objectToSpawn6, transform.position, transform.rotation);
         Instantiate(objectToSpawn7, transform.position, transform.rotation);
-        Instantiate(objectToSpawn8, transform.position, transform.rotation);
-        Instantiate(objectToSpawn9, transform.position, transform.rotation);
-        Instantiate(objectToSpawn10, transform.position, transform.rotation);
-        Instantiate(objectToSpawn11, transform.position, transform.rotation);
-        Instantiate(objectToSpawn12, transform.position, transform.rotation);
-        Instantiate(objectToSpawn13, transform.position, transform.rotation);
-        Instantiate(objectToSpawn14, transform.position, transform.rotation);
-        Instantiate(objectToSpawn15, transform.position, transform.rotation);
+
+
     }
 }
 

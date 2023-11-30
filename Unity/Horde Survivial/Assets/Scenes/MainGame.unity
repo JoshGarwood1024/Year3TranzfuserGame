@@ -33326,6 +33326,7 @@ GameObject:
   - component: {fileID: 2061591428}
   - component: {fileID: 2061591427}
   - component: {fileID: 2061591426}
+  - component: {fileID: 2061591430}
   m_Layer: 0
   m_Name: Mum and Dad spawner
   m_TagString: Untagged
@@ -33376,11 +33377,9 @@ MonoBehaviour:
   objectToSpawn: {fileID: 476825552791392146, guid: d7d8daa551581ac4ca25bfc368600266, type: 3}
   objectToSpawn1: {fileID: 476825552791392146, guid: d7d8daa551581ac4ca25bfc368600266, type: 3}
   objectToSpawn2: {fileID: 476825552791392146, guid: d7d8daa551581ac4ca25bfc368600266, type: 3}
-  objectToSpawn3: {fileID: 476825552791392146, guid: d7d8daa551581ac4ca25bfc368600266, type: 3}
+  objectToSpawn3: {fileID: 5844434621149984141, guid: e1c742b39e0990f48a75c6aac52f197a, type: 3}
   objectToSpawn4: {fileID: 5844434621149984141, guid: e1c742b39e0990f48a75c6aac52f197a, type: 3}
   objectToSpawn5: {fileID: 5844434621149984141, guid: e1c742b39e0990f48a75c6aac52f197a, type: 3}
-  objectToSpawn6: {fileID: 5844434621149984141, guid: e1c742b39e0990f48a75c6aac52f197a, type: 3}
-  objectToSpawn7: {fileID: 5844434621149984141, guid: e1c742b39e0990f48a75c6aac52f197a, type: 3}
 --- !u!114 &2061591427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33424,6 +33423,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 5844434621149984141, guid: e1c742b39e0990f48a75c6aac52f197a, type: 3}
+--- !u!114 &2061591430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061591422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5a15c2369dcb540b74e70d478701f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToSpawn: {fileID: 476825552791392146, guid: d7d8daa551581ac4ca25bfc368600266, type: 3}
+  objectToSpawn1: {fileID: 476825552791392146, guid: d7d8daa551581ac4ca25bfc368600266, type: 3}
+  objectToSpawn2: {fileID: 476825552791392146, guid: d7d8daa551581ac4ca25bfc368600266, type: 3}
+  objectToSpawn3: {fileID: 476825552791392146, guid: d7d8daa551581ac4ca25bfc368600266, type: 3}
+  objectToSpawn4: {fileID: 5844434621149984141, guid: e1c742b39e0990f48a75c6aac52f197a, type: 3}
+  objectToSpawn5: {fileID: 5844434621149984141, guid: e1c742b39e0990f48a75c6aac52f197a, type: 3}
+  objectToSpawn6: {fileID: 5844434621149984141, guid: e1c742b39e0990f48a75c6aac52f197a, type: 3}
+  objectToSpawn7: {fileID: 5844434621149984141, guid: e1c742b39e0990f48a75c6aac52f197a, type: 3}
 --- !u!1 &2078442416
 GameObject:
   m_ObjectHideFlags: 0

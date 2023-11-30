@@ -10,8 +10,7 @@ public class SpawnMumanddad3 : MonoBehaviour
     public GameObject objectToSpawn3;
     public GameObject objectToSpawn4;
     public GameObject objectToSpawn5;
-    public GameObject objectToSpawn6;
-    public GameObject objectToSpawn7;
+
 
     void Start()
     {
@@ -31,7 +30,6 @@ public class SpawnMumanddad3 : MonoBehaviour
         Instantiate(objectToSpawn3, transform.position, transform.rotation);
         Instantiate(objectToSpawn4, transform.position, transform.rotation);
         Instantiate(objectToSpawn5, transform.position, transform.rotation);
-        Instantiate(objectToSpawn6, transform.position, transform.rotation);
-        Instantiate(objectToSpawn7, transform.position, transform.rotation);
+
     }
 }
