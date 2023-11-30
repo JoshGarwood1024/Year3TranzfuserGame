@@ -27,7 +27,7 @@ public class Breathing : Weapon
 
         if (level <= 5)
         {
-            Radius += 0.25f;
+            Radius += 0.5f;
         }
     }
 

@@ -39,10 +39,20 @@ public class EnemySpawner : MonoBehaviour
         EnemySpawnAdditionTimer += Time.deltaTime;
         if (EnemySpawnAdditionTimer > 30f)
         {
-            if (EnemiesPerWave < 7)
+
+            EnemiesPerWave++;
+            if (EnemiesPerWave < 11)
             {
-                EnemiesPerWave++;
+                enemyPool.Add(easyEnemies[Random.Range(0, easyEnemies.Count)]);
+            }
+
+                else if (EnemiesPerWave > 11)
+            {
                 enemyPool.Add(midEnemies[Random.Range(0, midEnemies.Count)]);
+            }
+            else if (EnemiesPerWave >= 27)
+            {
+                enemyPool.Add(hardEnemies[Random.Range(0, hardEnemies.Count)]);
             }
 
             EnemySpawnAdditionTimer = 0f;
@@ -92,7 +102,7 @@ public class EnemySpawner : MonoBehaviour
 
     public void LeveledUp(int level)
     {
-        if (player.GetComponent<LevelSystem>().level % 2 == 0)
+        if (player.GetComponent<LevelSystem>().level % 3 == 0)
         {
             if (CurrentTime > 300)
             {

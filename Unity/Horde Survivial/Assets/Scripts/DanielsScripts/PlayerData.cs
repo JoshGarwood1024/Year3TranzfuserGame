@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerData : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class PlayerData : MonoBehaviour
     public Animator animator;
 
     public GameObject EndMenu;
+    public TextMeshProUGUI DamageBuffText, SpeedText, WeaponListText, HealthText;
+
 
     public static PlayerData Instance { get; private set; }
 
@@ -60,6 +63,7 @@ public class PlayerData : MonoBehaviour
 
         if (CurrentHealth - health <= 0)
         {
+            PlayerManager.Instance.weaponList.Clear();
             GameManager.Instance.UpdateGameState(GameState.Lose);
             EndMenu.GetComponent<EndScreenMenu>().OpenMenu();
             PlayerManager.Instance.Save();

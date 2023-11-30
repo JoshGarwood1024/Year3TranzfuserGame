@@ -15,5 +15,5 @@ MonoBehaviour:
   WeaponName: Breathing Technique
   Description: Send an air wave around you hurting enemies
   UpgradeDescription: Increase Radius
-  Damage: 5
+  Damage: 6
   Cooldown: 1.5

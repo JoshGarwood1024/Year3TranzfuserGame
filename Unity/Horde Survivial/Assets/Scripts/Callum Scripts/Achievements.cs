@@ -14,6 +14,11 @@ public class Achievements : MonoBehaviour
 
     }
 
+    public void resetAchievement()
+    {
+        PlayerPrefs.DeleteAll();
+    }
+
     // Update is called once per frame
     void Update()
     {
