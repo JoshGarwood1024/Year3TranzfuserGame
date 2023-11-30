@@ -18,7 +18,7 @@ public class finalspawn : MonoBehaviour
     void Start()
     {
         // Start the coroutine to wait for 5 minutes before spawning the object
-        StartCoroutine(SpawnObjectAfterDelay(15f)); // 300 seconds = 5 minutes
+        StartCoroutine(SpawnObjectAfterDelay(1800f)); // 300 seconds = 5 minutes
     }
 
     IEnumerator SpawnObjectAfterDelay(float delayInSeconds)
