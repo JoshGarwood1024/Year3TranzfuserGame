@@ -6,22 +6,31 @@ public class AudioManager : MonoBehaviour
 {
 
 	public static AudioManager instance;
+	public AudioSource MusicSource;
 
 	public AudioMixerGroup mixerGroup;
 
 	public Sound[] sounds;
+	public void PlayMusic(AudioClip clip)
+	{
+		MusicSource.clip = clip;
+		MusicSource.Play();
+	}
+
 
 	void Awake()
 	{
 		if (instance != null)
 		{
-			Destroy(gameObject);
+			//Destroy(gameObject);
 		}
-		else
+	else
 		{
 			instance = this;
-			DontDestroyOnLoad(gameObject);
+			//DontDestroyOnLoad(gameObject);
 		}
+
+
 
 		foreach (Sound s in sounds)
 		{
@@ -33,7 +42,7 @@ public class AudioManager : MonoBehaviour
 		}
 	}
 
-	public void Play(string sound)
+	public void PlaySound(string sound)
 	{
 		Sound s = Array.Find(sounds, item => item.name == sound);
 		if (s == null)

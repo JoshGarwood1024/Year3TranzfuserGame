@@ -63,6 +63,7 @@ public class PlayerData : MonoBehaviour
 
         if (CurrentHealth - health <= 0)
         {
+            AudioManager.instance.PlaySound("PlayerDeath");
             PlayerManager.Instance.weaponList.Clear();
             GameManager.Instance.UpdateGameState(GameState.Lose);
             EndMenu.GetComponent<EndScreenMenu>().OpenMenu();
@@ -75,6 +76,7 @@ public class PlayerData : MonoBehaviour
 
         } else
         {
+            AudioManager.instance.PlaySound("PlayerHitSound");
             CurrentHealth -= health;
             StartCoroutine(BecomeTemporarilyInvincible());
         }

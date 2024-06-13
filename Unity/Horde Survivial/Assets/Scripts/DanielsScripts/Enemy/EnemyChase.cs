@@ -9,6 +9,7 @@ public class EnemyChase : Enemy
     Rigidbody2D rb;
     public float speed;
     bool chasing;
+    public AudioManager ow;
 
     public override void Start()
     {
@@ -52,7 +53,7 @@ public class EnemyChase : Enemy
     public override void Hurt(float dmg)
     {
         base.Hurt(dmg);
-
+        FindObjectOfType<AudioManager>().PlaySound("EnemyHitSound");
         StartCoroutine(Knockback());
     }
 
